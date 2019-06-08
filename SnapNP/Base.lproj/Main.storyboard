@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,18 +23,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eV-qu-nEb" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="56.5" y="202.5" width="262.5" height="262.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6eV-qu-nEb" secondAttribute="height" multiplier="1:1" id="ADF-bg-clL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="squareSpin"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wge-Oj-E01">
                                 <rect key="frame" x="56.5" y="202.5" width="262.5" height="262.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh dear... you shouldnt be seeing this. Clay messed up and is very sorry. Please go back to the Snapcover app and try again..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-4W-ZZU">
-                                        <rect key="frame" x="26" y="26" width="210" height="210"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="JfW-4W-ZZU" secondAttribute="height" multiplier="1:1" id="29C-rC-trT"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="apw-yN-x35">
                                         <rect key="frame" x="0.0" y="0.0" width="262.5" height="262.5"/>
                                     </imageView>
@@ -55,21 +57,18 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="1EN-Ds-VH4" firstAttribute="height" secondItem="Wge-Oj-E01" secondAttribute="height" id="0G7-nU-GIc"/>
                                     <constraint firstItem="riw-Mm-Ggg" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" multiplier="0.3" constant="24.25" id="2g8-Mc-UNh"/>
-                                    <constraint firstItem="JfW-4W-ZZU" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" multiplier="0.8" id="3y5-cL-moq"/>
                                     <constraint firstAttribute="trailing" secondItem="riw-Mm-Ggg" secondAttribute="trailing" constant="3.5" id="68Z-WE-z7N"/>
                                     <constraint firstItem="1EN-Ds-VH4" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" id="B3I-Kr-ShW"/>
                                     <constraint firstItem="apw-yN-x35" firstAttribute="height" secondItem="Wge-Oj-E01" secondAttribute="height" id="B7t-ug-t7v"/>
                                     <constraint firstItem="apw-yN-x35" firstAttribute="centerX" secondItem="Wge-Oj-E01" secondAttribute="centerX" id="NOe-kg-MXO"/>
-                                    <constraint firstItem="JfW-4W-ZZU" firstAttribute="centerX" secondItem="Wge-Oj-E01" secondAttribute="centerX" id="aZt-dK-bCR"/>
                                     <constraint firstAttribute="bottom" secondItem="riw-Mm-Ggg" secondAttribute="bottom" constant="0.5" id="hEM-46-Jr9"/>
                                     <constraint firstItem="apw-yN-x35" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" id="jGf-4S-H2V"/>
                                     <constraint firstItem="1EN-Ds-VH4" firstAttribute="centerY" secondItem="Wge-Oj-E01" secondAttribute="centerY" id="rkN-jx-Rvu"/>
                                     <constraint firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="height" multiplier="1:1" id="tTK-ti-M8b"/>
-                                    <constraint firstItem="JfW-4W-ZZU" firstAttribute="centerY" secondItem="Wge-Oj-E01" secondAttribute="centerY" id="ueW-yj-H6a"/>
                                     <constraint firstItem="apw-yN-x35" firstAttribute="centerY" secondItem="Wge-Oj-E01" secondAttribute="centerY" id="vvj-kR-4yK"/>
                                     <constraint firstItem="1EN-Ds-VH4" firstAttribute="centerX" secondItem="Wge-Oj-E01" secondAttribute="centerX" id="zCI-vW-BJh"/>
                                 </constraints>
@@ -104,25 +103,43 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XC6-bW-DjW">
+                                <rect key="frame" x="173.5" y="626.5" width="28" height="27.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XC6-bW-DjW" secondAttribute="height" multiplier="1:1" id="QEN-Rr-dH2"/>
+                                </constraints>
+                                <state key="normal" image="spotify"/>
+                                <connections>
+                                    <action selector="logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFV-58-jEk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstItem="6eV-qu-nEb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0lU-Vn-MJV"/>
                             <constraint firstItem="Wge-Oj-E01" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Sb-M6-xxy"/>
+                            <constraint firstItem="6eV-qu-nEb" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" id="2UU-j1-inR"/>
                             <constraint firstItem="Wge-Oj-E01" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="2cq-ob-1ot"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="frY-Pz-Ddp" secondAttribute="bottom" constant="52" id="It5-J4-s5b"/>
                             <constraint firstItem="B35-kO-53a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KVN-uG-xG6"/>
                             <constraint firstItem="Wge-Oj-E01" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kce-pw-sTk"/>
                             <constraint firstItem="B35-kO-53a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pcj-8w-fhz"/>
+                            <constraint firstItem="XC6-bW-DjW" firstAttribute="height" secondItem="frY-Pz-Ddp" secondAttribute="height" multiplier="0.5" id="QRf-gr-A07"/>
+                            <constraint firstItem="XC6-bW-DjW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VGk-k6-6nJ"/>
+                            <constraint firstItem="6eV-qu-nEb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zda-eP-hxX"/>
                             <constraint firstItem="frY-Pz-Ddp" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" id="a8B-3Z-iKf"/>
                             <constraint firstItem="frY-Pz-Ddp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mS1-OP-1IZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XC6-bW-DjW" secondAttribute="bottom" constant="13" id="mcl-By-oXK"/>
                             <constraint firstItem="B35-kO-53a" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-113" id="ovx-yA-Ken"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activity" destination="6eV-qu-nEb" id="vnC-pg-g2b"/>
                         <outlet property="create" destination="frY-Pz-Ddp" id="XfV-18-ww9"/>
                         <outlet property="iamgeView" destination="apw-yN-x35" id="Vs5-YW-HgN"/>
                         <outlet property="snapCoverlbl" destination="riw-Mm-Ggg" id="Mmz-G0-dfA"/>
+                        <outlet property="spotBtn" destination="XC6-bW-DjW" id="a7I-sN-XGC"/>
                         <outlet property="stickerView" destination="Wge-Oj-E01" id="q5U-EV-QW9"/>
                         <outlet property="styleBtn" destination="1EN-Ds-VH4" id="JUi-yk-BZJ"/>
                     </connections>
@@ -138,13 +155,53 @@
                     <view key="view" contentMode="scaleToFill" id="J49-VY-Ch9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to Snapcover." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="edO-z7-iGb">
+                                <rect key="frame" x="37" y="34" width="300" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="edO-z7-iGb" secondAttribute="height" multiplier="292:97" id="U1p-Hl-URj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="47"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please authorize us to download covers" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fJ8-B9-QAk">
+                                <rect key="frame" x="37.5" y="555" width="300" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fJ8-B9-QAk" secondAttribute="height" multiplier="100:21" id="yQF-if-Lq3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Music support coming soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mq5-8i-RGP">
+                                <rect key="frame" x="37.5" y="639.5" width="300" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="edO-z7-iGb" firstAttribute="width" secondItem="J49-VY-Ch9" secondAttribute="width" multiplier="0.8" id="Jjf-bK-YTI"/>
+                            <constraint firstItem="edO-z7-iGb" firstAttribute="leading" secondItem="Ahe-hF-MC0" secondAttribute="leading" constant="37" id="LN9-Yu-K6q"/>
+                            <constraint firstItem="fJ8-B9-QAk" firstAttribute="centerX" secondItem="J49-VY-Ch9" secondAttribute="centerX" id="bBY-Q9-ps0"/>
+                            <constraint firstItem="Ahe-hF-MC0" firstAttribute="bottom" secondItem="Mq5-8i-RGP" secondAttribute="bottom" constant="7" id="fAE-XX-KSc"/>
+                            <constraint firstItem="Mq5-8i-RGP" firstAttribute="top" secondItem="fJ8-B9-QAk" secondAttribute="bottom" constant="21.5" id="fnR-rt-SHm"/>
+                            <constraint firstItem="fJ8-B9-QAk" firstAttribute="width" secondItem="edO-z7-iGb" secondAttribute="width" id="n8v-A7-GHO"/>
+                            <constraint firstItem="Mq5-8i-RGP" firstAttribute="width" secondItem="fJ8-B9-QAk" secondAttribute="width" id="n9f-5d-FMw"/>
+                            <constraint firstItem="edO-z7-iGb" firstAttribute="top" secondItem="Ahe-hF-MC0" secondAttribute="top" constant="14" id="rUj-Wp-4ob"/>
+                            <constraint firstItem="Mq5-8i-RGP" firstAttribute="centerX" secondItem="J49-VY-Ch9" secondAttribute="centerX" id="tSD-Az-qUS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ahe-hF-MC0"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Itl-ru-6yB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827" y="109"/>
+            <point key="canvasLocation" x="826.39999999999998" y="108.39580209895054"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="spotify" width="225" height="225"/>
+    </resources>
 </document>

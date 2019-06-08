@@ -13,7 +13,9 @@ import SpotifyLogin
 class LogInViewController: UIViewController {
     
     var loginButton: UIButton?
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let button = SpotifyLoginButton(viewController: self,

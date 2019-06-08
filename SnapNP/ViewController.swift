@@ -9,10 +9,12 @@ import SwiftyJSON
 import UIKit
 import SCSDKCreativeKit
 import SpotifyLogin
+import NVActivityIndicatorView
 class ViewController: UIViewController {
     @IBOutlet weak var stickerView: UIView!
     @IBOutlet weak var create: UIButton!
     
+    @IBOutlet weak var spotBtn: UIButton!
     @IBOutlet weak var styleBtn: UIButton!
     var snapAPI = SCSDKSnapAPI()
     var isBlackTheme = true
@@ -25,8 +27,10 @@ class ViewController: UIViewController {
     var urls = URL(string: "")
     override func viewDidLoad() {
         super.viewDidLoad()
+        activity.startAnimating()
       create.isHidden = true
         create.isEnabled = false
+        spotBtn.isHidden = true
         create.layer.cornerRadius = create.frame.height/2
         create.layer.borderWidth = 1
         create.layer.borderColor = UIColor.black.cgColor
@@ -36,8 +40,10 @@ class ViewController: UIViewController {
         }
   
     func refreshAll() {
+         activity.startAnimating()
          stickerView.isHidden = true
          create.isHidden = true
+        spotBtn.isHidden = true
         create.isEnabled = false
         SpotifyLogin.shared.getAccessToken { [weak self] (token, error) in
             
@@ -113,6 +119,7 @@ class ViewController: UIViewController {
         }
         
     }
+    @IBOutlet weak var activity: NVActivityIndicatorView!
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -244,6 +251,28 @@ class ViewController: UIViewController {
     task.resume()
     }
     }
+    @IBAction func logout(_ sender: Any) {
+        let dialogMessage = UIAlertController(title: "Disconnect Spotify", message: "Are you sure you want to sign out of Spotify account \(self.username)?", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "Yes", style: .destructive, handler: { (action) -> Void in
+            print("Ok button tapped")
+            SpotifyLogin.shared.logout()
+            self.showLogin()
+        })
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(ok)
+        dialogMessage.addAction(cancel)
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
     func showLogin() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "login")
@@ -284,6 +313,8 @@ class ViewController: UIViewController {
                 self.stickerView.isHidden = false
                 self.create.isHidden = false
                 self.create.isEnabled = true
+                self.spotBtn.isHidden = false
+                self.activity.stopAnimating()
             }
             
         }
