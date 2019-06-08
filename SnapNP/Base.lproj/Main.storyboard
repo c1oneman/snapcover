@@ -1,24 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNextLTPro-Bold.otf">
+            <string>AvenirNextLTPro-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SnapNP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wge-Oj-E01">
+                                <rect key="frame" x="56.5" y="202.5" width="262.5" height="262.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh dear... you shouldnt be seeing this. Clay messed up and is very sorry. Please go back to the Snapcover app and try again..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfW-4W-ZZU">
+                                        <rect key="frame" x="26" y="26" width="210" height="210"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="JfW-4W-ZZU" secondAttribute="height" multiplier="1:1" id="29C-rC-trT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="apw-yN-x35">
+                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="262.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="snapCover" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="riw-Mm-Ggg">
+                                        <rect key="frame" x="156" y="244" width="103" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="riw-Mm-Ggg" secondAttribute="height" multiplier="34:7" constant="15.571428571428584" id="Cow-0g-HJb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="1" height="-1"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1EN-Ds-VH4">
+                                        <rect key="frame" x="0.0" y="-1" width="262.5" height="262.5"/>
+                                        <connections>
+                                            <action selector="styleBtnAction:" destination="BYZ-38-t0r" eventType="touchDown" id="vwj-9A-RSm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1EN-Ds-VH4" firstAttribute="height" secondItem="Wge-Oj-E01" secondAttribute="height" id="0G7-nU-GIc"/>
+                                    <constraint firstItem="riw-Mm-Ggg" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" multiplier="0.3" constant="24.25" id="2g8-Mc-UNh"/>
+                                    <constraint firstItem="JfW-4W-ZZU" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" multiplier="0.8" id="3y5-cL-moq"/>
+                                    <constraint firstAttribute="trailing" secondItem="riw-Mm-Ggg" secondAttribute="trailing" constant="3.5" id="68Z-WE-z7N"/>
+                                    <constraint firstItem="1EN-Ds-VH4" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" id="B3I-Kr-ShW"/>
+                                    <constraint firstItem="apw-yN-x35" firstAttribute="height" secondItem="Wge-Oj-E01" secondAttribute="height" id="B7t-ug-t7v"/>
+                                    <constraint firstItem="apw-yN-x35" firstAttribute="centerX" secondItem="Wge-Oj-E01" secondAttribute="centerX" id="NOe-kg-MXO"/>
+                                    <constraint firstItem="JfW-4W-ZZU" firstAttribute="centerX" secondItem="Wge-Oj-E01" secondAttribute="centerX" id="aZt-dK-bCR"/>
+                                    <constraint firstAttribute="bottom" secondItem="riw-Mm-Ggg" secondAttribute="bottom" constant="0.5" id="hEM-46-Jr9"/>
+                                    <constraint firstItem="apw-yN-x35" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" id="jGf-4S-H2V"/>
+                                    <constraint firstItem="1EN-Ds-VH4" firstAttribute="centerY" secondItem="Wge-Oj-E01" secondAttribute="centerY" id="rkN-jx-Rvu"/>
+                                    <constraint firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="height" multiplier="1:1" id="tTK-ti-M8b"/>
+                                    <constraint firstItem="JfW-4W-ZZU" firstAttribute="centerY" secondItem="Wge-Oj-E01" secondAttribute="centerY" id="ueW-yj-H6a"/>
+                                    <constraint firstItem="apw-yN-x35" firstAttribute="centerY" secondItem="Wge-Oj-E01" secondAttribute="centerY" id="vvj-kR-4yK"/>
+                                    <constraint firstItem="1EN-Ds-VH4" firstAttribute="centerX" secondItem="Wge-Oj-E01" secondAttribute="centerX" id="zCI-vW-BJh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frY-Pz-Ddp">
+                                <rect key="frame" x="56.5" y="560" width="262.5" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="frY-Pz-Ddp" secondAttribute="height" multiplier="262:55" id="YBM-ag-R99"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="24"/>
+                                <state key="normal" title="Create Snap">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createBtn:" destination="BYZ-38-t0r" eventType="touchDown" id="qec-6E-hgH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snapcover" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="B35-kO-53a">
+                                <rect key="frame" x="56.5" y="20" width="262" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B35-kO-53a" secondAttribute="height" multiplier="343:78" constant="-116.17948717948718" id="FkZ-43-AjY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="44"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="by Clay Loneman" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aMi-nU-CRI">
+                                <rect key="frame" x="213" y="85" width="106" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="Wge-Oj-E01" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Sb-M6-xxy"/>
+                            <constraint firstItem="Wge-Oj-E01" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="2cq-ob-1ot"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="frY-Pz-Ddp" secondAttribute="bottom" constant="52" id="It5-J4-s5b"/>
+                            <constraint firstItem="B35-kO-53a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KVN-uG-xG6"/>
+                            <constraint firstItem="Wge-Oj-E01" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kce-pw-sTk"/>
+                            <constraint firstItem="B35-kO-53a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pcj-8w-fhz"/>
+                            <constraint firstItem="frY-Pz-Ddp" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" id="a8B-3Z-iKf"/>
+                            <constraint firstItem="frY-Pz-Ddp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mS1-OP-1IZ"/>
+                            <constraint firstItem="B35-kO-53a" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-113" id="ovx-yA-Ken"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="create" destination="frY-Pz-Ddp" id="XfV-18-ww9"/>
+                        <outlet property="iamgeView" destination="apw-yN-x35" id="Vs5-YW-HgN"/>
+                        <outlet property="snapCoverlbl" destination="riw-Mm-Ggg" id="Mmz-G0-dfA"/>
+                        <outlet property="stickerView" destination="Wge-Oj-E01" id="q5U-EV-QW9"/>
+                        <outlet property="styleBtn" destination="1EN-Ds-VH4" id="JUi-yk-BZJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="118.29085457271366"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="azW-Wo-NQV">
+            <objects>
+                <viewController storyboardIdentifier="login" id="DLN-rg-hOt" customClass="LogInViewController" customModule="SnapNP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J49-VY-Ch9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ahe-hF-MC0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Itl-ru-6yB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827" y="109"/>
         </scene>
     </scenes>
 </document>
