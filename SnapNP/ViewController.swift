@@ -41,6 +41,7 @@ class ViewController: UIViewController {
   
     func refreshAll() {
          activity.startAnimating()
+        activity.isHidden = false
          stickerView.isHidden = true
          create.isHidden = true
         spotBtn.isHidden = true
@@ -314,7 +315,8 @@ class ViewController: UIViewController {
                 self.create.isHidden = false
                 self.create.isEnabled = true
                 self.spotBtn.isHidden = false
-                self.activity.stopAnimating()
+                self.activity.isHidden = true
+                //self.activity.stopAnimating()
             }
             
         }

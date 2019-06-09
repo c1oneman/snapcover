@@ -27,7 +27,7 @@
                                 <rect key="frame" x="56.5" y="202.5" width="262.5" height="262.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="6eV-qu-nEb" secondAttribute="height" multiplier="1:1" id="ADF-bg-clL"/>
+                                    <constraint firstAttribute="width" secondItem="6eV-qu-nEb" secondAttribute="height" multiplier="1:1" id="UsR-i6-Eno"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="squareSpin"/>
@@ -116,21 +116,21 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="6eV-qu-nEb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0lU-Vn-MJV"/>
                             <constraint firstItem="Wge-Oj-E01" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Sb-M6-xxy"/>
-                            <constraint firstItem="6eV-qu-nEb" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" id="2UU-j1-inR"/>
+                            <constraint firstItem="6eV-qu-nEb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1qI-zw-C1L"/>
                             <constraint firstItem="Wge-Oj-E01" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="2cq-ob-1ot"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="frY-Pz-Ddp" secondAttribute="bottom" constant="52" id="It5-J4-s5b"/>
                             <constraint firstItem="B35-kO-53a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KVN-uG-xG6"/>
                             <constraint firstItem="Wge-Oj-E01" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kce-pw-sTk"/>
+                            <constraint firstItem="6eV-qu-nEb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MRE-cX-Mvu"/>
                             <constraint firstItem="B35-kO-53a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pcj-8w-fhz"/>
                             <constraint firstItem="XC6-bW-DjW" firstAttribute="height" secondItem="frY-Pz-Ddp" secondAttribute="height" multiplier="0.5" id="QRf-gr-A07"/>
                             <constraint firstItem="XC6-bW-DjW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VGk-k6-6nJ"/>
-                            <constraint firstItem="6eV-qu-nEb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zda-eP-hxX"/>
                             <constraint firstItem="frY-Pz-Ddp" firstAttribute="width" secondItem="Wge-Oj-E01" secondAttribute="width" id="a8B-3Z-iKf"/>
                             <constraint firstItem="frY-Pz-Ddp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mS1-OP-1IZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XC6-bW-DjW" secondAttribute="bottom" constant="13" id="mcl-By-oXK"/>
                             <constraint firstItem="B35-kO-53a" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-113" id="ovx-yA-Ken"/>
+                            <constraint firstItem="6eV-qu-nEb" firstAttribute="height" secondItem="Wge-Oj-E01" secondAttribute="height" id="pPn-UH-MIT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
