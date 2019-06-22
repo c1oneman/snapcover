@@ -1,0 +1,6 @@
+framework module Pods_SnapNP {
+  umbrella header "Pods-SnapNP-umbrella.h"
+
+  export *
+  module * { export * }
+}

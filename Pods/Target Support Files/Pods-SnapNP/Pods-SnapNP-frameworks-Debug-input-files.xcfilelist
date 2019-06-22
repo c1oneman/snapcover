@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-SnapNP/Pods-SnapNP-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework
+${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework
+${BUILT_PRODUCTS_DIR}/SpotifyLogin/SpotifyLogin.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

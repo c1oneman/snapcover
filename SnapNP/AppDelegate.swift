@@ -12,6 +12,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SpotifyLogin.shared.configure(clientID: "a8366dcd478f4ffeadbb2fa19c416614",
                                       clientSecret: "233254af719e45f59a36a16d634ee770",
                                       redirectURL: redirectURL)
+        Thread.sleep(forTimeInterval: 3)
+
         
         return true
     }

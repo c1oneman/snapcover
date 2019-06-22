@@ -9,42 +9,76 @@ import SwiftyJSON
 import UIKit
 import SCSDKCreativeKit
 import SpotifyLogin
-import NVActivityIndicatorView
+var globalID = ""
+var key = ""
 class ViewController: UIViewController {
     @IBOutlet weak var stickerView: UIView!
-    @IBOutlet weak var create: UIButton!
     
+    @IBOutlet weak var search: UIButton!
+    @IBOutlet weak var create: UIButton!
+    var gradientLayer = CAGradientLayer()
     @IBOutlet weak var spotBtn: UIButton!
     @IBOutlet weak var styleBtn: UIButton!
     var snapAPI = SCSDKSnapAPI()
     var isBlackTheme = true
     var username = ""
     var extUrl = ""
-    var key = ""
+    
     var artistName = ""
     var songTitle = ""
     var customImage = UIImage(named:"img.png")
     var urls = URL(string: "")
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        gradientLayer.frame = self.view.bounds
+        
+        // 3
+        let color1 = UIColor.black.cgColor as CGColor
+        let color2 = UIColor.black.cgColor as CGColor
+        
+        gradientLayer.colors = [color1, color2]
+        
+        // 4
+        gradientLayer.locations = [0.0,1.0]
+        
+        // 5
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        NotificationCenter.default.addObserver(self, selector: #selector(disconnectPaxiSocket(_:)), name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
+        
+        
+       stickerView.dropShadow()
+        snapCoverlbl.textColor = UIColor.black
+        activity.isHidden = false
         activity.startAnimating()
       create.isHidden = true
         create.isEnabled = false
-        spotBtn.isHidden = true
+        //spotBtn.isHidden = true
+        
         create.layer.cornerRadius = create.frame.height/2
         create.layer.borderWidth = 1
-        create.layer.borderColor = UIColor.black.cgColor
+        create.layer.borderColor = UIColor.clear.cgColor
         NotificationCenter.default.addObserver(self, selector: #selector(refreshAllNotif), name: UIApplication.willEnterForegroundNotification, object: nil)
         snapAPI = SCSDKSnapAPI()
         iamgeView.isHidden = false
         }
-  
+    @objc func disconnectPaxiSocket(_ notification: Notification) {
+        fetchFromID(idS: globalID)
+    }
+    @IBAction func searchAction(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as! searchViewController
+        self.present(vc, animated: true, completion: nil)
+    
+        
+       
+    }
     func refreshAll() {
          activity.startAnimating()
         activity.isHidden = false
          stickerView.isHidden = true
          create.isHidden = true
-        spotBtn.isHidden = true
+        spotBtn.isHidden = false
         create.isEnabled = false
         SpotifyLogin.shared.getAccessToken { [weak self] (token, error) in
             
@@ -58,7 +92,7 @@ class ViewController: UIViewController {
                 
                 print(usernameRec!)
                 self!.username = usernameRec!
-                self!.key = token!
+                key = token!
                 self!.fetchTrackRequest()
                 //self!.fetchTrackRequest()
                 
@@ -120,7 +154,7 @@ class ViewController: UIViewController {
         }
         
     }
-    @IBOutlet weak var activity: NVActivityIndicatorView!
+  
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -137,7 +171,7 @@ class ViewController: UIViewController {
                 
                 print(usernameRec!)
                 self!.username = usernameRec!
-                self!.key = token!
+                key = token!
                 self!.fetchTrackRequest()
                 //self!.fetchTrackRequest()
                 
@@ -145,6 +179,133 @@ class ViewController: UIViewController {
             }
         }
     }
+    func fetchFromID(idS: String) {
+        let string = "https://api.spotify.com/v1/tracks/\(idS)"
+        var url = NSURL(string: string)
+        let request = NSMutableURLRequest(url: url! as URL)
+        
+        request.setValue("Bearer \(key)", forHTTPHeaderField: "Authorization") //**
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        //request.addValue("application/json", forHTTPHeaderField: "")
+        let session = URLSession.shared
+        
+        do {
+            let task = session.dataTask(with: request as URLRequest) { data, response, error in
+                guard let data = data, error == nil else {                                                 // check for fundamental networking error
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                     let alert = UIAlertController(title: "Oh dear..", message: "fundamental networking error", preferredStyle: UIAlertController.Style.alert)
+                    
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
+                    }
+                    return
+                }
+                
+                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+                    //print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                    //print("response = \(String(describing: response))")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    let alert = UIAlertController(title: "Hmmm..", message: "Error loading: \(httpStatus.statusCode)", preferredStyle: UIAlertController.Style.alert)
+                    
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
+                    }
+                }
+                
+                
+                
+                do {
+                    
+                    let json = try JSON(data: data)
+                    
+                    
+                    if let id = json["album"]["images"].array {
+                        var stringURL = id[0]["url"].url
+                        // let stringURL = self.stringify(json: id[0]["url"])
+                        //self.urls = URL(string: stringURL!)
+                        self.downloadImageSearch(from: stringURL!)
+                        
+                        // print(stringURL)
+                        //self.getTempoOfID(id: id)
+                        
+                    }
+                    
+                    if let name = json["external_urls"]["spotify"].string {
+                        self.extUrl = name
+                        
+                        
+                    }
+                    if let title = json["name"].string {
+                        self.songTitle = title
+                        if let leftIdx = title.index(of: "("),
+                            let rightIdx = title.index(of: ")")
+                        {
+                            let sansParens = String(title.prefix(upTo: leftIdx) + title.suffix(from: title.index(after: rightIdx)))
+                            self.songTitle = sansParens.trimmingCharacters(in: .whitespacesAndNewlines)
+                        }
+                        print(self.songTitle)
+                        let replaced = self.songTitle.replacingOccurrences(of: " ", with: "-")
+                        if let arts = json["artists"][0]["name"].string {
+                            self.artistName = arts.lowercased()
+                            let replaced2 = self.artistName.replacingOccurrences(of: " ", with: "-")
+                            
+                            
+                            var testURL = "https://songwhip.com/song/\(replaced2.lowercased().replacingOccurrences(of: "\'", with: "", options: NSString.CompareOptions.literal, range: nil))/\(replaced.lowercased().replacingOccurrences(of: "\'", with: "", options: NSString.CompareOptions.literal, range: nil))"
+                            print("TEST \(testURL)")
+                            guard let myURL = URL(string: testURL) else {
+                                print("Error: \(testURL) doesn't seem to be a valid URL")
+                                return
+                            }
+                            
+                            do {
+                                let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
+                                print("HTML : \(myHTMLString)")
+                                
+                                self.extUrl = testURL
+                                
+                            } catch let error {
+                                print("Error: \(error)")
+                                testURL = "https://songwhip.com/album/\(replaced2.lowercased().replacingOccurrences(of: "\'", with: "", options: NSString.CompareOptions.literal, range: nil))/\(replaced.lowercased().replacingOccurrences(of: "\'", with: "", options: NSString.CompareOptions.literal, range: nil))"
+                                print("TEST \(testURL)")
+                                guard let myURL = URL(string: testURL) else {
+                                    print("Error: \(testURL) doesn't seem to be a valid URL")
+                                    return
+                                }
+                                
+                                do {
+                                    let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
+                                    print("HTML : \(myHTMLString)")
+                                    self.extUrl = testURL
+                                   
+                                } catch let error {
+                                    print("Error: \(error)")
+                                    testURL = self.extUrl
+                                    self.extUrl = testURL
+                                    
+                                }
+                            }
+                        }
+                        
+                    }
+                    
+                    
+                }
+                catch {
+                    
+                }
+            }
+            task.resume()
+          
+        }
+    }
+    
     func fetchTrackRequest() {
     let string = "https://api.spotify.com/v1/me/player/currently-playing"
         var url = NSURL(string: string)
@@ -159,15 +320,33 @@ class ViewController: UIViewController {
     do {
     let task = session.dataTask(with: request as URLRequest) { data, response, error in
     guard let data = data, error == nil else {                                                 // check for fundamental networking error
-    
-    
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            // your code here
+        
+        let alert = UIAlertController(title: "Oh dear.", message: "Fundamental networking error.", preferredStyle: UIAlertController.Style.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+        }
     return
     }
     
-    if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+    if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        // check for http errors
     //print("statusCode should be 200, but is \(httpStatus.statusCode)")
     //print("response = \(String(describing: response))")
-    
+    let alert = UIAlertController(title: "Nothing playing.", message: "You can search Spotify with the button above.", preferredStyle: UIAlertController.Style.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+        }
     }
     
     
@@ -256,8 +435,8 @@ class ViewController: UIViewController {
         let dialogMessage = UIAlertController(title: "Disconnect Spotify", message: "Are you sure you want to sign out of Spotify account \(self.username)?", preferredStyle: .alert)
         
         // Create OK button with action handler
-        let ok = UIAlertAction(title: "Yes", style: .destructive, handler: { (action) -> Void in
-            print("Ok button tapped")
+        let ok = UIAlertAction(title: "Disconnect", style: .destructive, handler: { (action) -> Void in
+            
             SpotifyLogin.shared.logout()
             self.showLogin()
         })
@@ -300,6 +479,8 @@ class ViewController: UIViewController {
         
         return ""
     }
+ 
+   
     @IBOutlet weak var iamgeView: UIImageView!
     func downloadImage(from url: URL) {
         print("Download Started")
@@ -309,20 +490,58 @@ class ViewController: UIViewController {
             print("Download Finished")
             DispatchQueue.main.async() {
                 self.iamgeView.image = UIImage(data: data)
+                
                 self.customImage = UIImage(data: data)!
+                self.activity.isHidden = true
+                self.activity.stopAnimating()
+                self.gradientLayer.colors = [ UIColor.black.cgColor, self.customImage?.averageColor?.cgColor]
                 print("Done setting image")
                 self.stickerView.isHidden = false
                 self.create.isHidden = false
                 self.create.isEnabled = true
                 self.spotBtn.isHidden = false
-                self.activity.isHidden = true
+                //self.view.backgroundColor = self.customImage?.averageColor
+                //self.activity.isHidden = true
                 //self.activity.stopAnimating()
             }
             
         }
+    }
     
     
+func downloadImageSearch(from url: URL) {
+    print("Download Started")
+    getData(from: url) { data, response, error in
+        guard let data = data, error == nil else { return }
+        print(response?.suggestedFilename ?? url.lastPathComponent)
+        print("Download Finished")
+        DispatchQueue.main.async() {
+            self.iamgeView.image = UIImage(data: data)
+            
+            self.customImage = UIImage(data: data)!
+            self.gradientLayer.colors = [ UIColor.black.cgColor, self.customImage?.averageColor?.cgColor]
+            self.activity.isHidden = true
+            self.activity.stopAnimating()
+            self.view.backgroundColor = UIColor.clear
+           
+            print("Done setting image")
+            self.stickerView.isHidden = false
+            self.create.isHidden = false
+            self.create.isEnabled = true
+            self.spotBtn.isHidden = false
+           // self.view.backgroundColor = self.customImage?.averageColor
+            DispatchQueue.main.async {
+                self.demoSendSticker()
+            }
+            //self.activity.isHidden = true
+            //self.activity.stopAnimating()
+        }
+        
+    }
 }
+
+
+    @IBOutlet weak var activity: NVActivityIndicatorView!
 }
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
@@ -343,5 +562,45 @@ extension UIImageView {
     func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
+    }
+}
+extension UIImage {
+    
+    var averageColor: UIColor? {
+        guard let inputImage = self.ciImage ?? CIImage(image: self) else { return nil }
+        guard let filter = CIFilter(name: "CIAreaAverage", parameters: [kCIInputImageKey: inputImage, kCIInputExtentKey: CIVector(cgRect: inputImage.extent)])
+            else { return nil }
+        guard let outputImage = filter.outputImage else { return nil }
+        
+        var bitmap = [UInt8](repeating: 0, count: 4)
+        let context = CIContext(options: [CIContextOption.workingColorSpace : kCFNull])
+        let outputImageRect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        
+        context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: outputImageRect, format: CIFormat.RGBA8, colorSpace: nil)
+        
+        return UIColor(red: CGFloat(bitmap[0]) / 255, green: CGFloat(bitmap[1]) / 255, blue: CGFloat(bitmap[2]) / 255, alpha: CGFloat(bitmap[3] / 255))
+    }
+}
+class Colors {
+    var gl:CAGradientLayer!
+    
+    init(colorToGrad: UIColor) {
+        let colorBottom = colorToGrad.cgColor
+        let colorTop = UIColor(red: 0.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0).cgColor
+        
+        self.gl = CAGradientLayer()
+        self.gl.colors = [colorTop, colorBottom]
+        self.gl.locations = [0.0, 1.0]
+    }
+}
+extension UIView {
+    func dropShadow(scale: Bool = true) {
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.2
+        layer.shadowOffset = .zero
+        layer.shadowRadius = 15
+        layer.shouldRasterize = true
+        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
     }
 }
