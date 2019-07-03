@@ -278,66 +278,29 @@ class ViewController: UIViewController {
                     }
                     
                     if let name = json["external_urls"]["spotify"].string {
-                        self.extUrl = "https://www.snapcover.app/song?c=Spotify&d=\(idS)"
+                        self.extUrl = "https://www.snapcover.app/song?c=" + name
                         
                         
                     }
                     if let title = json["name"].string {
                         self.songTitle = title
-                        if let leftIdx = title.index(of: "("),
-                            let rightIdx = title.index(of: ")")
-                        {
-                            let sansParens = String(title.prefix(upTo: leftIdx) + title.suffix(from: title.index(after: rightIdx)))
-                            self.songTitle = sansParens.trimmingCharacters(in: .whitespacesAndNewlines)
-                        }
+                        
+                         
+                    }
                         print(self.songTitle)
-                        let replaced = self.songTitle.replacingOccurrences(of: " ", with: "-")
+                        //let replaced = self.songTitle.replacingOccurrences(of: " ", with: "-")
                         if let arts = json["artists"][0]["name"].string {
                             self.artistName = arts.lowercased()
-                            let replaced2 = self.artistName.replacingOccurrences(of: " ", with: "-")
-                            
                            
-                            var testURL = "https://songwhip.com/song/\(self.filterChars(input: replaced2))/\(self.filterChars(input: replaced))"
-                            print("TEST \(testURL)")
-                            guard let myURL = URL(string: testURL) else {
-                                print("Error: \(testURL) doesn't seem to be a valid URL")
-                                return
-                            }
                             
-                            do {
-                                let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
-                                print("HTML : \(myHTMLString)")
-                                
-                                self.extUrl = "https://www.snapcover.app/song?c=Songwhip&d=\(self.filterChars(input: replaced2))&e=\(self.filterChars(input: replaced))"
-                                
-                            } catch let error {
-                                print("Error: \(error)")
-                                testURL = "https://songwhip.com/album/\(self.filterChars(input: replaced2))/\(self.filterChars(input: replaced))"
-                                print("TEST \(testURL)")
-                                guard let myURL = URL(string: testURL) else {
-                                    print("Error: \(testURL) doesn't seem to be a valid URL")
-                                    return
-                                }
-                                
-                                do {
-                                    let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
-                                    print("HTML : \(myHTMLString)")
-                                    self.extUrl = "https://www.snapcover.app/song?c=Songwhip&d=\(self.filterChars(input: replaced2))&e=\(self.filterChars(input: replaced))"
-                                   
-                                } catch let error {
-                                    print("Error: \(error)")
-                                    //
-                                    //testURL = self.extUrl
-                                   // self.extUrl = testURL
-                                    
-                                }
-                            }
+                            
+                            
                         }
                         
                     }
                     
                     
-                }
+                
                 catch {
                     
                 }
@@ -426,67 +389,20 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
     }
        
     if let name = json["item"]["album"]["external_urls"]["spotify"].string {
-        self.extUrl = name
+        self.extUrl = "https://snapcover.app/song?c=" + name
     
     
     }
-        if let extID = json["item"]["id"].string {
-           self.extUrl = "https://www.snapcover.app/song?c=Spotify&d=\(extID)"
-            
-            
-        }
+      
         if let title = json["item"]["name"].string {
             self.songTitle = title
-            print(title)
-            if let leftIdx = title.index(of: "("),
-                let rightIdx = title.index(of: ")")
-            {
-                let sansParens = String(title.prefix(upTo: leftIdx) + title.suffix(from: title.index(after: rightIdx)))
-                self.songTitle = sansParens.trimmingCharacters(in: .whitespacesAndNewlines)
-            }
+            
             print("TITLE",self.songTitle)
             var replaced = self.filterChars(input: self.songTitle)
             if let arts = json["item"]["artists"][0]["name"].string {
                  print("ARTIST",arts)
                 self.artistName = arts
-                let replaced2 = self.filterChars(input: arts)
-                
-                
-                var testURL = "https://songwhip.com/song/\(self.filterChars(input: replaced2))/\(self.filterChars(input: replaced))"
-                print("TEST \(testURL)")
-                guard let myURL = URL(string: testURL) else {
-                    print("Error: \(testURL) doesn't seem to be a valid URL")
-                    return
-                }
-                
-                do {
-                    let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
-                   // print("HTML : \(myHTMLString)")
-                    
-                    self.extUrl = "https://www.snapcover.app/song?c=Songwhip&d=\(self.filterChars(input: replaced2))&e=\(self.filterChars(input: replaced))&type=Song"
-                    
-                } catch let error {
-                    print("Error: \(error)")
-                    testURL = "https://songwhip.com/album/\(self.filterChars(input: replaced2))/\(self.filterChars(input: replaced))"
-                    print("ALBUM \(testURL)")
-                    guard let myURL = URL(string: testURL) else {
-                        print("Error: \(testURL) doesn't seem to be a valid URL")
-                        return
-                    }
-                    
-                    do {
-                        let myHTMLString = try String(contentsOf: myURL, encoding: .ascii)
-                        //print("HTML : \(myHTMLString)")
-                        self.extUrl = "https://www.snapcover.app/song?c=Songwhip&d=\(self.filterChars(input: replaced2))&e=\(self.filterChars(input: replaced))&type=Album"
-                        
-                    } catch let error {
-                        print("Error: \(error)")
-                        //
-                        //testURL = self.extUrl
-                        // self.extUrl = testURL
-                        
-                    }
-                }
+              
             }
            
         }
