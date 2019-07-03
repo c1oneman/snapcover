@@ -74,12 +74,16 @@ class ViewController: UIViewController {
        
     }
     func refreshAll() {
+        
+            self.refreshView.alpha = 0.0
+            self.activity.isHidden = false
+            self.stickerView.isHidden = true
+            self.create.isHidden = true
+            self.spotBtn.isHidden = false
+            self.create.isEnabled = false
+       
          activity.startAnimating()
-        activity.isHidden = false
-         stickerView.isHidden = true
-         create.isHidden = true
-        spotBtn.isHidden = false
-        create.isEnabled = false
+        
         SpotifyLogin.shared.getAccessToken { [weak self] (token, error) in
             
             if error != nil || token == nil {
@@ -105,21 +109,32 @@ class ViewController: UIViewController {
     }
     func demoSendSticker() {
         /* Sticker to be used in the Snap */
-        
-        let renderer = UIGraphicsImageRenderer(size: stickerView.bounds.size)
-        
-        let image = renderer.image { ctx in
-            stickerView.drawHierarchy(in: stickerView.bounds, afterScreenUpdates: true)
+         let snap = SCSDKNoSnapContent()
+        if #available(iOS 10.0, *) {
+            let renderer = UIGraphicsImageRenderer(size: stickerView.bounds.size)
+            let image = renderer.image { ctx in
+                stickerView.drawHierarchy(in: stickerView.bounds, afterScreenUpdates: true)
+                
+            }
+            let sticker = SCSDKSnapSticker(stickerImage: image)
+            snap.sticker = sticker
+        } else {
+            // Fallback on earlier versions
+            let image = customImage!
+             let sticker = SCSDKSnapSticker(stickerImage: image)
+             snap.sticker = sticker
         }
         
+       
+        
         //let stickerImage = image/* Prepare a sticker image */
-        let sticker = SCSDKSnapSticker(stickerImage: image)
+       
         /* Alternatively, use a URL instead */
         // let sticker = SCSDKSnapSticker(stickerUrl: stickerImageUrl, isAnimated: false)
         
         /* Modeling a Snap using SCSDKNoSnapContent */
-        let snap = SCSDKNoSnapContent()
-        snap.sticker = sticker /* Optional */
+       
+        /* Optional */
         /* Optional */
         snap.caption = songTitle + "\n" + artistName
         snap.attachmentUrl = extUrl
@@ -134,8 +149,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var snapCoverlbl: UILabel!
     @IBAction func styleBtnAction(_ sender: Any) {
-        let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
-        selectionFeedbackGenerator.selectionChanged()
+        if #available(iOS 10.0, *) {
+            let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+            selectionFeedbackGenerator.selectionChanged()
+        } else {
+            // Fallback on earlier versions
+        }
+        
         if isBlackTheme {
             snapCoverlbl.textColor = UIColor.white
             snapCoverlbl.shadowColor = UIColor.black
@@ -155,9 +175,29 @@ class ViewController: UIViewController {
         
     }
   
+    @IBAction func actionRefresh(_ sender: Any) {
+       self.refreshAll()
+    }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    var alreadyPressed = false
+    @IBAction func backgroundPress(_ sender: Any) {
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: [ .curveEaseOut], animations: {
+            self.refreshView.alpha = 1.0
+        }, completion: nil)
+        if(alreadyPressed == false) {
+            self.alreadyPressed = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                UIView.animate(withDuration: 0.5, delay: 0.0, options: [ .curveEaseOut], animations: {
+                   self.refreshView.alpha = 0.0
+                }, completion: nil)
+            self.alreadyPressed = false
+            
+        }
+        }
+    }
+    @IBOutlet weak var refreshView: UIView!
     override func viewDidAppear(_ animated: Bool) {
         SpotifyLogin.shared.getAccessToken { [weak self] (token, error) in
             
@@ -343,16 +383,27 @@ class ViewController: UIViewController {
     
     if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-        // check for http errors
-    //print("statusCode should be 200, but is \(httpStatus.statusCode)")
-    //print("response = \(String(describing: response))")
-    let alert = UIAlertController(title: "Nothing playing.", message: "You can search Spotify with the button above.", preferredStyle: UIAlertController.Style.alert)
+    let dialogMessage = UIAlertController(title: "Spotify not Playing", message: "Please try-again or search Spotify", preferredStyle: .alert)
+    
+    // Create OK button with action handler
+    let ok = UIAlertAction(title: "Try Again", style: .destructive, handler: { (action) -> Void in
         
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertAction.Style.default, handler: nil))
         
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
+        self.refreshAll()
+    })
+    
+    // Create Cancel button with action handlder
+    let cancel = UIAlertAction(title: "Search Spotify", style: .cancel) { (action) -> Void in
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "search") as! searchViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    //Add OK and Cancel button to dialog message
+    dialogMessage.addAction(ok)
+    dialogMessage.addAction(cancel)
+    
+    // Present dialog message to user
+    self.present(dialogMessage, animated: true, completion: nil)
         }
     }
     

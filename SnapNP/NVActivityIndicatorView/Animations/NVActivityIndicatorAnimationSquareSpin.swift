@@ -9,7 +9,7 @@ class NVActivityIndicatorAnimationSquareSpin: NVActivityIndicatorAnimationDelega
         // Animation
         let animation = CAKeyframeAnimation(keyPath: "transform")
         
-        animation.keyTimes = [0, 0.25, 0.5, 0.75, 1]
+        animation.keyTimes = [0, 0.25, 0.5, 0.75, 0.1]
         animation.timingFunctions = [timingFunction, timingFunction, timingFunction, timingFunction]
         animation.values = [
             NSValue(caTransform3D: CATransform3DConcat(createRotateXTransform(angle: 0), createRotateYTransform(angle: 0))),

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F7FF14522C08A02006BB9FB /* AvenirNextLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6F7FF14422C08A02006BB9FB /* AvenirNextLTPro-Bold.otf */; };
+		6F7FF14622C08A14006BB9FB /* AvenirNextLTPro-Bold.otf in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FF14422C08A02006BB9FB /* AvenirNextLTPro-Bold.otf */; };
+		6FBCC24522C088E500EA70E8 /* AvenirNextLTPro-BoldCn.otf in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCC24422C088E100EA70E8 /* AvenirNextLTPro-BoldCn.otf */; };
+		6FBCC24622C088EA00EA70E8 /* AvenirNextLTPro-BoldCn.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6FBCC24422C088E100EA70E8 /* AvenirNextLTPro-BoldCn.otf */; };
 		881EFE20C58A7C08A7EDDF8B /* Pods_SnapNP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B2557486C518DBBD0EB679 /* Pods_SnapNP.framework */; };
-		9809163822AC0413001E286D /* AvenirNextLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9809163722AC0405001E286D /* AvenirNextLTPro-Bold.otf */; };
 		980C424E22B5943200BDE1A5 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980C424D22B5943200BDE1A5 /* searchViewController.swift */; };
 		987C1D7A22AABCE800EA2CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C1D7922AABCE800EA2CD2 /* AppDelegate.swift */; };
 		987C1D7C22AABCE800EA2CD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C1D7B22AABCE800EA2CD2 /* ViewController.swift */; };
@@ -76,6 +79,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F7FF14422C08A02006BB9FB /* AvenirNextLTPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Bold.otf"; sourceTree = "<group>"; };
+		6FBCC24422C088E100EA70E8 /* AvenirNextLTPro-BoldCn.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-BoldCn.otf"; sourceTree = "<group>"; };
 		9809163722AC0405001E286D /* AvenirNextLTPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AvenirNextLTPro-Bold.otf"; path = "../../AvenirNextLTPro-Bold.otf"; sourceTree = "<group>"; };
 		980C424D22B5943200BDE1A5 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		987C1D7622AABCE800EA2CD2 /* SnapNP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapNP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,7 +215,9 @@
 			children = (
 				987C1D7922AABCE800EA2CD2 /* AppDelegate.swift */,
 				98D1DB5A22AAD73E00E4DBD6 /* loginViewController.swift */,
+				6FBCC24422C088E100EA70E8 /* AvenirNextLTPro-BoldCn.otf */,
 				980C424D22B5943200BDE1A5 /* searchViewController.swift */,
+				6F7FF14422C08A02006BB9FB /* AvenirNextLTPro-Bold.otf */,
 				987C1D7B22AABCE800EA2CD2 /* ViewController.swift */,
 				987C1D7D22AABCE800EA2CD2 /* Main.storyboard */,
 				987C1D8022AABCEB00EA2CD2 /* Assets.xcassets */,
@@ -406,9 +413,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9809163822AC0413001E286D /* AvenirNextLTPro-Bold.otf in Resources */,
+				6FBCC24622C088EA00EA70E8 /* AvenirNextLTPro-BoldCn.otf in Resources */,
 				987C1D8422AABCEB00EA2CD2 /* LaunchScreen.storyboard in Resources */,
 				987C1D8122AABCEB00EA2CD2 /* Assets.xcassets in Resources */,
+				6F7FF14522C08A02006BB9FB /* AvenirNextLTPro-Bold.otf in Resources */,
 				987C1D7F22AABCE800EA2CD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +484,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7FF14622C08A14006BB9FB /* AvenirNextLTPro-Bold.otf in Sources */,
+				6FBCC24522C088E500EA70E8 /* AvenirNextLTPro-BoldCn.otf in Sources */,
 				9883F21122AD7C200054E484 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				9883F21222AD7C200054E484 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				9883F21322AD7C200054E484 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
@@ -607,6 +617,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 3459QLS3UC;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -668,6 +679,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 3459QLS3UC;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -693,16 +705,20 @@
 			baseConfigurationReference = CE826E031FFDAECE9B2C7AA1 /* Pods-SnapNP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3459QLS3UC;
 				INFOPLIST_FILE = SnapNP/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CLSoftware.SnapNP;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Snapcover.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -713,16 +729,20 @@
 			baseConfigurationReference = F1142B40E5472EAA0E2FD942 /* Pods-SnapNP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3459QLS3UC;
 				INFOPLIST_FILE = SnapNP/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CLSoftware.SnapNP;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Snapcover.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
