@@ -109,6 +109,7 @@ class ViewController: UIViewController {
     }
     func demoSendSticker() {
         /* Sticker to be used in the Snap */
+        print("send sticker")
          let snap = SCSDKNoSnapContent()
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(size: stickerView.bounds.size)
@@ -137,6 +138,8 @@ class ViewController: UIViewController {
         /* Optional */
         /* Optional */
         snap.caption = songTitle + "\n" + artistName
+        print(extUrl)
+        extUrl = extUrl.replacingOccurrences(of: " ", with: "%20")
         snap.attachmentUrl = extUrl
         view.isUserInteractionEnabled = false
         print("Next Sent")
@@ -277,11 +280,7 @@ class ViewController: UIViewController {
                         
                     }
                     
-                    if let name = json["external_urls"]["spotify"].string {
-                        self.extUrl = "https://www.snapcover.app/song?c=" + name
-                        
-                        
-                    }
+                    
                     if let title = json["name"].string {
                         self.songTitle = title
                         
@@ -291,7 +290,11 @@ class ViewController: UIViewController {
                         //let replaced = self.songTitle.replacingOccurrences(of: " ", with: "-")
                         if let arts = json["artists"][0]["name"].string {
                             self.artistName = arts.lowercased()
-                           
+                            if let name = json["external_urls"]["spotify"].string {
+                                self.extUrl = "https://www.snapcover.app/song?c=" + name + "&d=" + self.songTitle + "&e=" + self.artistName
+                                
+                                
+                            }
                             
                             
                             
@@ -388,11 +391,7 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
     
     }
        
-    if let name = json["item"]["album"]["external_urls"]["spotify"].string {
-        self.extUrl = "https://snapcover.app/song?c=" + name
-    
-    
-    }
+  
       
         if let title = json["item"]["name"].string {
             self.songTitle = title
@@ -402,7 +401,10 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             if let arts = json["item"]["artists"][0]["name"].string {
                  print("ARTIST",arts)
                 self.artistName = arts
-              
+                if let name = json["item"]["album"]["external_urls"]["spotify"].string {
+                    self.extUrl = "https://www.snapcover.app/song?c=" + name + "&d=" + self.songTitle + "&e=" + self.artistName
+                    
+                }
             }
            
         }
