@@ -28,11 +28,21 @@ class searchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    public let percentThresholdDismiss: CGFloat = 0.3
+    public var velocityDismiss: CGFloat = 300
+    public var axis: NSLayoutConstraint.Axis = .vertical
+    public var backgroundDismissColor: UIColor = .clear {
+        didSet {
+            navigationController?.view.backgroundColor = backgroundDismissColor
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(onDrag(_:))))
+        
         searchTextEntry.delegate = self
         searchTextEntry.becomeFirstResponder()
+        searchTextEntry.text = "Search Spotify"
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.estimatedRowHeight = 50
@@ -43,6 +53,63 @@ class searchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
         searchTextEntry.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         // Do any additional setup after loading the view.
+    }
+    @objc fileprivate func onDrag(_ sender: UIPanGestureRecognizer) {
+        
+        let translation = sender.translation(in: view)
+        
+        // Movement indication index
+        let movementOnAxis: CGFloat
+        
+        // Move view to new position
+        switch axis {
+        case .vertical:
+            let newY = min(max(view.frame.minY + translation.y, 0), view.frame.maxY)
+            movementOnAxis = newY / view.bounds.height
+            view.frame.origin.y = newY
+            
+        case .horizontal:
+            let newX = min(max(view.frame.minX + translation.x, 0), view.frame.maxX)
+            movementOnAxis = newX / view.bounds.width
+            view.frame.origin.x = newX
+        }
+        
+        let positiveMovementOnAxis = fmaxf(Float(movementOnAxis), 0.0)
+        let positiveMovementOnAxisPercent = fminf(positiveMovementOnAxis, 1.0)
+        let progress = CGFloat(positiveMovementOnAxisPercent)
+        navigationController?.view.backgroundColor = UIColor.black.withAlphaComponent(1 - progress)
+        
+        switch sender.state {
+        case .ended where sender.velocity(in: view).y >= velocityDismiss || progress > percentThresholdDismiss:
+            // After animate, user made the conditions to leave
+            UIView.animate(withDuration: 0.2, animations: {
+                switch self.axis {
+                case .vertical:
+                    self.view.frame.origin.y = self.view.bounds.height
+                    
+                case .horizontal:
+                    self.view.frame.origin.x = self.view.bounds.width
+                }
+                self.navigationController?.view.backgroundColor = UIColor.black.withAlphaComponent(0)
+                
+            }, completion: { finish in
+                self.dismiss(animated: true) //Perform dismiss
+            })
+        case .ended:
+            // Revert animation
+            UIView.animate(withDuration: 0.2, animations: {
+                switch self.axis {
+                case .vertical:
+                    self.view.frame.origin.y = 0
+                    
+                case .horizontal:
+                    self.view.frame.origin.x = 0
+                }
+            })
+        default:
+            break
+        }
+        sender.setTranslation(.zero, in: view)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -145,6 +212,9 @@ class searchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     func callAlamo(url : String){
         let headers: HTTPHeaders = [

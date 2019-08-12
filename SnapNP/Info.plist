@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Snapcover</string>
+	<string>Coverly</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -32,7 +32,9 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>5</string>
+	<string>6</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-7908027428647197~9067202662</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>snapchat</string>
@@ -40,6 +42,8 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Fetching what Apple Music is currently playing.</string>
 	<key>SCSDKClientId</key>
 	<string>a6373a20-8f21-45d1-87d4-e34eac7dcc24</string>
 	<key>UILaunchStoryboardName</key>
@@ -50,6 +54,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

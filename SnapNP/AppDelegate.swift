@@ -1,6 +1,6 @@
 import UIKit
 import SpotifyLogin
-
+import GoogleMobileAds
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -12,9 +12,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SpotifyLogin.shared.configure(clientID: "a8366dcd478f4ffeadbb2fa19c416614",
                                       clientSecret: "233254af719e45f59a36a16d634ee770",
                                       redirectURL: redirectURL)
-        Thread.sleep(forTimeInterval: 1)
+         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        UITextField.appearance().keyboardAppearance = .dark
 
-        
+         UIApplication.shared.statusBarStyle = .lightContent
         return true
     }
     
