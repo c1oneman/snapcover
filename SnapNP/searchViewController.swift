@@ -240,7 +240,6 @@ class searchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         callAlamo(url: searchURL)
     }
 }
-
 class HeadlineTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     

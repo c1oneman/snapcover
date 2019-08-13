@@ -30,6 +30,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - Pastel (0.6.0)
   - SnapSDK/SCSDKCreativeKit (1.3.2)
   - SpotifyLogin (0.1.6)
   - SwiftVideoBackground (3.3.0)
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - Alamofire
   - AZDialogView
   - Google-Mobile-Ads-SDK
+  - Pastel
   - SnapSDK/SCSDKCreativeKit
   - SpotifyLogin
   - SwiftVideoBackground (~> 3.0)
@@ -52,6 +54,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - nanopb
+    - Pastel
     - SnapSDK
     - SpotifyLogin
     - SwiftVideoBackground
@@ -64,11 +67,12 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 47285fa897e5a125df56b9ef8750a1d81e4598a8
   GoogleUtilities: 64b5e3982b1b01bda26712affd5c523ef32563cf
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  Pastel: 814f081efbe2859c37e65ee44f396e6e5be88619
   SnapSDK: 11226f7d562030dfc9212da2d9fd956f037fba3b
   SpotifyLogin: 9cdf82ff13e5f37e5ddc7fd07cf9793a9ebd1124
   SwiftVideoBackground: ebcc843d4cbcfc520e42472dad80925a6433da06
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 45e3ee47224e31d569871960452f1631ede1af14
+PODFILE CHECKSUM: 060b3ff1e392b0a750b3cbea78d559a8a34fb1c7
 
-COCOAPODS: 1.7.0
+COCOAPODS: 1.7.5

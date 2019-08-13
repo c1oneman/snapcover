@@ -13,8 +13,6 @@
 		6FBCC24622C088EA00EA70E8 /* AvenirNextLTPro-BoldCn.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6FBCC24422C088E100EA70E8 /* AvenirNextLTPro-BoldCn.otf */; };
 		881EFE20C58A7C08A7EDDF8B /* Pods_SnapNP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B2557486C518DBBD0EB679 /* Pods_SnapNP.framework */; };
 		980C424E22B5943200BDE1A5 /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980C424D22B5943200BDE1A5 /* searchViewController.swift */; };
-		98496F4822DFC0B500BF7030 /* 1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 98496F4722DFC0B500BF7030 /* 1024.png */; };
-		984BD0F922F3C1CB00B44AAE /* bigFile.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 984BD0F822F3C1B100B44AAE /* bigFile.mp4 */; };
 		987C1D7A22AABCE800EA2CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C1D7922AABCE800EA2CD2 /* AppDelegate.swift */; };
 		987C1D7C22AABCE800EA2CD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987C1D7B22AABCE800EA2CD2 /* ViewController.swift */; };
 		987C1D7F22AABCE800EA2CD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987C1D7D22AABCE800EA2CD2 /* Main.storyboard */; };
@@ -419,8 +417,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				984BD0F922F3C1CB00B44AAE /* bigFile.mp4 in Resources */,
-				98496F4822DFC0B500BF7030 /* 1024.png in Resources */,
 				6FBCC24622C088EA00EA70E8 /* AvenirNextLTPro-BoldCn.otf in Resources */,
 				987C1D8422AABCEB00EA2CD2 /* LaunchScreen.storyboard in Resources */,
 				987C1D8122AABCEB00EA2CD2 /* Assets.xcassets in Resources */,

@@ -207,17 +207,19 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
         print("send sticker")
          let snap = SCSDKNoSnapContent()
         if #available(iOS 10.0, *) {
-            let size = CGSize(width: stickerView.bounds.width, height: stickerView.bounds.height*2)
+            let size = CGSize(width: stickerView.bounds.width, height: stickerView.bounds.height)
             let renderer = UIGraphicsImageRenderer(size: size)
             let image = renderer.pngData { ctx in
                 
                // UIColor.clear.set()
-                
+               
 
                 
                stickerView.drawHierarchy(in: stickerView.bounds, afterScreenUpdates: true)
                 
             }
+            
+            //var imageToUseAsSticker = self.resizeImage(image: UIImage(data: image)!, targetSize: CGSize(width: 200.0, height: 200.0))
             let sticker = SCSDKSnapSticker(stickerImage: UIImage(data: image)!)
             snap.sticker = sticker
         } else {
@@ -531,8 +533,13 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
            // dialog.dismiss(animated: true, completion: nil)
            //  self.refreshAll()
         })
-        self.present(dialog, animated: false, completion: nil)
-    }
+        DispatchQueue.main.async {
+            //Do UI Code here.
+            //Call Google maps methods.
+            self.present(dialog, animated: false, completion: nil)
+            }
+        }
+        
     func aboutDia() {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
@@ -598,7 +605,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
                 self.sendEmail()
             })
             
-            dialog.addAction(AZDialogAction(title: "Disconnect Spotify") { (dialog) -> (Void) in
+            dialog.addAction(AZDialogAction(title: "Spotify") { (dialog) -> (Void) in
                 //add your actions here.
                 
                 dialog.dismiss(animated: false, completion: nil)
@@ -782,6 +789,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
     func showLogin() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "login")
+        controller.modalPresentationStyle = .fullScreen
         self.present(controller, animated: true, completion: nil)
     }
     @IBOutlet weak var lbl: UILabel!
@@ -863,6 +871,31 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
         aboutDia()
         
     }
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+        
+        let widthRatio  = targetSize.width  / size.width
+        let heightRatio = targetSize.height / size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
 func downloadImageSearch(from url: URL) {
     print("Download Started")
     imgURLpublic = url.absoluteString
@@ -927,6 +960,7 @@ extension UIImageView {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
     }
+    
 }
 extension UIImage {
     
@@ -991,3 +1025,4 @@ extension UIView {
         layer.mask = mask
     }
 }
+
