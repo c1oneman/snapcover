@@ -11,6 +11,7 @@ import UIKit
 import Pastel
 import SpotifyLogin
 import SwiftVideoBackground
+import SafariServices
 class LogInViewController: UIViewController {
     
     var loginButton: UIButton?
@@ -20,48 +21,50 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
-        
-        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(loginSuccessful),
                                                name: .SpotifyLoginSuccessful,
                                                object: nil)
     }
-    override func viewDidLayoutSubviews() {
-        DispatchQueue.main.async {
-        let button = SpotifyLoginButton(viewController: self,
-                                        scopes: [.userReadCurrentlyPlaying])
-        let xPostion:CGFloat = 0
-        let yPostion:CGFloat = 100
-        let buttonWidth:CGFloat = self.view.frame.width * 0.7
-        
-        let buttonHeight:CGFloat = self.view.frame.width * 0.16
-        
-        button.frame = CGRect(x:xPostion + self.view.frame.width/2 - buttonWidth/2, y:self.view.frame.size.height - yPostion, width:buttonWidth, height:buttonHeight)
-        self.view.addSubview(button)
-        self.loginButton = button
-            //setGradientBackground()
-            
-            let pastelView = PastelView(frame: self.view.bounds)
-            
-            // Custom Direction
-            pastelView.startPastelPoint = .bottomLeft
-            pastelView.endPastelPoint = .topRight
-            
-            // Custom Duration
-            pastelView.animationDuration = 3.0
-            
-            // Custom Color
-            pastelView.setColors([UIColor(red: 24/255, green: 78/255, blue: 104/255, alpha: 1.0),
-                                  UIColor(red: 66/255, green: 230/255, blue: 149/255, alpha: 1.0),UIColor(red: 252/255, green: 227/255, blue: 138/255, alpha: 1.0)])
-            pastelView.startAnimation()
-            //252,227,138
-            
-            
-            self.view.insertSubview(pastelView, at: 0)
+    @IBAction func loginToSpotify(_ sender: Any) {
+        SpotifyLoginPresenter.login(from: self, scopes: [.userReadCurrentlyPlaying])
+    }
+    func showSafariVC(for url: String) {
+        guard let url = URL(string: url) else {
+            //Show an invalid URL error alert
+            return
         }
+        
+        let safariVC = SFSafariViewController(url: url)
+        present(safariVC, animated: true)
+    }
+    @IBOutlet weak var imageView: UIImageView!
+    override func viewDidLayoutSubviews() {
+  
+        runGradient()
+        imageView.blink()
+    }
+    @IBAction func termsOfServiceBtn(_ sender: Any) {
+        self.showSafariVC(for: "https://www.coverly.app/tos")
+    }
+    func runGradient() {
+        
+        let pastelView = PastelView(frame: view.bounds)
+        
+        // Custom Direction
+        pastelView.startPastelPoint = .bottomLeft
+        pastelView.endPastelPoint = .topRight
+        
+        // Custom Duration
+        pastelView.animationDuration = 3.0
+        
+        // Custom Color
+        pastelView.setColors([UIColor(red: 32/255, green: 158/255, blue: 255/255, alpha: 1.0),
+                              UIColor(red: 90/255, green: 120/255, blue: 127/255, alpha: 1.0),
+                              UIColor(red: 58/255, green: 255/255, blue: 217/255, alpha: 1.0)])
+        
+        pastelView.startAnimation()
+        view.insertSubview(pastelView, at: 0)
     }
     func setGradientBackground() {
         let colorTop =  UIColor(red: 0/255.0, green: 252/255.0, blue: 100/255.0, alpha: 1.0).cgColor
@@ -77,7 +80,7 @@ class LogInViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        loginButton?.center = self.view.center
+        //loginButton?.center = self.view.center
     }
     
     deinit {
@@ -87,6 +90,19 @@ class LogInViewController: UIViewController {
     @objc func loginSuccessful() {
         self.dismiss(animated: true, completion: nil)
         NotificationCenter.default.post(name: Notification.Name(rawValue: "loginRefresh"), object: nil)
+    }
+}
+extension UIView {
+    func blink(duration: Double=1.0, repeatCount: Int=5) {
+        self.alpha = 0.3;
+        UIView.animate(withDuration: duration,
+                       delay: 0.0,
+                       options: [.curveEaseInOut, .autoreverse, .repeat],
+                       animations: { [weak self] in
+                        UIView.setAnimationRepeatCount(Float(repeatCount) + 0.5)
+                        self?.alpha = 0.8
+            }
+        )
     }
 }
     

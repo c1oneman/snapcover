@@ -5,10 +5,12 @@
 //  Created by Clay Loneman on 6/7/19.
 //  Copyright © 2019 Clay Loneman. All rights reserved.
 //
+import StoreKit
 import MessageUI
+import UIImageColors
 import SwiftyJSON
 import SafariServices
-
+import Pastel
 import UIKit
 import SCSDKCreativeKit
 import AZDialogView
@@ -25,6 +27,8 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
     var red = 0
     var green = 0
     var imgURLpublic = ""
+    let runIncrementerSetting = "numberOfRuns2"  // UserDefauls dictionary key where we store number of runs
+    let minimumRunCount = 0
     var blue = 0
     @IBOutlet weak var stickerView: UIView!
     var didClick = false
@@ -43,7 +47,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
     var isBlackTheme = false
     var username = ""
     var extUrl = ""
-    
+    var pastelView = PastelView()
     var artistName = ""
     var songTitle = ""
     var customImage = UIImage(named:"img.png")
@@ -52,19 +56,26 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
     @IBOutlet weak var logoView: UIView!
     
     @IBOutlet weak var versionLbl: UILabel!
+    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        pastelView = PastelView(frame: view.bounds)
+        
+        view.insertSubview(pastelView, at: 0)
+        
         searchBtnView.roundCorners(corners: [.topLeft, .bottomLeft], radius: searchBtnView.frame.height/2)
         logoView.roundCorners(corners: [.bottomRight, .topRight], radius: searchBtnView.frame.height/2)
-        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+        
         versionLbl.text = "v.\(appVersion!)b.\(buildNumber!)"
+        if(adsAllowed) {
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
                                                     withAdUnitID: "ca-app-pub-7908027428647197/1619957489")
         interstitial = createAndLoadInterstitial()
         let request = GADRequest()
         interstitial.load(request)
+        }
         gradientLayer.frame = self.view.bounds
         
         // 3
@@ -77,7 +88,9 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
         gradientLayer.locations = [0.0,1.0]
         
         // 5
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        DispatchQueue.main.async() {
+            self.view.layer.insertSublayer(self.gradientLayer, at: 0)
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(disconnectPaxiSocket(_:)), name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(refreshNote(_:)), name: Notification.Name(rawValue: "loginRefresh"), object: nil)
         
@@ -97,14 +110,41 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
         NotificationCenter.default.addObserver(self, selector: #selector(refreshAllNotif), name: UIApplication.willEnterForegroundNotification, object: nil)
         snapAPI = SCSDKSnapAPI()
         iamgeView.isHidden = false
+          if(adsAllowed) {
          interstitial.delegate = self
-        refreshAll()
-        
         }
+        refreshAll()
+        showReview()
+        incrementAppRuns()
+        }
+    func showReview() {
+        
+        let runs = getRunCounts()
+        print("Show Review")
+        
+        if (runs > minimumRunCount) {
+            
+            if #available(iOS 10.3, *) {
+                print("Review Requested")
+                SKStoreReviewController.requestReview()
+                
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        } else {
+            
+            print("Runs are not enough to request review!")
+            
+        }
+        
+    }
     func createAndLoadInterstitial() -> GADInterstitial {
-        var interstitial = GADInterstitial(adUnitID: "ca-app-pub-7908027428647197/1112335805")
+      
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-7908027428647197/1112335805")
         interstitial.delegate = self
         interstitial.load(GADRequest())
+            
         return interstitial
     }
     
@@ -155,7 +195,10 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
     }
     func refreshAll() {
         print("RefreshAll")
+        //runGradient(mainColor: UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0))
+          if(adsAllowed) {
        interstitial = createAndLoadInterstitial()
+        }
             self.artistLbl.isHidden = true
             self.tapNotif.isHidden = true
             self.titleLbl.isHidden = true
@@ -192,15 +235,21 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
     @IBAction func createBtn(_ sender: Any) {
         self.create.titleLabel!.text = "..."
         didClick = true
-        if interstitial.isReady && adAble && adsAllowed{
+        if(adsAllowed) {
+        if interstitial.isReady && adAble {
             interstitial.present(fromRootViewController: self)
         } else {
+              if(adsAllowed) {
              interstitial = createAndLoadInterstitial()
+            }
             print("Ad wasn't ready")
             adAble = true
             self.demoSendSticker()
         }
-        
+        }
+        else {
+            self.demoSendSticker()
+        }
     }
     func demoSendSticker() {
         /* Sticker to be used in the Snap */
@@ -252,7 +301,29 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
             // Handle response
         }
     }
-    
+    func incrementAppRuns() {                   // counter for number of runs for the app. You can call this from App Delegate
+        
+        let usD = UserDefaults()
+        let runs = getRunCounts() + 1
+        usD.setValuesForKeys([runIncrementerSetting: runs])
+        usD.synchronize()
+        
+    }
+    func getRunCounts () -> Int {               // Reads number of runs from UserDefaults and returns it.
+        
+        let usD = UserDefaults()
+        let savedRuns = usD.value(forKey: runIncrementerSetting)
+        
+        var runs = 0
+        if (savedRuns != nil) {
+            
+            runs = savedRuns as! Int
+        }
+        
+        print("Run Counts are \(runs)")
+        return runs
+        
+    }
     @IBOutlet weak var snapCoverlbl: UILabel!
     @IBAction func styleBtnAction(_ sender: Any) {
         tapNotif.isHidden = true
@@ -336,7 +407,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
     
     func fetchFromID(idS: String) {
         let string = "https://api.spotify.com/v1/tracks/\(idS)"
-        var url = NSURL(string: string)
+        let url = NSURL(string: string)
         let request = NSMutableURLRequest(url: url! as URL)
         
         request.setValue("Bearer \(key)", forHTTPHeaderField: "Authorization") //**
@@ -382,7 +453,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
                     
                     
                     if let id = json["album"]["images"].array {
-                        var stringURL = id[0]["url"].url
+                        let stringURL = id[0]["url"].url
                         // let stringURL = self.stringify(json: id[0]["url"])
                         //self.urls = URL(string: stringURL!)
                         self.downloadImageSearch(from: stringURL!)
@@ -449,27 +520,27 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
         dialog.dismissWithOutsideTouch = false
         dialog.show(in: self)
         
-        var when = DispatchTime.now() + 1  // change 2 to desired number of seconds
+        var when = DispatchTime.now() + 0.5  // change 2 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
             dialog.message = "Contacting Spotify."
            
         }
-        when = DispatchTime.now() + 2
+        when = DispatchTime.now() + 1
         DispatchQueue.main.asyncAfter(deadline: when) {
             dialog.message = "Left on read.."
             
         }
-        when = DispatchTime.now() + 3
+        when = DispatchTime.now() + 1.5
         DispatchQueue.main.asyncAfter(deadline: when) {
             dialog.message = "Double snapping..."
             
         }
-        when = DispatchTime.now() + 4
+        when = DispatchTime.now() + 2.2
         DispatchQueue.main.asyncAfter(deadline: when) {
             dialog.message = "Finishing up.."
             
         }
-        when = DispatchTime.now() + 5
+        when = DispatchTime.now() + 3
         DispatchQueue.main.asyncAfter(deadline: when) {
             
             dialog.dismiss(animated: false, completion: nil)
@@ -543,7 +614,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
     func aboutDia() {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
-        var versionDetails = "v.\(appVersion!)b.\(buildNumber!)"
+        let versionDetails = "v.\(appVersion!)b.\(buildNumber!)"
             let dialog = AZDialogViewController(title: "Coverly (\(versionDetails))", message: "Thanks for using Coverly!")
             dialog.titleColor = .black
             
@@ -582,7 +653,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
             
             // set the dialog offset (from center)
             // dialog.contentOffset = self.view.frame.height / 2.0 - dialog.estimatedHeight / 2.0 - 16.0
-            dialog.addAction(AZDialogAction(title: "About Coverly") { (dialog) -> (Void) in
+            dialog.addAction(AZDialogAction(title: "About Coverly 💁🏼‍♂️") { (dialog) -> (Void) in
                 //add your actions here.
                 
                 dialog.dismiss(animated: false, completion: nil)
@@ -605,7 +676,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
                 self.sendEmail()
             })
             
-            dialog.addAction(AZDialogAction(title: "Spotify") { (dialog) -> (Void) in
+            dialog.addAction(AZDialogAction(title: "Spotify 🔌") { (dialog) -> (Void) in
                 //add your actions here.
                 
                 dialog.dismiss(animated: false, completion: nil)
@@ -613,6 +684,29 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
             })
             self.present(dialog, animated: false, completion: nil)
         
+    }
+    
+    func runGradient(mainColor: [UIColor]) {
+        
+    
+        
+        // Custom Direction
+        pastelView.startPastelPoint = .bottomLeft
+        pastelView.endPastelPoint = .topRight
+        
+        // Custom Duration
+        pastelView.animationDuration = 3.0
+        pastelView.setColors(mainColor)
+        // Custom Color
+        //pastelView.setColors([UIColor(red: 156/255, green: 39/255, blue: 176/255, alpha: 1.0),
+        //                      UIColor(red: 255/255, green: 64/255, blue: 129/255, alpha: 1.0),
+        //                      UIColor(red: 123/255, green: 31/255, blue: 162/255, alpha: 1.0),
+        //                      UIColor(red: 32/255, green: 76/255, blue: 255/255, alpha: 1.0),
+        //                      UIColor(red: 32/255, green: 158/255, blue: 255/255, alpha: 1.0),
+         //                     UIColor(red: 90/255, green: 120/255, blue: 127/255, alpha: 1.0),
+        //                      UIColor(red: 58/255, green: 255/255, blue: 217/255, alpha: 1.0)])
+        
+        pastelView.startAnimation()
     }
     func showSafariVC(for url: String) {
         guard let url = URL(string: url) else {
@@ -629,7 +723,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
             mail.mailComposeDelegate = self
             mail.setToRecipients(["support@coverly.app"])
             mail.setSubject("Coverly Support Request")
-            mail.setMessageBody("<p>Type here</p>", isHTML: true)
+            mail.setMessageBody("<p>Type here</p><br>v.\(appVersion!)b.\(buildNumber!)", isHTML: true)
             present(mail, animated: true)
         } else {
             let dialog = AZDialogViewController(title: "Error", message: "iPhone is not able to send an email, setup in the Mail app first or contact support@coverly.app")
@@ -698,7 +792,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
     }
     func fetchTrackRequest() {
     let string = "https://api.spotify.com/v1/me/player/currently-playing"
-        var url = NSURL(string: string)
+        let url = NSURL(string: string)
     let request = NSMutableURLRequest(url: url! as URL)
     
     request.setValue("Bearer \(key)", forHTTPHeaderField: "Authorization") //**
@@ -737,7 +831,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
         
         
         if let id = json["item"]["album"]["images"].array {
-    var stringURL = id[0]["url"].url
+            let stringURL = id[0]["url"].url
            // let stringURL = self.stringify(json: id[0]["url"])
            //self.urls = URL(string: stringURL!)
             self.downloadImage(from: stringURL!)
@@ -828,9 +922,13 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
                 self.customImage = UIImage(data: data)!
                 self.activity.isHidden = true
                 self.activity.stopAnimating()
-                var cgGradColor = self.customImage?.averageColor?.cgColor
+                let cgGradColor = self.customImage?.averageColor?.cgColor
                 let myColor = UIColor(cgColor: cgGradColor!)
+                var colors = self.customImage?.getColors()
+                var colorsArray = [colors?.background, colors?.primary, colors?.secondary, colors?.detail!] as! [UIColor]
                 
+                
+                self.runGradient(mainColor: colorsArray)
                 let myColorComponents = myColor.components
                 print(myColorComponents.red)
                 self.red = Int(myColorComponents.red * 256)
@@ -846,7 +944,7 @@ class ViewController: UIViewController, GADInterstitialDelegate, GADAppEventDele
                 self.extUrl = self.extUrl + "&b=" + String(self.blue)
                 print(myColorComponents.alpha) // 0.5
 
-                self.gradientLayer.colors = [ UIColor.black.cgColor, cgGradColor]
+                self.gradientLayer.colors = [ UIColor.black.cgColor, cgGradColor!]
                 print("Done setting image")
                 self.stickerView.isHidden = false
                 self.create.titleLabel!.text = "Share"
@@ -907,7 +1005,14 @@ func downloadImageSearch(from url: URL) {
             self.iamgeView.image = UIImage(data: data)
             
             self.customImage = UIImage(data: data)!
-            self.gradientLayer.colors = [ UIColor.black.cgColor, self.customImage?.averageColor?.cgColor]
+            
+            self.gradientLayer.colors = [ UIColor.black.cgColor, self.customImage?.averageColor?.cgColor ?? UIColor.black]
+            var colorsArray = [UIColor.black]
+            var colors = self.customImage?.getColors()
+            colorsArray = [colors?.background, colors?.primary, colors?.secondary, colors?.detail!] as! [UIColor]
+                
+            
+            self.runGradient(mainColor: colorsArray)
             self.activity.isHidden = true
             self.activity.stopAnimating()
             self.view.backgroundColor = UIColor.clear
@@ -922,10 +1027,12 @@ func downloadImageSearch(from url: URL) {
             self.tapNotif.isHidden = false
             self.titleLbl.isHidden = false
            // self.spotBtn.isHidden = false
-            if self.interstitial.isReady && adsAllowed && adAble{
+            if(adsAllowed) {
+            if self.interstitial.isReady && adAble{
                 self.interstitial.present(fromRootViewController: self)
             } else {
                 print("Ad wasn't ready")
+            }
             }
            // self.view.backgroundColor = self.customImage?.averageColor
             
@@ -971,7 +1078,7 @@ extension UIImage {
         guard let outputImage = filter.outputImage else { return nil }
         
         var bitmap = [UInt8](repeating: 0, count: 4)
-        let context = CIContext(options: [CIContextOption.workingColorSpace : kCFNull])
+        let context = CIContext(options: [CIContextOption.workingColorSpace : kCFNull!])
         let outputImageRect = CGRect(x: 0, y: 0, width: 1, height: 1)
         
         context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: outputImageRect, format: CIFormat.RGBA8, colorSpace: nil)

@@ -42,7 +42,7 @@ class searchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         searchTextEntry.delegate = self
         searchTextEntry.becomeFirstResponder()
-        searchTextEntry.text = "Search Spotify"
+        
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.estimatedRowHeight = 50
@@ -60,20 +60,10 @@ class searchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // Movement indication index
         let movementOnAxis: CGFloat
-        
+        let newY = min(max(view.frame.minY + translation.y, 0), view.frame.maxY)
+        movementOnAxis = newY / view.bounds.height
+        view.frame.origin.y = newY
         // Move view to new position
-        switch axis {
-        case .vertical:
-            let newY = min(max(view.frame.minY + translation.y, 0), view.frame.maxY)
-            movementOnAxis = newY / view.bounds.height
-            view.frame.origin.y = newY
-            
-        case .horizontal:
-            let newX = min(max(view.frame.minX + translation.x, 0), view.frame.maxX)
-            movementOnAxis = newX / view.bounds.width
-            view.frame.origin.x = newX
-        }
-        
         let positiveMovementOnAxis = fmaxf(Float(movementOnAxis), 0.0)
         let positiveMovementOnAxisPercent = fminf(positiveMovementOnAxis, 1.0)
         let progress = CGFloat(positiveMovementOnAxisPercent)
@@ -83,13 +73,10 @@ class searchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         case .ended where sender.velocity(in: view).y >= velocityDismiss || progress > percentThresholdDismiss:
             // After animate, user made the conditions to leave
             UIView.animate(withDuration: 0.2, animations: {
-                switch self.axis {
-                case .vertical:
+                
                     self.view.frame.origin.y = self.view.bounds.height
                     
-                case .horizontal:
-                    self.view.frame.origin.x = self.view.bounds.width
-                }
+             
                 self.navigationController?.view.backgroundColor = UIColor.black.withAlphaComponent(0)
                 
             }, completion: { finish in
@@ -98,13 +85,10 @@ class searchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         case .ended:
             // Revert animation
             UIView.animate(withDuration: 0.2, animations: {
-                switch self.axis {
-                case .vertical:
+              
                     self.view.frame.origin.y = 0
                     
-                case .horizontal:
-                    self.view.frame.origin.x = 0
-                }
+               
             })
         default:
             break

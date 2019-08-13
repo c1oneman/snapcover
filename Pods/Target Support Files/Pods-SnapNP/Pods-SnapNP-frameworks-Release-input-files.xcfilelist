@@ -8,4 +8,5 @@ ${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework
 ${BUILT_PRODUCTS_DIR}/SpotifyLogin/SpotifyLogin.framework
 ${BUILT_PRODUCTS_DIR}/SwiftVideoBackground/SwiftVideoBackground.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/UIImageColors/UIImageColors.framework
 ${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework

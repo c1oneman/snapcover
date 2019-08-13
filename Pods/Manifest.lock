@@ -35,6 +35,7 @@ PODS:
   - SpotifyLogin (0.1.6)
   - SwiftVideoBackground (3.3.0)
   - SwiftyJSON (4.3.0)
+  - UIImageColors (2.1.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - SpotifyLogin
   - SwiftVideoBackground (~> 3.0)
   - SwiftyJSON (~> 4.0)
+  - UIImageColors
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -59,6 +61,7 @@ SPEC REPOS:
     - SpotifyLogin
     - SwiftVideoBackground
     - SwiftyJSON
+    - UIImageColors
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -72,7 +75,8 @@ SPEC CHECKSUMS:
   SpotifyLogin: 9cdf82ff13e5f37e5ddc7fd07cf9793a9ebd1124
   SwiftVideoBackground: ebcc843d4cbcfc520e42472dad80925a6433da06
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  UIImageColors: d2ef3b0877d203cbb06489eeb78ea8b7788caabe
 
-PODFILE CHECKSUM: 060b3ff1e392b0a750b3cbea78d559a8a34fb1c7
+PODFILE CHECKSUM: 7a5fb1627c92416d83ec5cf41f1169101bc1ff2f
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.7.0
