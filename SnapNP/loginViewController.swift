@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Pastel
 import SpotifyLogin
 import SwiftVideoBackground
 import SafariServices
@@ -40,43 +39,18 @@ class LogInViewController: UIViewController {
     }
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLayoutSubviews() {
-  
+        //try? VideoBackground.shared.play(view: view, videoName: "backdrop", videoType: "mp4")
         runGradient()
-        imageView.blink()
+       // imageView.blink()
     }
     @IBAction func termsOfServiceBtn(_ sender: Any) {
         self.showSafariVC(for: "https://www.coverly.app/tos")
     }
     func runGradient() {
         
-        let pastelView = PastelView(frame: view.bounds)
-        
-        // Custom Direction
-        pastelView.startPastelPoint = .bottomLeft
-        pastelView.endPastelPoint = .topRight
-        
-        // Custom Duration
-        pastelView.animationDuration = 3.0
-        
-        // Custom Color
-        pastelView.setColors([UIColor(red: 32/255, green: 158/255, blue: 255/255, alpha: 1.0),
-                              UIColor(red: 90/255, green: 120/255, blue: 127/255, alpha: 1.0),
-                              UIColor(red: 58/255, green: 255/255, blue: 217/255, alpha: 1.0)])
-        
-        pastelView.startAnimation()
-        view.insertSubview(pastelView, at: 0)
+       
     }
-    func setGradientBackground() {
-        let colorTop =  UIColor(red: 0/255.0, green: 252/255.0, blue: 100/255.0, alpha: 1.0).cgColor
-        let colorBottom = UIColor(red: 0/255.0, green: 252/255.0, blue: 100/255.0, alpha: 1.0).cgColor
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [colorTop, colorBottom]
-        gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.frame = self.view.bounds
-        
-        self.view.layer.insertSublayer(gradientLayer, at:0)
-    }
+    
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

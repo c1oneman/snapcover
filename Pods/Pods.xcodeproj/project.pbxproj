@@ -41,114 +41,114 @@
 
 /* Begin PBXBuildFile section */
 		01C5CC5195440F8178CE07FB8E4C9FDE /* GULNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 769C837880A82A483BE0CD32B8986817 /* GULNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02AEED865D2144E99A2ED4AFEFBDD0EB /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DA102DD9EEEA822956E1CEDDF080B /* URLBuilder.swift */; };
 		051D7FD6EF2577067F84F2786395F401 /* GULAppEnvironmentUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC19AC25635C6E5BE7C7A8D281F5328 /* GULAppEnvironmentUtil.m */; };
-		06AC6A2155161B597B31C81029073E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
 		091B44ABBF9E5486644D596F55AD58A3 /* GULAppDelegateSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E43DF896A530B88EBEDA80417173E73 /* GULAppDelegateSwizzler.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		099CE45BE39CE3384F95A966B4A2B04F /* UIImageColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DAC9EB6B64DE42F882D9B9F0387CC3 /* UIImageColors-dummy.m */; };
-		0B2E1F604BF58EE6DAF5BA916B87EEEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
-		0FDCCBD71EB223141F529C9F203BBEDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
-		12568E9337517196B17622E99268F781 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
-		12B1756664CAC4D9C05EB1EB3E351C2B /* AZDialogView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A54AFFA062A8FFD9EE7A18A826E65F /* AZDialogView-dummy.m */; };
-		14ECF6E40B0356170FEDE170B2EB6F2F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB1F4C4844602649893ADE87F8E19F /* Request.swift */; };
+		0C5E11DE24DAA737704B355F5F2F3426 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8B0484B6A6854165965780C9D0B91 /* ParameterEncoding.swift */; };
+		11304F62C5C8EA69A6A10FE099B21D2D /* UIImageColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DAC9EB6B64DE42F882D9B9F0387CC3 /* UIImageColors-dummy.m */; };
+		12FF3555B8531302FBEA78B38EE187F3 /* Pods-SnapNP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8191B51AED9A63AFD7AD6BDFB8A6A71 /* Pods-SnapNP-dummy.m */; };
+		132E0F619E4338E5D1B27E4C72076B3F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96B4D870A332718D1154D2CAA748E3 /* Notifications.swift */; };
 		1822D09CFD33B6F3654735D48FDCA34F /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = BA6924C6D1118EBC93EEE27F66938C18 /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc -fno-objc-arc"; }; };
-		1EFBDFF87715F105A7C8A49B28122172 /* Pods-SnapNP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66E70A75BEE36E4243A5E4C7B7B51E3F /* Pods-SnapNP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1942F7D3B7722A5637C3FC0BE44B1E6C /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33837FBC4FCC71531CD1567DFF1B7CD7 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1945CD5D63A1C164AEAAA9A33E85571E /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD24092BC89F80E5DBC66EE1148B2121 /* Alamofire-dummy.m */; };
+		1986B50C74F1697EA43F68335C93CEB3 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF019EC04E8DA16902867A89BE2BBB /* MultipartFormData.swift */; };
 		201E7ACF86A45876A5BFAC68B115CBF4 /* GULNetworkURLSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 81BAAB93205DB57F66A70848E32EE251 /* GULNetworkURLSession.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		2167552C5C8A1C7DED591574DBFB8EC4 /* PastelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A124562BB6EA42C12F8A67CAE94A227 /* PastelView.swift */; };
-		29C63AB0D159A830DBD4F8E61F5CE5DE /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33837FBC4FCC71531CD1567DFF1B7CD7 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		240A557125411EA0B672FC771BD3F421 /* AZDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397B9544BEFFC48D67F11374FEB83E7 /* AZDialogViewController.swift */; };
+		2BF6FBC0A64BF107C5D64C61F1397770 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73294E0480B560946CF6CDB18F8D0C88 /* SwiftyJSON-dummy.m */; };
+		2C61B040BA6A9A7AE66C4D9BA26D5520 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDB4F125FF21C10DE986A964FCA787 /* SessionDelegate.swift */; };
+		2F57C310A40462328E654E9BD26311F3 /* SwiftVideoBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = CA43ADBB2B89235305668B8AAC0B50B6 /* SwiftVideoBackground.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		326D4FE59C3467650361EC93654B8E0D /* nanopb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8BADDF05478CCA48F6A20740A7F70E /* nanopb-dummy.m */; };
-		39AF59536B0F16DB489CDA09937A8F94 /* AZDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397B9544BEFFC48D67F11374FEB83E7 /* AZDialogViewController.swift */; };
+		3571F958A3907B3A806E62D50C2550D4 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68CED8E50C8C7150FA65F2C9593496 /* NetworkReachabilityManager.swift */; };
+		3787149578B1C727E66F128F814FB406 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
+		3ABBAD93F92A1171CE9F3C292D211169 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69854A3B8F0ED352B996D660874F98 /* UIImageColors.swift */; };
 		3AD772DF626469AC7B1B9A93EC9D3820 /* GULReachabilityChecker+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F17E3369D69A4C69EE0611853655AA20 /* GULReachabilityChecker+Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3DED8BFF42C2EC0B0C4E5B1553818BA2 /* PastelLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C400BC344683EA7228AFE4ED7381C63 /* PastelLabel.swift */; };
+		3CF4CDBA30FDEFE44484F65ECB765B6A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296C7400EDB13416B077B09E1BB0E85 /* Session.swift */; };
+		3EDBE14617ADF50C15D8E8E7FEABBF77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
 		42E6C55FF5CA9F75E2FF35A41C78F14F /* GULNetworkConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E62830FDDD31B9E67BBF808871BA3CA6 /* GULNetworkConstants.m */; };
-		43AEEE0AC9D95FD633132B5997A6EB06 /* Pastel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F0F84437139A56EFDFB642272489DD /* Pastel-dummy.m */; };
+		436455B287A50944F60BAB699E02C75D /* SpotifyLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93406896EA5F87AE740C2D32325F42D /* SpotifyLoginPresenter.swift */; };
 		43F06A006398F991734E8709CF997226 /* GULLoggerCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = AD2A298956959B784F8693A54FBBE12B /* GULLoggerCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		451BAC4BDA74D6F631F8743A55789C8F /* AZDialogView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A54AFFA062A8FFD9EE7A18A826E65F /* AZDialogView-dummy.m */; };
 		4557BE810A6249A88651C376EF491A43 /* nanopb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FA9C945EFBDC88C2BF62178B99E82A2 /* nanopb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		464450D037D17ED5EE2322E180A6A9F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
 		481B827A7E8377D1B92B1C7231E4F5EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
-		4920AD2B3D668DB550BEDED6747F925B /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD6B3013AF03DD246EA5F350C2F963 /* ServerTrustPolicy.swift */; };
-		4D8763F9AD199BBF6B057BB4D48B8D78 /* SessionLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81D0BD4740D974C72026B3A234A529 /* SessionLocalStorage.swift */; };
+		4EA435E0385E273CAE57F8984F533361 /* spotifylogo-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E73F73A367C2C2C660BE76CB19F511F5 /* spotifylogo-32@2x.png */; };
 		4F1809CA476C0C025CD34257BDCB69A8 /* GULMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 11144CEE73E02960C74F51349B4B00FF /* GULMutableDictionary.m */; };
-		4F2D4B2F068CB596ADC5C9920134BFF2 /* SwiftVideoBackground-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C888D6E84C8B98C579D69795F85282BF /* SwiftVideoBackground-dummy.m */; };
-		505B75241DCEA8C1FBF9F479C2DDEF31 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA369C434AD73B3F15AABA45C60644A5 /* Timeline.swift */; };
 		51C2BAFB3A00484D3D4B2D48E6586580 /* GULReachabilityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2016C2B94D773E49F399243FEC218 /* GULReachabilityChecker.m */; };
-		53CCF90878CA9CD1B0C45D0BCDFF8D18 /* SafariDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA6190F9ABD3FACF9DDA98DE8730CFD /* SafariDelegate.swift */; };
-		559368DD6966DB1193B3FD6E7CBF5FED /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD24092BC89F80E5DBC66EE1148B2121 /* Alamofire-dummy.m */; };
+		53791F5E5F07400F92CFDFC89A432305 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E593D94AA6DE2F58B69610D00CF9FA /* Validation.swift */; };
 		56F8C98A3ED689E26880C38B98FAE4A8 /* GULNetworkURLSession.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E186B9D081E0B0741DFF872CF42ED6 /* GULNetworkURLSession.m */; };
 		58277A864770C2F4B7D9BFA0261C2B07 /* GULNetworkConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = A2E4889BD81825BA5FE747A4F2ACAD6F /* GULNetworkConstants.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		594494BAB3E029862D7009DE60FCC904 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D36DC56E6A6B20631D5354E14CFFD1 /* TaskDelegate.swift */; };
+		58E5292B66E33336487404E4CCF17788 /* VideoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF9E6F8439C1E0B340E3D1C9D47140 /* VideoBackground.swift */; };
 		59EC3619014263EA77F6EFFFE6A3A3EB /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 9FD98690A42A775BC7A36D6A9FE91E60 /* pb_decode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
 		5AECD58492A76411598FFC1D482A9DC5 /* GULNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = F12F622A49A6B7A8D6E80D690ACFB3EE /* GULNetwork.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		5B1086B0A866704A6CAF72B5A47582C6 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337AD48A333D04A5C1E5C15840E9D23 /* Alamofire.swift */; };
-		5C2F9E5485166B59DD032D7DF4C29CF0 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6ECE593EFCD17D66C4C7E3B8C978F /* Response.swift */; };
-		5F5D673FB97CA948FC0B4A7C4929ED11 /* spotifylogo-32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E73F73A367C2C2C660BE76CB19F511F5 /* spotifylogo-32@2x.png */; };
-		6347B1BA6D146FE1BF6D4C140D5CDA04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
-		6499B1F14A26D3A1FACF8DCD8DF6D560 /* PastelPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CBA4361D2FE6F0BBF25FA097363AE9 /* PastelPoint.swift */; };
-		653CC250F21995DE3BD4236B75173F18 /* SpotifyLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = E9338ABC5D83E1B3D7F6BEB292859FAB /* SpotifyLogin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		667034F5A627C2A8BF443EAD5FC33669 /* SwiftVideoBackground-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE6A5744E6474BEA6C98CAAD7C7DE3E /* SwiftVideoBackground-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68EBFC1CC223292E584150373B26A659 /* Pastel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EBFFB1FFC25678AA9A95EFFC79D7CA /* Pastel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BD42A57C5E0B2FB9A50CD69D4327084 /* SessionLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81D0BD4740D974C72026B3A234A529 /* SessionLocalStorage.swift */; };
+		5F46B77615FFBDE0CFD77B8A6FEA646C /* PastelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A124562BB6EA42C12F8A67CAE94A227 /* PastelView.swift */; };
+		64744C911253C3E01461FAD7C935C8D7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9C3F8A227F36D52800EE6D0D60C5F /* Result.swift */; };
+		67F3D3F39D5D25B7E3C3A1C32F22EA39 /* Pastel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30EBFFB1FFC25678AA9A95EFFC79D7CA /* Pastel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AEF443FE437F2F3BE14B5D30FDCEE84 /* GULSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C4EA0FE716E6DEB7486A59EDA03E9F /* GULSwizzler.m */; };
 		6CDFFD2746C5054BD8CCE798A1A20FB0 /* GULNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 833698A7A98CBA4D467CB1239400C411 /* GULNSData+zlib.m */; };
-		72C2F0877FAB758F102C1D5FB6641559 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E68CED8E50C8C7150FA65F2C9593496 /* NetworkReachabilityManager.swift */; };
 		735F80A3DAF7C26DC74E410FBA536668 /* GULNetworkLoggerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 42A6F7D74601EB3326AB0D9130CF5BD4 /* GULNetworkLoggerProtocol.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		763EA582B030AB9A2FC93F6C1AF1EF19 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73294E0480B560946CF6CDB18F8D0C88 /* SwiftyJSON-dummy.m */; };
+		760C6088A78D44576FBEFC7BE5D29D24 /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF950B1CC9FE3496A942B1EF81C3CC /* Scope.swift */; };
+		7664FD4F59A0C00866CBAE60B0A3AD64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
 		78DD4E110829D7CD01E01CDBE97BEF70 /* GULReachabilityMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D1B6B703E86FA21BF207AD73805689E /* GULReachabilityMessageCode.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		7C1B66D9F9745866357AD6CF9DA615D8 /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF950B1CC9FE3496A942B1EF81C3CC /* Scope.swift */; };
-		7CEC75D092231F8E7A54684E3A5BA2EC /* VideoBackgroundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2976DE6DE5014A1863E3305F27749D /* VideoBackgroundError.swift */; };
-		7ED6EEE37DE49B6E66E03514B783795E /* SpotifyLogin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6010A12619475FC2E6C964E53F7C5782 /* SpotifyLogin-dummy.m */; };
+		7B4CE5C84161E2BFE477F42DFD634382 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEF4EC77D0D08B7A389734E788E52E /* SwiftyJSON.swift */; };
+		7B8FA437539B67696F939A2F88DFF71D /* SpotifyLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028D6949282F9B90EA83BFD2BFF615DD /* SpotifyLoginButton.swift */; };
+		7D6E5145ADD4B2E13476D209C28C935F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DCE9EA2A24FF55153A797366422DC6 /* Constants.swift */; };
+		813D89BAF17188C6B8D21A8FB6133E32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
+		83956E20859CDBBE7BC38ABADE0170FB /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C489BA716DADF7288D0A7FE3A7180C70 /* AFError.swift */; };
 		879E7EB94FF0E70D57C07C072E0B6749 /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = C974DF61491E500AF97335FD3792BDAE /* pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		882B73607214BE1653D3858A8E145B6D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3477DD5B6202AED934620CCA7D1D6879 /* SystemConfiguration.framework */; };
-		89DD9B60943AD872E42B8D273BF57C3B /* PastelGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E189C1F6ACF44A81616A46354AF9DC2 /* PastelGradient.swift */; };
-		8CFB089233F5C9C63E84771C0998ABE2 /* SwiftVideoBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = CA43ADBB2B89235305668B8AAC0B50B6 /* SwiftVideoBackground.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F150C7CB64399FAE1D2472934F4C70A /* SpotifyLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE78814155E533F3E3506AED38763D /* SpotifyLogin.swift */; };
+		91B4E14ED95F2894F910147816703A09 /* SwiftVideoBackground-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C888D6E84C8B98C579D69795F85282BF /* SwiftVideoBackground-dummy.m */; };
 		91E3A93577528ED1E9A3E009E1B2A839 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
-		94A78B24F38B55CEC9DE9FF601A306C1 /* AZDialogView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A749F6334689AEFF1EA247CB5E5C91D1 /* AZDialogView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9865337467AC27F5A4286E67EFCF2B2F /* spotifylogo-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 66432009F76D45C8971F09C73B7DDEBD /* spotifylogo-32.png */; };
+		931BBB8230A25161D5C37528A8F9FECF /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9150ADD5DCDAEC38A114A0F82333508C /* SessionManager.swift */; };
+		933FDA5970AA525D6CB92BFEBA2BAB4A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA369C434AD73B3F15AABA45C60644A5 /* Timeline.swift */; };
+		943C7FAC59BCD2000030AC569538EF33 /* UIImageColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D24C38EBF366C9F67FD700E7CE276AA /* UIImageColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		953D11A58294EE4F4807413FE6EBD24A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
+		98A929C8E9012AB167672714FFD2113C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFB1F4C4844602649893ADE87F8E19F /* Request.swift */; };
+		999875B9100EBDCFAEBDA20F5DAC8913 /* SpotifyLogin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6010A12619475FC2E6C964E53F7C5782 /* SpotifyLogin-dummy.m */; };
 		9B04CBB25304C3D7373F2DE0DB1D1354 /* GULSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 199392EC2AFB88F8C8F3DFA6355F6B5B /* GULSwizzler.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9D525CF7FFE8B51B479F0CA886D47171 /* GULOriginalIMPConvenienceMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 87D16A6D5FA1BA2C7E7A1C2CD0826D66 /* GULOriginalIMPConvenienceMacros.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A5ADEF55257E4C1A482BF072C205F388 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B8B0484B6A6854165965780C9D0B91 /* ParameterEncoding.swift */; };
-		ABAEB9DEE3CE05729A9442CFA1988407 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9150ADD5DCDAEC38A114A0F82333508C /* SessionManager.swift */; };
-		ADB18D94C4F71AE2FCE388100D556B0F /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4F0DC59BB5285EC12FFAA5CBAAE3D /* ResponseSerialization.swift */; };
+		9D751AEB9A4C8C416382549AD33B05A7 /* Pods-SnapNP-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66E70A75BEE36E4243A5E4C7B7B51E3F /* Pods-SnapNP-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E5784B12FCB5B512CF072F1B05AF075 /* PastelPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CBA4361D2FE6F0BBF25FA097363AE9 /* PastelPoint.swift */; };
+		A86D3DB0B67FF29709A36E54A00B12E0 /* PastelGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E189C1F6ACF44A81616A46354AF9DC2 /* PastelGradient.swift */; };
 		AF019FADFE39757B22977A2DEE5E8064 /* GoogleUtilities-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 381376C80E704AB07BBB7EE0B1C29172 /* GoogleUtilities-dummy.m */; };
-		B082FA7223428C8DE32F7DE7F5AF441C /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C489BA716DADF7288D0A7FE3A7180C70 /* AFError.swift */; };
-		B25C5D5DC6967C702BA7C9A911219590 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32DA102DD9EEEA822956E1CEDDF080B /* URLBuilder.swift */; };
-		B2E54789768E4F4EE35F11E0034C7383 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96B4D870A332718D1154D2CAA748E3 /* Notifications.swift */; };
-		B42BD3EB17B5561C8FE175CBD9903828 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
-		B43BC60D4083152EBF25FEF3B279BECA /* SpotifyLoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93406896EA5F87AE740C2D32325F42D /* SpotifyLoginPresenter.swift */; };
-		B6F6E4CC26451E91B59FAE0F6841DC1F /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C94A70BB9E12D49C46D1882DFA5AC608 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B8B9F6DA9BE6BE3679EC77D89E028E73 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AEF4EC77D0D08B7A389734E788E52E /* SwiftyJSON.swift */; };
-		B8BE0FA0F75A0C4CE2747D624E961E82 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427119DDDC6BDA67F8BCE83F5C91F423 /* Networking.swift */; };
-		BA6D4D69802EBF7C16A65FAE1F8965C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
+		AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D36DC56E6A6B20631D5354E14CFFD1 /* TaskDelegate.swift */; };
+		B65D445DBBFC21A569ECCAED7AA1D81B /* SafariDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA6190F9ABD3FACF9DDA98DE8730CFD /* SafariDelegate.swift */; };
+		B9B8D20601FF222DA61DFBEA646730BA /* Pastel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F0F84437139A56EFDFB642272489DD /* Pastel-dummy.m */; };
 		BB73244CFCD5310B914BD0CEF37A1B7E /* pb_common.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E87485F9A1C7CF74DD9630525BA4CF /* pb_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBB144C8C1152B483FB2C56CB3CEFA7C /* GULLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 988933ECCD0E94873850BEED24BF890A /* GULLogger.m */; };
 		BC79740B63FC8116160D7F5F019F1C7A /* GULMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8FB04E9C91C4F36701B4D9023BAC10 /* GULMutableDictionary.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		BFB713FD9AB97E6AC9225211D56AD10E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
+		BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8337AD48A333D04A5C1E5C15840E9D23 /* Alamofire.swift */; };
 		C0191362BCA2BA1F475848F493595716 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = C6E608129ECC730E80F8A8A7B4184A17 /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
 		C1210090B6D66295F304766203A3D27E /* GoogleUtilities-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A2BC39911B82066A43B94C05EF6FD2 /* GoogleUtilities-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6BFCFB2721D2029FD9184F09F7830F4 /* PastelLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C400BC344683EA7228AFE4ED7381C63 /* PastelLabel.swift */; };
 		C6C72230BA09671D9DB17263F4635BE2 /* GULLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2A8315654431B4636ACF77DF82044A /* GULLogger.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C7BC0998F116AC6C3DD0E63BE6351AFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
+		C7C49BF5310B7E7DCF5C390CC5705D1B /* AZDialogView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A749F6334689AEFF1EA247CB5E5C91D1 /* AZDialogView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDA3B99F37D90CDE687A444826D50622 /* spotifylogo-32@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D058651C9BD3EF0F65803376A91FB176 /* spotifylogo-32@3x.png */; };
 		CE40F6552D7378BB3AAECD5E82B544A2 /* GULNetworkMessageCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E36F2A8659AD9372B031C5CF309B28 /* GULNetworkMessageCode.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CF70215215576E6C966A5A5D6DC8A060 /* GULNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEBB8154C831876DA2695C8936AADD5 /* GULNetwork.m */; };
 		D188F85BAA13D18248F4859CAB82C6AA /* pb_encode.h in Headers */ = {isa = PBXBuildFile; fileRef = D2851EB673D54F200189A77EB47E9164 /* pb_encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1C98B41CF6BA6A4E31E6EA5FF750BA2 /* GULReachabilityChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 5423D6B6F8771741D9CF2A2A6B2DBF66 /* GULReachabilityChecker.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D2B384893454A891D32CB20A53E4EDAF /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC8194FC65053D8AAD6C5E02378FCD1 /* DispatchQueue+Alamofire.swift */; };
+		D3D8C379C6E4FB487E5ABD6800AD7B7E /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC8194FC65053D8AAD6C5E02378FCD1 /* DispatchQueue+Alamofire.swift */; };
+		D421A6C52D31905BFD0446659AA1CF6D /* SpotifyLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE78814155E533F3E3506AED38763D /* SpotifyLogin.swift */; };
 		D4391E2F0603863C84CFA0E502EB8735 /* GULLoggerLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACF120861EC660ECADEB658491FCC28 /* GULLoggerLevel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D583829CA1D3C6B9B8F5C085B1D597EF /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E593D94AA6DE2F58B69610D00CF9FA /* Validation.swift */; };
+		D5E44AED525A78DF95933F3F0FB88B6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */; };
+		D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB6ECE593EFCD17D66C4C7E3B8C978F /* Response.swift */; };
+		D8726BE53FE3101D3E251FBD1516C45A /* SwiftVideoBackground-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE6A5744E6474BEA6C98CAAD7C7DE3E /* SwiftVideoBackground-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D907B49713ED40B1D38DBD17A9CEF87C /* GULAppDelegateSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D44D6CACF4A1C81AE141D74A4578B81 /* GULAppDelegateSwizzler.m */; };
-		DAF0ACAE8C6F0346748D44C0E8294958 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DCE9EA2A24FF55153A797366422DC6 /* Constants.swift */; };
-		DC14F83E941D06C9F6B1C952B050AF8A /* SpotifyLogin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB9092A19AE82BC7BABD52C2E239FB39 /* SpotifyLogin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC47C1DBD429F03A51702D42281E2503 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = C05A906A7A3157C09EE52D512A7138BE /* pb_decode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7BA58DE1AA8F11BAA7E8817D8AB509C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9C3F8A227F36D52800EE6D0D60C5F /* Result.swift */; };
-		ECE217BC89B02138E69F74D3F3486A79 /* spotifylogo-32@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D058651C9BD3EF0F65803376A91FB176 /* spotifylogo-32@3x.png */; };
+		E231946CB5F9C9DFD09A477936A357F1 /* VideoBackgroundError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2976DE6DE5014A1863E3305F27749D /* VideoBackgroundError.swift */; };
+		E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4F0DC59BB5285EC12FFAA5CBAAE3D /* ResponseSerialization.swift */; };
 		EF61FD7F310E7360527E2F33D48564FE /* GULApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 79A2ED34756300A55136717017EC74C2 /* GULApplication.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		F1AF1A1AC470568CB3EA2B067B99DA96 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = E296C7400EDB13416B077B09E1BB0E85 /* Session.swift */; };
-		F2889ACCDC24EE6A134B17C2EC9B36DE /* UIImageColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D24C38EBF366C9F67FD700E7CE276AA /* UIImageColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4D82D78C14BF258042CDA3C1B15B7E1 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF019EC04E8DA16902867A89BE2BBB /* MultipartFormData.swift */; };
+		F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD6B3013AF03DD246EA5F350C2F963 /* ServerTrustPolicy.swift */; };
 		F763ABA5903CF88B078E48B6852F167F /* GULAppDelegateSwizzler_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = BC35D5F5CEAD8B23D4A9977AF77DF54E /* GULAppDelegateSwizzler_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F7E38988544305D0DCFCC0AA0506D4DD /* Pods-SnapNP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8191B51AED9A63AFD7AD6BDFB8A6A71 /* Pods-SnapNP-dummy.m */; };
+		F7B74645E07C39771156A1FA413B98D4 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C94A70BB9E12D49C46D1882DFA5AC608 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F84C432F6010D60D9FEEA7E3AA1D92BB /* SpotifyLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = E9338ABC5D83E1B3D7F6BEB292859FAB /* SpotifyLogin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8AFF5D2D484A62087CCEB704AA9CDF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D345AA1CA7BA285C593B4CB9AF8A501 /* Security.framework */; };
-		F8B55FFE94DAE4E5D6168E410CA7AEB4 /* SpotifyLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028D6949282F9B90EA83BFD2BFF615DD /* SpotifyLoginButton.swift */; };
-		FB36E092E7C8E5E5EBAB65C33D69AD4C /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF69854A3B8F0ED352B996D660874F98 /* UIImageColors.swift */; };
+		FB30A55401B78BE1C682E40A3C4F81DF /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427119DDDC6BDA67F8BCE83F5C91F423 /* Networking.swift */; };
 		FC7B0AC1A54C2EE7DB577C117DB85D06 /* GULAppEnvironmentUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A6E259763485CB4A2BE01DAF6A0531 /* GULAppEnvironmentUtil.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		FE518CF6E2B53236318285C1B0C8A934 /* VideoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF9E6F8439C1E0B340E3D1C9D47140 /* VideoBackground.swift */; };
-		FFB9BA683C701138C08A211F3E192F56 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDB4F125FF21C10DE986A964FCA787 /* SessionDelegate.swift */; };
+		FD993DEADBBBF9B934934C852B28C118 /* spotifylogo-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 66432009F76D45C8971F09C73B7DDEBD /* spotifylogo-32.png */; };
+		FF232C4B870FF2F9F0A6EC0ED1F39EDF /* SpotifyLogin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB9092A19AE82BC7BABD52C2E239FB39 /* SpotifyLogin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,82 +159,68 @@
 			remoteGlobalIDString = B53D977A951AFC38B21751B706C1DF83;
 			remoteInfo = GoogleAppMeasurement;
 		};
-		03EB21BE751DDA65AB54E2F9ED6A3158 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
-		};
-		041438F985899BB49C05FBE595EAA0FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 15E734B610B8DC61AE5AC6FFE7ED857A;
-			remoteInfo = SwiftVideoBackground;
-		};
-		0672D53ABE13156F34F3C64C1C9477C0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B53D977A951AFC38B21751B706C1DF83;
-			remoteInfo = GoogleAppMeasurement;
-		};
-		2EAA3CACF92682F42D3B330E88BF4DED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
-			remoteInfo = GoogleUtilities;
-		};
-		396117A872E433693584D4D230357247 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DC460828FF0F2F76C86CA020169EDB5F;
-			remoteInfo = SnapSDK;
-		};
-		42F2FA39955960BE8F56C36648B5AB95 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
-			remoteInfo = nanopb;
-		};
-		530FC274B030DEB28FEFA276C7942AF2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C3EF3F58964FDE51A71B36344F566F9B;
-			remoteInfo = SpotifyLogin;
-		};
-		6567E832050853E4EDF70E3BF641353D /* PBXContainerItemProxy */ = {
+		11CEA0DED238F4CA8DF14FD56EAFAC76 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BDB3D9762DE1E9282191B6B26703E4DE;
 			remoteInfo = UIImageColors;
 		};
-		7FB2BDAE8C9BCF36356390C5FA7506FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 223ACB2993ED61193B95A52611ED34E7;
-			remoteInfo = Pastel;
-		};
-		9009F11E40488D212949A9147B245EF1 /* PBXContainerItemProxy */ = {
+		40BC5F96A30175357B104FAD627A1B5D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FEA3B3A570634836C0457F3D7CEF1699;
 			remoteInfo = "Google-Mobile-Ads-SDK";
 		};
-		903BD7EF9386F156BE906AD0387C6C5D /* PBXContainerItemProxy */ = {
+		4EE20851C2A606B92E4955B81204DDC5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
 			remoteInfo = SwiftyJSON;
+		};
+		6ACD739FF3218B8286ED7BB580FF0E5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 223ACB2993ED61193B95A52611ED34E7;
+			remoteInfo = Pastel;
+		};
+		8D519F8F8F6E0EC6E9E539A3356F21C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B53D977A951AFC38B21751B706C1DF83;
+			remoteInfo = GoogleAppMeasurement;
+		};
+		9FAB7C1C1F9350AA509D4BE14E5DDC7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3EF3F58964FDE51A71B36344F566F9B;
+			remoteInfo = SpotifyLogin;
+		};
+		A0C5B8A3F87CD8187C8CEEDDD64804A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2B5E7DCCBBFB32341D857D01211A1A3;
+			remoteInfo = nanopb;
+		};
+		B5C20F763401F209A0A575ADD08B4778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC460828FF0F2F76C86CA020169EDB5F;
+			remoteInfo = SnapSDK;
+		};
+		BB4D8D36F19936BE406BA69C7F2A598D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
+			remoteInfo = GoogleUtilities;
 		};
 		BBB170488659A159B449AB60C31B69DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -250,29 +236,42 @@
 			remoteGlobalIDString = 8D7F5D5DD528D21A72DC87ADA5B12E2D;
 			remoteInfo = GoogleUtilities;
 		};
-		F3DE981D2DD109D99061F828528EE596 /* PBXContainerItemProxy */ = {
+		EFB2BE706C7BADB18A0B053AA95C6C23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D7E15BC85DBC8F150C7C6B40A72AC0C8;
 			remoteInfo = AZDialogView;
 		};
+		F623F4DE84D025D79AE2E9AC1CC061A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15E734B610B8DC61AE5AC6FFE7ED857A;
+			remoteInfo = SwiftVideoBackground;
+		};
+		FCFC60590FE92AFAD1E4332165A5BC1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		028D6949282F9B90EA83BFD2BFF615DD /* SpotifyLoginButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotifyLoginButton.swift; path = Sources/SpotifyLoginButton.swift; sourceTree = "<group>"; };
+		05AA625691E2EA21BEBE097057C4C7CC /* AZDialogView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AZDialogView.framework; path = AZDialogView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E593D94AA6DE2F58B69610D00CF9FA /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		0AE6A5744E6474BEA6C98CAAD7C7DE3E /* SwiftVideoBackground-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVideoBackground-umbrella.h"; sourceTree = "<group>"; };
 		0D8F80996125327BD3D726CC4A4098CF /* GoogleUtilities.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleUtilities.xcconfig; sourceTree = "<group>"; };
 		0F8A8CB8A2549E61204B1BC09D3B76D6 /* Pods-SnapNP-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SnapNP-Info.plist"; sourceTree = "<group>"; };
 		11144CEE73E02960C74F51349B4B00FF /* GULMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULMutableDictionary.m; path = GoogleUtilities/Network/GULMutableDictionary.m; sourceTree = "<group>"; };
-		154DE3B7F198AB47C118886A2B80594C /* Pastel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pastel.framework; path = Pastel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		183127355306B891FD01183FF4D54706 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		199392EC2AFB88F8C8F3DFA6355F6B5B /* GULSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSwizzler.h; path = GoogleUtilities/MethodSwizzler/Private/GULSwizzler.h; sourceTree = "<group>"; };
 		1ACF120861EC660ECADEB658491FCC28 /* GULLoggerLevel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerLevel.h; path = GoogleUtilities/Logger/Public/GULLoggerLevel.h; sourceTree = "<group>"; };
 		1C0C1CF630D901B20BB2C9CF1A506BF3 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		1D24C38EBF366C9F67FD700E7CE276AA /* UIImageColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImageColors-umbrella.h"; sourceTree = "<group>"; };
-		1DC03A4D74B8FB81233643B366A2CF2E /* AZDialogView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AZDialogView.framework; path = AZDialogView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCB0BA55B2DE8278C0B133EAE726ACD /* AZDialogView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AZDialogView.xcconfig; sourceTree = "<group>"; };
 		1E3C4BF62AD053BC10D246D63E8C7C54 /* SCSDKCreativeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCreativeKit.framework; sourceTree = "<group>"; };
 		1EB0460E898E07F95D85D401DF578CBF /* UIImageColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIImageColors.modulemap; sourceTree = "<group>"; };
@@ -303,24 +302,27 @@
 		427119DDDC6BDA67F8BCE83F5C91F423 /* Networking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Networking.swift; path = Sources/Internal/Networking.swift; sourceTree = "<group>"; };
 		42A6F7D74601EB3326AB0D9130CF5BD4 /* GULNetworkLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkLoggerProtocol.h; path = GoogleUtilities/Network/Private/GULNetworkLoggerProtocol.h; sourceTree = "<group>"; };
 		43CCB64591E5193571220AB99A29E8AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4866C58E19CAEE80F0A28A13A1E23D35 /* SwiftVideoBackground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftVideoBackground.framework; path = SwiftVideoBackground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A124562BB6EA42C12F8A67CAE94A227 /* PastelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PastelView.swift; path = Pastel/Classes/PastelView.swift; sourceTree = "<group>"; };
 		4A81D0BD4740D974C72026B3A234A529 /* SessionLocalStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionLocalStorage.swift; path = Sources/Internal/SessionLocalStorage.swift; sourceTree = "<group>"; };
 		4BCF9E6F8439C1E0B340E3D1C9D47140 /* VideoBackground.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoBackground.swift; path = SwiftVideoBackground/Sources/VideoBackground.swift; sourceTree = "<group>"; };
 		51B8B0484B6A6854165965780C9D0B91 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		5423D6B6F8771741D9CF2A2A6B2DBF66 /* GULReachabilityChecker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULReachabilityChecker.h; path = GoogleUtilities/Reachability/Private/GULReachabilityChecker.h; sourceTree = "<group>"; };
+		575B4FEF97C798B19B4D4572DB58FB83 /* UIImageColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIImageColors.framework; path = UIImageColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58544834EF3F0C3F8E18E2DD2599B97C /* Pods-SnapNP-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SnapNP-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5BFB1F4C4844602649893ADE87F8E19F /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		5D00802EF527C810CB60A3D841A71DE7 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		5D44D6CACF4A1C81AE141D74A4578B81 /* GULAppDelegateSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppDelegateSwizzler.m; path = GoogleUtilities/AppDelegateSwizzler/GULAppDelegateSwizzler.m; sourceTree = "<group>"; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F63A7F9B2DC547A04FB9ED0F461B23D /* SpotifyLogin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SpotifyLogin.xcconfig; sourceTree = "<group>"; };
 		6010A12619475FC2E6C964E53F7C5782 /* SpotifyLogin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SpotifyLogin-dummy.m"; sourceTree = "<group>"; };
+		63983CF4674AD37DA0792ADEED95BC1E /* Pods_SnapNP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SnapNP.framework; path = "Pods-SnapNP.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66432009F76D45C8971F09C73B7DDEBD /* spotifylogo-32.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "spotifylogo-32.png"; path = "SpotifyLogin/Resources/spotifylogo-32.png"; sourceTree = "<group>"; };
 		66E70A75BEE36E4243A5E4C7B7B51E3F /* Pods-SnapNP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SnapNP-umbrella.h"; sourceTree = "<group>"; };
 		695607AAC44A6D7E059E6AD5EF218173 /* SpotifyLogin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpotifyLogin-prefix.pch"; sourceTree = "<group>"; };
 		6A8BADDF05478CCA48F6A20740A7F70E /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
 		6C657AF2029FD741496C731C36BF4FCB /* Pastel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Pastel.modulemap; sourceTree = "<group>"; };
 		6D6E83D332C4A3FBF36B5DB2CC9B4629 /* GoogleUtilities-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleUtilities-Info.plist"; sourceTree = "<group>"; };
+		6D8CDB93561D3B235015E3B4014A69AB /* SwiftVideoBackground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftVideoBackground.framework; path = SwiftVideoBackground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA9C945EFBDC88C2BF62178B99E82A2 /* nanopb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-umbrella.h"; sourceTree = "<group>"; };
 		70DF8E3620700B7849AFB94D6B24E990 /* SnapSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapSDK.xcconfig; sourceTree = "<group>"; };
 		716796773D2FA9BB7C1EEEF1142B7778 /* SwiftVideoBackground.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftVideoBackground.modulemap; sourceTree = "<group>"; };
@@ -329,11 +331,11 @@
 		74CBA4361D2FE6F0BBF25FA097363AE9 /* PastelPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PastelPoint.swift; path = Pastel/Classes/PastelPoint.swift; sourceTree = "<group>"; };
 		7695BC189C79FE72E9607A56E77551B8 /* GoogleUtilities.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GoogleUtilities.modulemap; sourceTree = "<group>"; };
 		769C837880A82A483BE0CD32B8986817 /* GULNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULNSData+zlib.h"; path = "GoogleUtilities/NSData+zlib/GULNSData+zlib.h"; sourceTree = "<group>"; };
-		788C6383E7DC80F6DE87622AD3EDD665 /* UIImageColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIImageColors.framework; path = UIImageColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A2ED34756300A55136717017EC74C2 /* GULApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULApplication.h; path = GoogleUtilities/AppDelegateSwizzler/Private/GULApplication.h; sourceTree = "<group>"; };
 		7DD6EAACA180D82D55ACB57D9E78709F /* SpotifyLogin-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SpotifyLogin-Info.plist"; sourceTree = "<group>"; };
 		7E43DF896A530B88EBEDA80417173E73 /* GULAppDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Private/GULAppDelegateSwizzler.h; sourceTree = "<group>"; };
 		7E4C4FDD51017599A8D22483395C8F5E /* SpotifyLogin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SpotifyLogin.modulemap; sourceTree = "<group>"; };
+		7E6869F153D7CB9C1B22DAF7252FF3E4 /* Pastel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pastel.framework; path = Pastel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BAAB93205DB57F66A70848E32EE251 /* GULNetworkURLSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkURLSession.h; path = GoogleUtilities/Network/Private/GULNetworkURLSession.h; sourceTree = "<group>"; };
 		833698A7A98CBA4D467CB1239400C411 /* GULNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GULNSData+zlib.m"; path = "GoogleUtilities/NSData+zlib/GULNSData+zlib.m"; sourceTree = "<group>"; };
 		8337AD48A333D04A5C1E5C15840E9D23 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
@@ -349,7 +351,6 @@
 		988933ECCD0E94873850BEED24BF890A /* GULLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULLogger.m; path = GoogleUtilities/Logger/GULLogger.m; sourceTree = "<group>"; };
 		99118128D98A798BED8DB4C8319481FA /* AZDialogView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AZDialogView-prefix.pch"; sourceTree = "<group>"; };
 		9BEBB8154C831876DA2695C8936AADD5 /* GULNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetwork.m; path = GoogleUtilities/Network/GULNetwork.m; sourceTree = "<group>"; };
-		9CF64E0650D6843C15C6925DBF512C8D /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleUtilities.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E6CC4EA6F6DE638E2A6456A9E8DC3AD /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Frameworks/GoogleMobileAdsFramework-Current/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		9FD98690A42A775BC7A36D6A9FE91E60 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
@@ -361,10 +362,9 @@
 		A7BA6CF9277AA10F314DE01C4FC85B78 /* SwiftVideoBackground-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftVideoBackground-prefix.pch"; sourceTree = "<group>"; };
 		AA369C434AD73B3F15AABA45C60644A5 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		AAC19AC25635C6E5BE7C7A8D281F5328 /* GULAppEnvironmentUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULAppEnvironmentUtil.m; path = GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.m; sourceTree = "<group>"; };
-		AAEBD4115C43B74F3D86A6B35ED53A61 /* SpotifyLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SpotifyLogin.framework; path = SpotifyLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACFB1D8D2510E8A41367E76AD19136EF /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2A298956959B784F8693A54FBBE12B /* GULLoggerCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerCodes.h; path = GoogleUtilities/Common/GULLoggerCodes.h; sourceTree = "<group>"; };
 		AF69854A3B8F0ED352B996D660874F98 /* UIImageColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageColors.swift; path = UIImageColors/Sources/UIImageColors.swift; sourceTree = "<group>"; };
+		B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleUtilities.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B500FEF28D0952624EB2935DA174203D /* SwiftVideoBackground-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftVideoBackground-Info.plist"; sourceTree = "<group>"; };
 		B5A350935BFF1F4CE60A28A63221FC73 /* SCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCoreKit.framework; sourceTree = "<group>"; };
 		B7E87485F9A1C7CF74DD9630525BA4CF /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
@@ -396,6 +396,7 @@
 		DEF2016C2B94D773E49F399243FEC218 /* GULReachabilityChecker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULReachabilityChecker.m; path = GoogleUtilities/Reachability/GULReachabilityChecker.m; sourceTree = "<group>"; };
 		DFB6ECE593EFCD17D66C4C7E3B8C978F /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		E0FEFDD7FD8B009250837140A0E30F21 /* Pastel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pastel-prefix.pch"; sourceTree = "<group>"; };
+		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E296C7400EDB13416B077B09E1BB0E85 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Sources/Internal/Session.swift; sourceTree = "<group>"; };
 		E2D36DC56E6A6B20631D5354E14CFFD1 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		E62830FDDD31B9E67BBF808871BA3CA6 /* GULNetworkConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkConstants.m; path = GoogleUtilities/Network/GULNetworkConstants.m; sourceTree = "<group>"; };
@@ -404,14 +405,13 @@
 		E73F73A367C2C2C660BE76CB19F511F5 /* spotifylogo-32@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "spotifylogo-32@2x.png"; path = "SpotifyLogin/Resources/spotifylogo-32@2x.png"; sourceTree = "<group>"; };
 		E9338ABC5D83E1B3D7F6BEB292859FAB /* SpotifyLogin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpotifyLogin.h; path = SpotifyLogin/SpotifyLogin.h; sourceTree = "<group>"; };
 		E93406896EA5F87AE740C2D32325F42D /* SpotifyLoginPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotifyLoginPresenter.swift; path = Sources/SpotifyLoginPresenter.swift; sourceTree = "<group>"; };
+		EF71156CAC2EAD29ADFFD110DC4F46E1 /* SpotifyLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SpotifyLogin.framework; path = SpotifyLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFBF72E7BE2FC0A417AD91A837E82B09 /* Pods-SnapNP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SnapNP.release.xcconfig"; sourceTree = "<group>"; };
 		EFE4F0DC59BB5285EC12FFAA5CBAAE3D /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		F0105F3DA7E74CA70C29113ADCF04167 /* UIImageColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIImageColors.xcconfig; sourceTree = "<group>"; };
 		F12F622A49A6B7A8D6E80D690ACFB3EE /* GULNetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetwork.h; path = GoogleUtilities/Network/Private/GULNetwork.h; sourceTree = "<group>"; };
 		F17E3369D69A4C69EE0611853655AA20 /* GULReachabilityChecker+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULReachabilityChecker+Internal.h"; path = "GoogleUtilities/Reachability/GULReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
-		F334AEA904A78D47CEB74001A8C7692E /* Pods_SnapNP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SnapNP.framework; path = "Pods-SnapNP.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4440716B365A7751D7CD8607A6A7428 /* Pods-SnapNP.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SnapNP.modulemap"; sourceTree = "<group>"; };
-		F5EE035BB7A87C4DD884AA353D92E5C4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F63F5195F32745C44BFDA2E156D3F232 /* nanopb-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "nanopb-Info.plist"; sourceTree = "<group>"; };
 		F8191B51AED9A63AFD7AD6BDFB8A6A71 /* Pods-SnapNP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SnapNP-dummy.m"; sourceTree = "<group>"; };
 		F83827E37650B9B7E25FDF63276287F3 /* Pods-SnapNP-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SnapNP-frameworks.sh"; sourceTree = "<group>"; };
@@ -424,19 +424,43 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		57F59F4F98A4C4810A148DF776B9B5BE /* Frameworks */ = {
+		090C1D63463ACF622287EFF9D5C9392D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA6D4D69802EBF7C16A65FAE1F8965C2 /* Foundation.framework in Frameworks */,
+				7664FD4F59A0C00866CBAE60B0A3AD64 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77ED46575F32B0B9E26F372DD7C68B90 /* Frameworks */ = {
+		1A4E6A8BDEA2C3D7EED6BBB28556A8EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06AC6A2155161B597B31C81029073E78 /* Foundation.framework in Frameworks */,
+				C7BC0998F116AC6C3DD0E63BE6351AFC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B37E351AB8CC22F779EB08F806723A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953D11A58294EE4F4807413FE6EBD24A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531ADF5E960E16B4E81F5FBEBD891FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EDBE14617ADF50C15D8E8E7FEABBF77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		633916D43C1FED89997608449F54C7EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5E44AED525A78DF95933F3F0FB88B6B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,14 +469,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				91E3A93577528ED1E9A3E009E1B2A839 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A577C4E7D7005AA80E26FF693F15D8C8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				12568E9337517196B17622E99268F781 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,43 +482,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE516A9BF31C6E61F03173E3ECD16B34 /* Frameworks */ = {
+		AD9C5A8DAF4334B670E91B2EC08DBE2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFB713FD9AB97E6AC9225211D56AD10E /* Foundation.framework in Frameworks */,
+				464450D037D17ED5EE2322E180A6A9F5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFAF6C48DA76767FBAB7B8C2DB475201 /* Frameworks */ = {
+		B554069AD987B72C06A9A9FED40A3A71 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B2E1F604BF58EE6DAF5BA916B87EEEA /* Foundation.framework in Frameworks */,
+				3787149578B1C727E66F128F814FB406 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D09D8013F90867FF12A44A3225302091 /* Frameworks */ = {
+		C44D148D14281BB145AF71F58C13472A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42BD3EB17B5561C8FE175CBD9903828 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F1626ADC3A7EC435D2722B3173355D36 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6347B1BA6D146FE1BF6D4C140D5CDA04 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FDF4EDA510F12EF0232C165422773EE0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FDCCBD71EB223141F529C9F203BBEDE /* Foundation.framework in Frameworks */,
+				813D89BAF17188C6B8D21A8FB6133E32 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,16 +904,16 @@
 		C9EA7A97505EFEFD91E38C4EF4436090 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				183127355306B891FD01183FF4D54706 /* Alamofire.framework */,
-				1DC03A4D74B8FB81233643B366A2CF2E /* AZDialogView.framework */,
-				9CF64E0650D6843C15C6925DBF512C8D /* GoogleUtilities.framework */,
-				ACFB1D8D2510E8A41367E76AD19136EF /* nanopb.framework */,
-				154DE3B7F198AB47C118886A2B80594C /* Pastel.framework */,
-				F334AEA904A78D47CEB74001A8C7692E /* Pods_SnapNP.framework */,
-				AAEBD4115C43B74F3D86A6B35ED53A61 /* SpotifyLogin.framework */,
-				4866C58E19CAEE80F0A28A13A1E23D35 /* SwiftVideoBackground.framework */,
-				F5EE035BB7A87C4DD884AA353D92E5C4 /* SwiftyJSON.framework */,
-				788C6383E7DC80F6DE87622AD3EDD665 /* UIImageColors.framework */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				05AA625691E2EA21BEBE097057C4C7CC /* AZDialogView.framework */,
+				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */,
+				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */,
+				7E6869F153D7CB9C1B22DAF7252FF3E4 /* Pastel.framework */,
+				63983CF4674AD37DA0792ADEED95BC1E /* Pods_SnapNP.framework */,
+				EF71156CAC2EAD29ADFFD110DC4F46E1 /* SpotifyLogin.framework */,
+				6D8CDB93561D3B235015E3B4014A69AB /* SwiftVideoBackground.framework */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
+				575B4FEF97C798B19B4D4572DB58FB83 /* UIImageColors.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1056,28 +1056,53 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0B93C65CC292E8A096BA9E230F87294F /* Headers */ = {
+		12C8074647CDEA63BE272DE8EA4241A5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EFBDFF87715F105A7C8A49B28122172 /* Pods-SnapNP-umbrella.h in Headers */,
+				D8726BE53FE3101D3E251FBD1516C45A /* SwiftVideoBackground-umbrella.h in Headers */,
+				2F57C310A40462328E654E9BD26311F3 /* SwiftVideoBackground.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14E00DD8E28F3A16C61E4CF2E2A9EFDA /* Headers */ = {
+		19491DDCBE1DE9F00A209912060ACF27 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC14F83E941D06C9F6B1C952B050AF8A /* SpotifyLogin-umbrella.h in Headers */,
-				653CC250F21995DE3BD4236B75173F18 /* SpotifyLogin.h in Headers */,
+				FF232C4B870FF2F9F0A6EC0ED1F39EDF /* SpotifyLogin-umbrella.h in Headers */,
+				F84C432F6010D60D9FEEA7E3AA1D92BB /* SpotifyLogin.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23D70D9651451F43E7E8CC1A87B4B7E9 /* Headers */ = {
+		1D7098407796840817B2B054A4D23B59 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6F6E4CC26451E91B59FAE0F6841DC1F /* Alamofire-umbrella.h in Headers */,
+				C7C49BF5310B7E7DCF5C390CC5705D1B /* AZDialogView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2582784E4FA6A1AC5D23FC53AC3F6EE2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7B74645E07C39771156A1FA413B98D4 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D7DD627DB5C5AD636646E57B685AFB2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1942F7D3B7722A5637C3FC0BE44B1E6C /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54E499618C21ABA3AC348171170D5B5D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				943C7FAC59BCD2000030AC569538EF33 /* UIImageColors-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1093,36 +1118,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EB5D677D964C018FB8169F5D94014E8 /* Headers */ = {
+		6471D66125C873DE7E19B5A99CB9AAFA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A78B24F38B55CEC9DE9FF601A306C1 /* AZDialogView-umbrella.h in Headers */,
+				9D751AEB9A4C8C416382549AD33B05A7 /* Pods-SnapNP-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5287D7F00214718072FD4AAA155F2C9 /* Headers */ = {
+		C60A019DF9962A957DDF5E20FEB399E3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2889ACCDC24EE6A134B17C2EC9B36DE /* UIImageColors-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B52DA5D67E39646E28E0E7716A0EBFAC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68EBFC1CC223292E584150373B26A659 /* Pastel-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDAE1686FF403084B17B1EA40E5D69D8 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				667034F5A627C2A8BF443EAD5FC33669 /* SwiftVideoBackground-umbrella.h in Headers */,
-				8CFB089233F5C9C63E84771C0998ABE2 /* SwiftVideoBackground.h in Headers */,
+				67F3D3F39D5D25B7E3C3A1C32F22EA39 /* Pastel-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1153,25 +1161,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5FD500616E7B3585CDC612B217AB8EF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29C63AB0D159A830DBD4F8E61F5CE5DE /* SwiftyJSON-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		15E734B610B8DC61AE5AC6FFE7ED857A /* SwiftVideoBackground */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB2E9810EB2A7C3A021E21FC0D8D752B /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */;
+			buildConfigurationList = 3F32C55E0312ADFB971169F98AD8D1A0 /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */;
 			buildPhases = (
-				CDAE1686FF403084B17B1EA40E5D69D8 /* Headers */,
-				B525BD9438463FA4E73D49106876F722 /* Sources */,
-				AE516A9BF31C6E61F03173E3ECD16B34 /* Frameworks */,
-				70DD33964AF005DECAC517CEF4DC82ED /* Resources */,
+				12C8074647CDEA63BE272DE8EA4241A5 /* Headers */,
+				CE54C82677F3FEA63DA1B5D77E9797C0 /* Sources */,
+				B554069AD987B72C06A9A9FED40A3A71 /* Frameworks */,
+				AAAED2E222BA81DD33C9D99DD462519E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1179,17 +1179,17 @@
 			);
 			name = SwiftVideoBackground;
 			productName = SwiftVideoBackground;
-			productReference = 4866C58E19CAEE80F0A28A13A1E23D35 /* SwiftVideoBackground.framework */;
+			productReference = 6D8CDB93561D3B235015E3B4014A69AB /* SwiftVideoBackground.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		223ACB2993ED61193B95A52611ED34E7 /* Pastel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3AFCCE8C050002E3CB3C7A537357E8ED /* Build configuration list for PBXNativeTarget "Pastel" */;
+			buildConfigurationList = 9C50A4A5CEA57821BA3CD911B290D419 /* Build configuration list for PBXNativeTarget "Pastel" */;
 			buildPhases = (
-				B52DA5D67E39646E28E0E7716A0EBFAC /* Headers */,
-				08B2D0AB86672DAD8BA2F3686A501A4D /* Sources */,
-				FDF4EDA510F12EF0232C165422773EE0 /* Frameworks */,
-				9697B28A7CB80D3445662F0F5056647F /* Resources */,
+				C60A019DF9962A957DDF5E20FEB399E3 /* Headers */,
+				D5A4C040EDB49FEECE02D74495641FC7 /* Sources */,
+				633916D43C1FED89997608449F54C7EC /* Frameworks */,
+				3360140E99CC2CA2AD74233DDC25739E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1197,37 +1197,37 @@
 			);
 			name = Pastel;
 			productName = Pastel;
-			productReference = 154DE3B7F198AB47C118886A2B80594C /* Pastel.framework */;
+			productReference = 7E6869F153D7CB9C1B22DAF7252FF3E4 /* Pastel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2256594FA0EDB1F725DB7D7B91B0ADD8 /* Pods-SnapNP */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C155EECD6EC839B9AA60922CEC409258 /* Build configuration list for PBXNativeTarget "Pods-SnapNP" */;
+			buildConfigurationList = 633DEAD6F1D791840D172915245F26AA /* Build configuration list for PBXNativeTarget "Pods-SnapNP" */;
 			buildPhases = (
-				0B93C65CC292E8A096BA9E230F87294F /* Headers */,
-				76F589E16185E2C76477257CC77311CE /* Sources */,
-				77ED46575F32B0B9E26F372DD7C68B90 /* Frameworks */,
-				745B90E67DF0559EB77BE6BB28B86B0A /* Resources */,
+				6471D66125C873DE7E19B5A99CB9AAFA /* Headers */,
+				EBB601CBE9AFC859D2561AB155219B09 /* Sources */,
+				C44D148D14281BB145AF71F58C13472A /* Frameworks */,
+				A2DF6E4B27488AB052F1C15A2FBA2F16 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1D626100A00CF1DAC4781A493647BF65 /* PBXTargetDependency */,
-				B6C48F6A63973A5B3DA3A998EDDE8F36 /* PBXTargetDependency */,
-				66F512E4D247D029759FC57989E3E58D /* PBXTargetDependency */,
-				2C6502DEE1C199E2FBA2558D4EC1AFC6 /* PBXTargetDependency */,
-				18EFCB23A6D4E81D7E94B64DF7B9C345 /* PBXTargetDependency */,
-				DC93B2A96956637FECA80FDEA707047B /* PBXTargetDependency */,
-				1EB12CC52C8F5A09F0A12E22C31E0CAE /* PBXTargetDependency */,
-				EA09B40951B59A71119D9E3AB3E68BD4 /* PBXTargetDependency */,
-				11EF7E67020582F1582D3C37A8E82DA4 /* PBXTargetDependency */,
-				0C4585DEF4E3BE54075F0C867B6C6BE2 /* PBXTargetDependency */,
-				F1D80FFD676C04BF45E908E22D36C163 /* PBXTargetDependency */,
-				07F582A89CF9769D7EEF1A8069EDA15D /* PBXTargetDependency */,
+				757FA0BF512FADB3C187738ED787BA3C /* PBXTargetDependency */,
+				D95521A8F6214B5E3E9A6359D8FD1A0E /* PBXTargetDependency */,
+				5ECA137929275E646FB23124C47B961B /* PBXTargetDependency */,
+				957A53F4C86EF03EEC7F66D65CFCCC05 /* PBXTargetDependency */,
+				9758EAF1EBC0F9CB1B6147D20DE9B43E /* PBXTargetDependency */,
+				0D326FA8A519A75F0C2018EDE05E7347 /* PBXTargetDependency */,
+				113A54A3EE8F157C9E929419D02CB9EF /* PBXTargetDependency */,
+				34050F6FE8D97855C7004E6F41876E30 /* PBXTargetDependency */,
+				861562D5C69F2F17B82D3C10A82672D6 /* PBXTargetDependency */,
+				EB06089B28EDBDDA8E1FA86BFB1A5FF1 /* PBXTargetDependency */,
+				C37B3AE2C973A2D4D61790B01410AD0C /* PBXTargetDependency */,
+				49CB0A2D65E61ABB21D527488279647A /* PBXTargetDependency */,
 			);
 			name = "Pods-SnapNP";
 			productName = "Pods-SnapNP";
-			productReference = F334AEA904A78D47CEB74001A8C7692E /* Pods_SnapNP.framework */;
+			productReference = 63983CF4674AD37DA0792ADEED95BC1E /* Pods_SnapNP.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */ = {
@@ -1245,17 +1245,17 @@
 			);
 			name = GoogleUtilities;
 			productName = GoogleUtilities;
-			productReference = 9CF64E0650D6843C15C6925DBF512C8D /* GoogleUtilities.framework */;
+			productReference = B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BDB3D9762DE1E9282191B6B26703E4DE /* UIImageColors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C169FB0063A74D33B45C0D7A66FD65D1 /* Build configuration list for PBXNativeTarget "UIImageColors" */;
+			buildConfigurationList = 82F4B7C8B61FB3FB7B650EF96D1FB1C8 /* Build configuration list for PBXNativeTarget "UIImageColors" */;
 			buildPhases = (
-				A5287D7F00214718072FD4AAA155F2C9 /* Headers */,
-				4A514A4594AF3DC16F48D58BC5972CC8 /* Sources */,
-				BFAF6C48DA76767FBAB7B8C2DB475201 /* Frameworks */,
-				8CF30E3054A70F6593B6C54AD6041E50 /* Resources */,
+				54E499618C21ABA3AC348171170D5B5D /* Headers */,
+				58B030BDD504462A2F26190A113F1248 /* Sources */,
+				1B37E351AB8CC22F779EB08F806723A8 /* Frameworks */,
+				14A22D9CCE24C04299B587133D8952E6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1263,17 +1263,17 @@
 			);
 			name = UIImageColors;
 			productName = UIImageColors;
-			productReference = 788C6383E7DC80F6DE87622AD3EDD665 /* UIImageColors.framework */;
+			productReference = 575B4FEF97C798B19B4D4572DB58FB83 /* UIImageColors.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C3EF3F58964FDE51A71B36344F566F9B /* SpotifyLogin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 884508D2388916369DB1497152683DBE /* Build configuration list for PBXNativeTarget "SpotifyLogin" */;
+			buildConfigurationList = 38B630A7187E461BD8B75EE1B30D78F9 /* Build configuration list for PBXNativeTarget "SpotifyLogin" */;
 			buildPhases = (
-				14E00DD8E28F3A16C61E4CF2E2A9EFDA /* Headers */,
-				51A7166C1AF78D53C6DF385D8DA58B5A /* Sources */,
-				A577C4E7D7005AA80E26FF693F15D8C8 /* Frameworks */,
-				E308FAB68824C1E0C1F99CD0EFE748FC /* Resources */,
+				19491DDCBE1DE9F00A209912060ACF27 /* Headers */,
+				A78484DA5273CC1434B7A466998E9E1E /* Sources */,
+				1A4E6A8BDEA2C3D7EED6BBB28556A8EB /* Frameworks */,
+				4FDB36D5CAB36845CEC579F3BC326F5F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1281,17 +1281,17 @@
 			);
 			name = SpotifyLogin;
 			productName = SpotifyLogin;
-			productReference = AAEBD4115C43B74F3D86A6B35ED53A61 /* SpotifyLogin.framework */;
+			productReference = EF71156CAC2EAD29ADFFD110DC4F46E1 /* SpotifyLogin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 500983288FD27F691001EEF004174E82 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = 62468BF9C7EDA172E951A24083C3ECA7 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				D5FD500616E7B3585CDC612B217AB8EF /* Headers */,
-				1C23F93016AD02D1E2389C53E71EF604 /* Sources */,
-				57F59F4F98A4C4810A148DF776B9B5BE /* Frameworks */,
-				04D10243A21F1712662C92EBCC5385D1 /* Resources */,
+				3D7DD627DB5C5AD636646E57B685AFB2 /* Headers */,
+				1700C451C98D9DCECBEDFC5E351C5A9E /* Sources */,
+				AD9C5A8DAF4334B670E91B2EC08DBE2C /* Frameworks */,
+				D098F7F0080A87A1F472C81FC2F85528 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1299,7 +1299,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = F5EE035BB7A87C4DD884AA353D92E5C4 /* SwiftyJSON.framework */;
+			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */ = {
@@ -1317,17 +1317,17 @@
 			);
 			name = nanopb;
 			productName = nanopb;
-			productReference = ACFB1D8D2510E8A41367E76AD19136EF /* nanopb.framework */;
+			productReference = 06FC5C9CF96D60C50FCD47D339C91951 /* nanopb.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D7E15BC85DBC8F150C7C6B40A72AC0C8 /* AZDialogView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5E312F4600394E714475D6967C23540 /* Build configuration list for PBXNativeTarget "AZDialogView" */;
+			buildConfigurationList = EE6D071531D5E58B92215EB1935E976B /* Build configuration list for PBXNativeTarget "AZDialogView" */;
 			buildPhases = (
-				7EB5D677D964C018FB8169F5D94014E8 /* Headers */,
-				04F2992D863F3385F6E02FFF5BDB2998 /* Sources */,
-				D09D8013F90867FF12A44A3225302091 /* Frameworks */,
-				4F6B807ED85038B328DFABF42CD4F121 /* Resources */,
+				1D7098407796840817B2B054A4D23B59 /* Headers */,
+				03DAE4EB766E85F9D0CF51279193238B /* Sources */,
+				531ADF5E960E16B4E81F5FBEBD891FEC /* Frameworks */,
+				5F6858B208C4414FD6095664E71C0E14 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1335,17 +1335,17 @@
 			);
 			name = AZDialogView;
 			productName = AZDialogView;
-			productReference = 1DC03A4D74B8FB81233643B366A2CF2E /* AZDialogView.framework */;
+			productReference = 05AA625691E2EA21BEBE097057C4C7CC /* AZDialogView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E87124444A44B7DB55208E7FEC21D331 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildConfigurationList = E4A5194ABAF7A4780609E0E581DA6B54 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-				23D70D9651451F43E7E8CC1A87B4B7E9 /* Headers */,
-				CFA11E47B3EB3A36AA49F6F7F060CB98 /* Sources */,
-				F1626ADC3A7EC435D2722B3173355D36 /* Frameworks */,
-				28FF73341543B6F0A7DF3C20CFFEA0AA /* Resources */,
+				2582784E4FA6A1AC5D23FC53AC3F6EE2 /* Headers */,
+				2DDFD9AC10F181CD7130BDF5F9E0502B /* Sources */,
+				090C1D63463ACF622287EFF9D5C9392D /* Frameworks */,
+				473D3E892ABB6C798CFF290644259B34 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1353,7 +1353,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 183127355306B891FD01183FF4D54706 /* Alamofire.framework */;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1362,8 +1362,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1371,6 +1371,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = C9EA7A97505EFEFD91E38C4EF4436090 /* Products */;
@@ -1395,35 +1396,38 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		04D10243A21F1712662C92EBCC5385D1 /* Resources */ = {
+		14A22D9CCE24C04299B587133D8952E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		28FF73341543B6F0A7DF3C20CFFEA0AA /* Resources */ = {
+		3360140E99CC2CA2AD74233DDC25739E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F6B807ED85038B328DFABF42CD4F121 /* Resources */ = {
+		473D3E892ABB6C798CFF290644259B34 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70DD33964AF005DECAC517CEF4DC82ED /* Resources */ = {
+		4FDB36D5CAB36845CEC579F3BC326F5F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD993DEADBBBF9B934934C852B28C118 /* spotifylogo-32.png in Resources */,
+				4EA435E0385E273CAE57F8984F533361 /* spotifylogo-32@2x.png in Resources */,
+				CDA3B99F37D90CDE687A444826D50622 /* spotifylogo-32@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		745B90E67DF0559EB77BE6BB28B86B0A /* Resources */ = {
+		5F6858B208C4414FD6095664E71C0E14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1437,14 +1441,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8CF30E3054A70F6593B6C54AD6041E50 /* Resources */ = {
+		A2DF6E4B27488AB052F1C15A2FBA2F16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9697B28A7CB80D3445662F0F5056647F /* Resources */ = {
+		AAAED2E222BA81DD33C9D99DD462519E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D098F7F0080A87A1F472C81FC2F85528 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1458,73 +1469,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E308FAB68824C1E0C1F99CD0EFE748FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9865337467AC27F5A4286E67EFCF2B2F /* spotifylogo-32.png in Resources */,
-				5F5D673FB97CA948FC0B4A7C4929ED11 /* spotifylogo-32@2x.png in Resources */,
-				ECE217BC89B02138E69F74D3F3486A79 /* spotifylogo-32@3x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		04F2992D863F3385F6E02FFF5BDB2998 /* Sources */ = {
+		03DAE4EB766E85F9D0CF51279193238B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12B1756664CAC4D9C05EB1EB3E351C2B /* AZDialogView-dummy.m in Sources */,
-				39AF59536B0F16DB489CDA09937A8F94 /* AZDialogViewController.swift in Sources */,
+				451BAC4BDA74D6F631F8743A55789C8F /* AZDialogView-dummy.m in Sources */,
+				240A557125411EA0B672FC771BD3F421 /* AZDialogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		08B2D0AB86672DAD8BA2F3686A501A4D /* Sources */ = {
+		1700C451C98D9DCECBEDFC5E351C5A9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43AEEE0AC9D95FD633132B5997A6EB06 /* Pastel-dummy.m in Sources */,
-				89DD9B60943AD872E42B8D273BF57C3B /* PastelGradient.swift in Sources */,
-				3DED8BFF42C2EC0B0C4E5B1553818BA2 /* PastelLabel.swift in Sources */,
-				6499B1F14A26D3A1FACF8DCD8DF6D560 /* PastelPoint.swift in Sources */,
-				2167552C5C8A1C7DED591574DBFB8EC4 /* PastelView.swift in Sources */,
+				2BF6FBC0A64BF107C5D64C61F1397770 /* SwiftyJSON-dummy.m in Sources */,
+				7B4CE5C84161E2BFE477F42DFD634382 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C23F93016AD02D1E2389C53E71EF604 /* Sources */ = {
+		2DDFD9AC10F181CD7130BDF5F9E0502B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				763EA582B030AB9A2FC93F6C1AF1EF19 /* SwiftyJSON-dummy.m in Sources */,
-				B8B9F6DA9BE6BE3679EC77D89E028E73 /* SwiftyJSON.swift in Sources */,
+				83956E20859CDBBE7BC38ABADE0170FB /* AFError.swift in Sources */,
+				1945CD5D63A1C164AEAAA9A33E85571E /* Alamofire-dummy.m in Sources */,
+				BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */,
+				D3D8C379C6E4FB487E5ABD6800AD7B7E /* DispatchQueue+Alamofire.swift in Sources */,
+				1986B50C74F1697EA43F68335C93CEB3 /* MultipartFormData.swift in Sources */,
+				3571F958A3907B3A806E62D50C2550D4 /* NetworkReachabilityManager.swift in Sources */,
+				132E0F619E4338E5D1B27E4C72076B3F /* Notifications.swift in Sources */,
+				0C5E11DE24DAA737704B355F5F2F3426 /* ParameterEncoding.swift in Sources */,
+				98A929C8E9012AB167672714FFD2113C /* Request.swift in Sources */,
+				D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */,
+				E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */,
+				64744C911253C3E01461FAD7C935C8D7 /* Result.swift in Sources */,
+				F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */,
+				2C61B040BA6A9A7AE66C4D9BA26D5520 /* SessionDelegate.swift in Sources */,
+				931BBB8230A25161D5C37528A8F9FECF /* SessionManager.swift in Sources */,
+				AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */,
+				933FDA5970AA525D6CB92BFEBA2BAB4A /* Timeline.swift in Sources */,
+				53791F5E5F07400F92CFDFC89A432305 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4A514A4594AF3DC16F48D58BC5972CC8 /* Sources */ = {
+		58B030BDD504462A2F26190A113F1248 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				099CE45BE39CE3384F95A966B4A2B04F /* UIImageColors-dummy.m in Sources */,
-				FB36E092E7C8E5E5EBAB65C33D69AD4C /* UIImageColors.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		51A7166C1AF78D53C6DF385D8DA58B5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DAF0ACAE8C6F0346748D44C0E8294958 /* Constants.swift in Sources */,
-				B8BE0FA0F75A0C4CE2747D624E961E82 /* Networking.swift in Sources */,
-				53CCF90878CA9CD1B0C45D0BCDFF8D18 /* SafariDelegate.swift in Sources */,
-				7C1B66D9F9745866357AD6CF9DA615D8 /* Scope.swift in Sources */,
-				F1AF1A1AC470568CB3EA2B067B99DA96 /* Session.swift in Sources */,
-				4D8763F9AD199BBF6B057BB4D48B8D78 /* SessionLocalStorage.swift in Sources */,
-				7ED6EEE37DE49B6E66E03514B783795E /* SpotifyLogin-dummy.m in Sources */,
-				8F150C7CB64399FAE1D2472934F4C70A /* SpotifyLogin.swift in Sources */,
-				F8B55FFE94DAE4E5D6168E410CA7AEB4 /* SpotifyLoginButton.swift in Sources */,
-				B43BC60D4083152EBF25FEF3B279BECA /* SpotifyLoginPresenter.swift in Sources */,
-				B25C5D5DC6967C702BA7C9A911219590 /* URLBuilder.swift in Sources */,
+				11304F62C5C8EA69A6A10FE099B21D2D /* UIImageColors-dummy.m in Sources */,
+				3ABBAD93F92A1171CE9F3C292D211169 /* UIImageColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1546,46 +1542,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		76F589E16185E2C76477257CC77311CE /* Sources */ = {
+		A78484DA5273CC1434B7A466998E9E1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7E38988544305D0DCFCC0AA0506D4DD /* Pods-SnapNP-dummy.m in Sources */,
+				7D6E5145ADD4B2E13476D209C28C935F /* Constants.swift in Sources */,
+				FB30A55401B78BE1C682E40A3C4F81DF /* Networking.swift in Sources */,
+				B65D445DBBFC21A569ECCAED7AA1D81B /* SafariDelegate.swift in Sources */,
+				760C6088A78D44576FBEFC7BE5D29D24 /* Scope.swift in Sources */,
+				3CF4CDBA30FDEFE44484F65ECB765B6A /* Session.swift in Sources */,
+				5BD42A57C5E0B2FB9A50CD69D4327084 /* SessionLocalStorage.swift in Sources */,
+				999875B9100EBDCFAEBDA20F5DAC8913 /* SpotifyLogin-dummy.m in Sources */,
+				D421A6C52D31905BFD0446659AA1CF6D /* SpotifyLogin.swift in Sources */,
+				7B8FA437539B67696F939A2F88DFF71D /* SpotifyLoginButton.swift in Sources */,
+				436455B287A50944F60BAB699E02C75D /* SpotifyLoginPresenter.swift in Sources */,
+				02AEED865D2144E99A2ED4AFEFBDD0EB /* URLBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B525BD9438463FA4E73D49106876F722 /* Sources */ = {
+		CE54C82677F3FEA63DA1B5D77E9797C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F2D4B2F068CB596ADC5C9920134BFF2 /* SwiftVideoBackground-dummy.m in Sources */,
-				FE518CF6E2B53236318285C1B0C8A934 /* VideoBackground.swift in Sources */,
-				7CEC75D092231F8E7A54684E3A5BA2EC /* VideoBackgroundError.swift in Sources */,
+				91B4E14ED95F2894F910147816703A09 /* SwiftVideoBackground-dummy.m in Sources */,
+				58E5292B66E33336487404E4CCF17788 /* VideoBackground.swift in Sources */,
+				E231946CB5F9C9DFD09A477936A357F1 /* VideoBackgroundError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFA11E47B3EB3A36AA49F6F7F060CB98 /* Sources */ = {
+		D5A4C040EDB49FEECE02D74495641FC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B082FA7223428C8DE32F7DE7F5AF441C /* AFError.swift in Sources */,
-				559368DD6966DB1193B3FD6E7CBF5FED /* Alamofire-dummy.m in Sources */,
-				5B1086B0A866704A6CAF72B5A47582C6 /* Alamofire.swift in Sources */,
-				D2B384893454A891D32CB20A53E4EDAF /* DispatchQueue+Alamofire.swift in Sources */,
-				F4D82D78C14BF258042CDA3C1B15B7E1 /* MultipartFormData.swift in Sources */,
-				72C2F0877FAB758F102C1D5FB6641559 /* NetworkReachabilityManager.swift in Sources */,
-				B2E54789768E4F4EE35F11E0034C7383 /* Notifications.swift in Sources */,
-				A5ADEF55257E4C1A482BF072C205F388 /* ParameterEncoding.swift in Sources */,
-				14ECF6E40B0356170FEDE170B2EB6F2F /* Request.swift in Sources */,
-				5C2F9E5485166B59DD032D7DF4C29CF0 /* Response.swift in Sources */,
-				ADB18D94C4F71AE2FCE388100D556B0F /* ResponseSerialization.swift in Sources */,
-				E7BA58DE1AA8F11BAA7E8817D8AB509C /* Result.swift in Sources */,
-				4920AD2B3D668DB550BEDED6747F925B /* ServerTrustPolicy.swift in Sources */,
-				FFB9BA683C701138C08A211F3E192F56 /* SessionDelegate.swift in Sources */,
-				ABAEB9DEE3CE05729A9442CFA1988407 /* SessionManager.swift in Sources */,
-				594494BAB3E029862D7009DE60FCC904 /* TaskDelegate.swift in Sources */,
-				505B75241DCEA8C1FBF9F479C2DDEF31 /* Timeline.swift in Sources */,
-				D583829CA1D3C6B9B8F5C085B1D597EF /* Validation.swift in Sources */,
+				B9B8D20601FF222DA61DFBEA646730BA /* Pastel-dummy.m in Sources */,
+				A86D3DB0B67FF29709A36E54A00B12E0 /* PastelGradient.swift in Sources */,
+				C6BFCFB2721D2029FD9184F09F7830F4 /* PastelLabel.swift in Sources */,
+				9E5784B12FCB5B512CF072F1B05AF075 /* PastelPoint.swift in Sources */,
+				5F46B77615FFBDE0CFD77B8A6FEA646C /* PastelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1600,62 +1593,76 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB601CBE9AFC859D2561AB155219B09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12FF3555B8531302FBEA78B38EE187F3 /* Pods-SnapNP-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		07F582A89CF9769D7EEF1A8069EDA15D /* PBXTargetDependency */ = {
+		0D326FA8A519A75F0C2018EDE05E7347 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = nanopb;
-			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
-			targetProxy = 42F2FA39955960BE8F56C36648B5AB95 /* PBXContainerItemProxy */;
+			name = Pastel;
+			target = 223ACB2993ED61193B95A52611ED34E7 /* Pastel */;
+			targetProxy = 6ACD739FF3218B8286ED7BB580FF0E5A /* PBXContainerItemProxy */;
 		};
-		0C4585DEF4E3BE54075F0C867B6C6BE2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyJSON;
-			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
-			targetProxy = 903BD7EF9386F156BE906AD0387C6C5D /* PBXContainerItemProxy */;
-		};
-		11EF7E67020582F1582D3C37A8E82DA4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftVideoBackground;
-			target = 15E734B610B8DC61AE5AC6FFE7ED857A /* SwiftVideoBackground */;
-			targetProxy = 041438F985899BB49C05FBE595EAA0FA /* PBXContainerItemProxy */;
-		};
-		18EFCB23A6D4E81D7E94B64DF7B9C345 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GoogleUtilities;
-			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
-			targetProxy = 2EAA3CACF92682F42D3B330E88BF4DED /* PBXContainerItemProxy */;
-		};
-		1D626100A00CF1DAC4781A493647BF65 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AZDialogView;
-			target = D7E15BC85DBC8F150C7C6B40A72AC0C8 /* AZDialogView */;
-			targetProxy = F3DE981D2DD109D99061F828528EE596 /* PBXContainerItemProxy */;
-		};
-		1EB12CC52C8F5A09F0A12E22C31E0CAE /* PBXTargetDependency */ = {
+		113A54A3EE8F157C9E929419D02CB9EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnapSDK;
 			target = DC460828FF0F2F76C86CA020169EDB5F /* SnapSDK */;
-			targetProxy = 396117A872E433693584D4D230357247 /* PBXContainerItemProxy */;
+			targetProxy = B5C20F763401F209A0A575ADD08B4778 /* PBXContainerItemProxy */;
 		};
-		2C6502DEE1C199E2FBA2558D4EC1AFC6 /* PBXTargetDependency */ = {
+		34050F6FE8D97855C7004E6F41876E30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = GoogleAppMeasurement;
-			target = B53D977A951AFC38B21751B706C1DF83 /* GoogleAppMeasurement */;
-			targetProxy = 0672D53ABE13156F34F3C64C1C9477C0 /* PBXContainerItemProxy */;
+			name = SpotifyLogin;
+			target = C3EF3F58964FDE51A71B36344F566F9B /* SpotifyLogin */;
+			targetProxy = 9FAB7C1C1F9350AA509D4BE14E5DDC7A /* PBXContainerItemProxy */;
 		};
-		66F512E4D247D029759FC57989E3E58D /* PBXTargetDependency */ = {
+		49CB0A2D65E61ABB21D527488279647A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = nanopb;
+			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
+			targetProxy = A0C5B8A3F87CD8187C8CEEDDD64804A5 /* PBXContainerItemProxy */;
+		};
+		5ECA137929275E646FB23124C47B961B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Google-Mobile-Ads-SDK";
 			target = FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */;
-			targetProxy = 9009F11E40488D212949A9147B245EF1 /* PBXContainerItemProxy */;
+			targetProxy = 40BC5F96A30175357B104FAD627A1B5D /* PBXContainerItemProxy */;
 		};
-		B6C48F6A63973A5B3DA3A998EDDE8F36 /* PBXTargetDependency */ = {
+		757FA0BF512FADB3C187738ED787BA3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 03EB21BE751DDA65AB54E2F9ED6A3158 /* PBXContainerItemProxy */;
+			name = AZDialogView;
+			target = D7E15BC85DBC8F150C7C6B40A72AC0C8 /* AZDialogView */;
+			targetProxy = EFB2BE706C7BADB18A0B053AA95C6C23 /* PBXContainerItemProxy */;
+		};
+		861562D5C69F2F17B82D3C10A82672D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftVideoBackground;
+			target = 15E734B610B8DC61AE5AC6FFE7ED857A /* SwiftVideoBackground */;
+			targetProxy = F623F4DE84D025D79AE2E9AC1CC061A4 /* PBXContainerItemProxy */;
+		};
+		957A53F4C86EF03EEC7F66D65CFCCC05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleAppMeasurement;
+			target = B53D977A951AFC38B21751B706C1DF83 /* GoogleAppMeasurement */;
+			targetProxy = 8D519F8F8F6E0EC6E9E539A3356F21C6 /* PBXContainerItemProxy */;
+		};
+		9758EAF1EBC0F9CB1B6147D20DE9B43E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleUtilities;
+			target = 8D7F5D5DD528D21A72DC87ADA5B12E2D /* GoogleUtilities */;
+			targetProxy = BB4D8D36F19936BE406BA69C7F2A598D /* PBXContainerItemProxy */;
+		};
+		C37B3AE2C973A2D4D61790B01410AD0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIImageColors;
+			target = BDB3D9762DE1E9282191B6B26703E4DE /* UIImageColors */;
+			targetProxy = 11CEA0DED238F4CA8DF14FD56EAFAC76 /* PBXContainerItemProxy */;
 		};
 		C9B67B7AD978666EAB8B538DA6646A3B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1663,11 +1670,11 @@
 			target = B53D977A951AFC38B21751B706C1DF83 /* GoogleAppMeasurement */;
 			targetProxy = 00C747A125DB0A6E88D0C2923AB38452 /* PBXContainerItemProxy */;
 		};
-		DC93B2A96956637FECA80FDEA707047B /* PBXTargetDependency */ = {
+		D95521A8F6214B5E3E9A6359D8FD1A0E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Pastel;
-			target = 223ACB2993ED61193B95A52611ED34E7 /* Pastel */;
-			targetProxy = 7FB2BDAE8C9BCF36356390C5FA7506FB /* PBXContainerItemProxy */;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = FCFC60590FE92AFAD1E4332165A5BC1E /* PBXContainerItemProxy */;
 		};
 		DD61449376457E003B6EDBB84E3A5FC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1675,17 +1682,11 @@
 			target = D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */;
 			targetProxy = BBB170488659A159B449AB60C31B69DC /* PBXContainerItemProxy */;
 		};
-		EA09B40951B59A71119D9E3AB3E68BD4 /* PBXTargetDependency */ = {
+		EB06089B28EDBDDA8E1FA86BFB1A5FF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SpotifyLogin;
-			target = C3EF3F58964FDE51A71B36344F566F9B /* SpotifyLogin */;
-			targetProxy = 530FC274B030DEB28FEFA276C7942AF2 /* PBXContainerItemProxy */;
-		};
-		F1D80FFD676C04BF45E908E22D36C163 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UIImageColors;
-			target = BDB3D9762DE1E9282191B6B26703E4DE /* UIImageColors */;
-			targetProxy = 6567E832050853E4EDF70E3BF641353D /* PBXContainerItemProxy */;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = 4EE20851C2A606B92E4955B81204DDC5 /* PBXContainerItemProxy */;
 		};
 		FFD5D92930868D867B191EF21D425025 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1696,6 +1697,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		02D9E94E3A1B1CB989FFDDF65AA094A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89F32DAD22B71035D68EA2C3D7FD7493 /* Pastel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Pastel/Pastel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pastel/Pastel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Pastel/Pastel.modulemap";
+				PRODUCT_MODULE_NAME = Pastel;
+				PRODUCT_NAME = Pastel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		062344AE75BBF862EE0093481932545A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A450AFD1EA7B830D70A232DB0D389DA2 /* nanopb.xcconfig */;
@@ -1811,9 +1848,9 @@
 			};
 			name = Debug;
 		};
-		4019DA20E239F6AB93935F149076D007 /* Debug */ = {
+		1A97F0CD0CBC7D8C31DFF229D53F7B88 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0105F3DA7E74CA70C29113ADCF04167 /* UIImageColors.xcconfig */;
+			baseConfigurationReference = 2EBFCE355F6D6A8BAC7DE17DD91C7295 /* SwiftVideoBackground.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1824,8 +1861,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UIImageColors/UIImageColors-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UIImageColors/UIImageColors-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1833,156 +1870,19 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/UIImageColors/UIImageColors.modulemap";
-				PRODUCT_MODULE_NAME = UIImageColors;
-				PRODUCT_NAME = UIImageColors;
+				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
+				PRODUCT_MODULE_NAME = SwiftVideoBackground;
+				PRODUCT_NAME = SwiftVideoBackground;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4560B22638A12214851FEE33D3AE5138 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0105F3DA7E74CA70C29113ADCF04167 /* UIImageColors.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UIImageColors/UIImageColors-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UIImageColors/UIImageColors-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/UIImageColors/UIImageColors.modulemap";
-				PRODUCT_MODULE_NAME = UIImageColors;
-				PRODUCT_NAME = UIImageColors;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		50BAE404B1CA10544EC797DB64D25ACA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89F32DAD22B71035D68EA2C3D7FD7493 /* Pastel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Pastel/Pastel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pastel/Pastel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Pastel/Pastel.modulemap";
-				PRODUCT_MODULE_NAME = Pastel;
-				PRODUCT_NAME = Pastel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		524DBB5D93314D2DE17F58D0348EA8F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F63A7F9B2DC547A04FB9ED0F461B23D /* SpotifyLogin.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SpotifyLogin/SpotifyLogin-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SpotifyLogin/SpotifyLogin-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SpotifyLogin/SpotifyLogin.modulemap";
-				PRODUCT_MODULE_NAME = SpotifyLogin;
-				PRODUCT_NAME = SpotifyLogin;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		533220A7363132F85843031FA4F2AAAB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C0C1CF630D901B20BB2C9CF1A506BF3 /* Alamofire.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		5DBAD0E0866475FBDA5F4E0EF790FE37 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2037,9 +1937,9 @@
 			};
 			name = Release;
 		};
-		67AA0E5F2C7C311997942BF7D92AD52B /* Debug */ = {
+		60F731DF48862C993F703DD3290E342F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DCB0BA55B2DE8278C0B133EAE726ACD /* AZDialogView.xcconfig */;
+			baseConfigurationReference = 89F32DAD22B71035D68EA2C3D7FD7493 /* Pastel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2050,18 +1950,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AZDialogView/AZDialogView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AZDialogView/AZDialogView-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pastel/Pastel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pastel/Pastel-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/AZDialogView/AZDialogView.modulemap";
-				PRODUCT_MODULE_NAME = AZDialogView;
-				PRODUCT_NAME = AZDialogView;
+				MODULEMAP_FILE = "Target Support Files/Pastel/Pastel.modulemap";
+				PRODUCT_MODULE_NAME = Pastel;
+				PRODUCT_NAME = Pastel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -2088,12 +1988,10 @@
 			};
 			name = Debug;
 		};
-		918C9E14809AA87F049BE5A618C23750 /* Release */ = {
+		6D8148BF34076F0461CD19040BC4F09D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFBF72E7BE2FC0A417AD91A837E82B09 /* Pods-SnapNP.release.xcconfig */;
+			baseConfigurationReference = 5F63A7F9B2DC547A04FB9ED0F461B23D /* SpotifyLogin.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2103,23 +2001,21 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SnapNP/Pods-SnapNP-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SpotifyLogin/SpotifyLogin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpotifyLogin/SpotifyLogin-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SnapNP/Pods-SnapNP.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SpotifyLogin/SpotifyLogin.modulemap";
+				PRODUCT_MODULE_NAME = SpotifyLogin;
+				PRODUCT_NAME = SpotifyLogin;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2127,7 +2023,7 @@
 			};
 			name = Release;
 		};
-		96EFDB97F9EFB8EEBBA65C5AA6A9488E /* Release */ = {
+		6E2226BAF771B9AEEA8FE646C18E7879 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74181A73E668FDC7E95409444B1A01DD /* SwiftyJSON.xcconfig */;
 			buildSettings = {
@@ -2163,7 +2059,7 @@
 			};
 			name = Release;
 		};
-		9838C58BD1AA67DBD29475983CB12D4A /* Release */ = {
+		75BBB760DFD877E344322B54D29DFE64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C0C1CF630D901B20BB2C9CF1A506BF3 /* Alamofire.xcconfig */;
 			buildSettings = {
@@ -2191,13 +2087,84 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		75F9C7830BE040D93482C29D1F9A8B33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9AFA5D4187405A3F0294193470C5DF0 /* Pods-SnapNP.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SnapNP/Pods-SnapNP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SnapNP/Pods-SnapNP.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		96673C129897484A7F7134855502925B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0105F3DA7E74CA70C29113ADCF04167 /* UIImageColors.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIImageColors/UIImageColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIImageColors/UIImageColors-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIImageColors/UIImageColors.modulemap";
+				PRODUCT_MODULE_NAME = UIImageColors;
+				PRODUCT_NAME = UIImageColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		99F4538DA64ABF8F78B5F3DA25FD8258 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2235,12 +2202,10 @@
 			};
 			name = Release;
 		};
-		A19A0F445A4DB64B95619AD51C7AF196 /* Debug */ = {
+		A20B5BEE6151EFE3EA6BDA11CF88D8B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9AFA5D4187405A3F0294193470C5DF0 /* Pods-SnapNP.debug.xcconfig */;
+			baseConfigurationReference = 2EBFCE355F6D6A8BAC7DE17DD91C7295 /* SwiftVideoBackground.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2250,23 +2215,91 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SnapNP/Pods-SnapNP-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SnapNP/Pods-SnapNP.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
+				PRODUCT_MODULE_NAME = SwiftVideoBackground;
+				PRODUCT_NAME = SwiftVideoBackground;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A5B32E39265E24014D221DD30DD3E08B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0105F3DA7E74CA70C29113ADCF04167 /* UIImageColors.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIImageColors/UIImageColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIImageColors/UIImageColors-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIImageColors/UIImageColors.modulemap";
+				PRODUCT_MODULE_NAME = UIImageColors;
+				PRODUCT_NAME = UIImageColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9F769BF77DCD0B7C3403818EAA6EA09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F63A7F9B2DC547A04FB9ED0F461B23D /* SpotifyLogin.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SpotifyLogin/SpotifyLogin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpotifyLogin/SpotifyLogin-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SpotifyLogin/SpotifyLogin.modulemap";
+				PRODUCT_MODULE_NAME = SpotifyLogin;
+				PRODUCT_NAME = SpotifyLogin;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2384,9 +2417,9 @@
 			};
 			name = Debug;
 		};
-		C7B968830D5FD1F45391B575FA492EF5 /* Release */ = {
+		C795FAD710EBBBC7928336F950F93FBE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F63A7F9B2DC547A04FB9ED0F461B23D /* SpotifyLogin.xcconfig */;
+			baseConfigurationReference = 1DCB0BA55B2DE8278C0B133EAE726ACD /* AZDialogView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2397,8 +2430,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SpotifyLogin/SpotifyLogin-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SpotifyLogin/SpotifyLogin-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AZDialogView/AZDialogView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AZDialogView/AZDialogView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2406,18 +2439,18 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SpotifyLogin/SpotifyLogin.modulemap";
-				PRODUCT_MODULE_NAME = SpotifyLogin;
-				PRODUCT_NAME = SpotifyLogin;
+				MODULEMAP_FILE = "Target Support Files/AZDialogView/AZDialogView.modulemap";
+				PRODUCT_MODULE_NAME = AZDialogView;
+				PRODUCT_NAME = AZDialogView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		C91FF48E33524C71B223B1B43CFF3EBD /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2436,43 +2469,7 @@
 			};
 			name = Release;
 		};
-		CDDC381D215553AD76EE8CC440AAD773 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EBFCE355F6D6A8BAC7DE17DD91C7295 /* SwiftVideoBackground.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
-				PRODUCT_MODULE_NAME = SwiftVideoBackground;
-				PRODUCT_NAME = SwiftVideoBackground;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D3E8B1110A1CBD27FA1FD177F9807FA1 /* Release */ = {
+		E160CA8282A3C9B9920E01EAD357E68F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DCB0BA55B2DE8278C0B133EAE726ACD /* AZDialogView.xcconfig */;
 			buildSettings = {
@@ -2508,42 +2505,7 @@
 			};
 			name = Release;
 		};
-		DE4D572776E4EDC9E6CBDBE5BEDADD84 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EBFCE355F6D6A8BAC7DE17DD91C7295 /* SwiftVideoBackground.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftVideoBackground/SwiftVideoBackground.modulemap";
-				PRODUCT_MODULE_NAME = SwiftVideoBackground;
-				PRODUCT_NAME = SwiftVideoBackground;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E7E18A3E8278024C2F3A5AA8E8C2EFCF /* Debug */ = {
+		E8F35927ECB754A46E0AC8C2BACAF32D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74181A73E668FDC7E95409444B1A01DD /* SwiftyJSON.xcconfig */;
 			buildSettings = {
@@ -2595,9 +2557,48 @@
 			};
 			name = Release;
 		};
-		F863F57AF3E1A19FE89511721DC8CBA1 /* Release */ = {
+		EDE285A01054B131AAD4E533B7CC7053 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89F32DAD22B71035D68EA2C3D7FD7493 /* Pastel.xcconfig */;
+			baseConfigurationReference = EFBF72E7BE2FC0A417AD91A837E82B09 /* Pods-SnapNP.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SnapNP/Pods-SnapNP-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SnapNP/Pods-SnapNP.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F94FD07C591B17B7E61A1528AB9BCB3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C0C1CF630D901B20BB2C9CF1A506BF3 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2608,8 +2609,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Pastel/Pastel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pastel/Pastel-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2617,13 +2618,13 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/Pastel/Pastel.modulemap";
-				PRODUCT_MODULE_NAME = Pastel;
-				PRODUCT_NAME = Pastel;
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2643,11 +2644,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3AFCCE8C050002E3CB3C7A537357E8ED /* Build configuration list for PBXNativeTarget "Pastel" */ = {
+		38B630A7187E461BD8B75EE1B30D78F9 /* Build configuration list for PBXNativeTarget "SpotifyLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50BAE404B1CA10544EC797DB64D25ACA /* Debug */,
-				F863F57AF3E1A19FE89511721DC8CBA1 /* Release */,
+				A9F769BF77DCD0B7C3403818EAA6EA09 /* Debug */,
+				6D8148BF34076F0461CD19040BC4F09D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F32C55E0312ADFB971169F98AD8D1A0 /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A20B5BEE6151EFE3EA6BDA11CF88D8B6 /* Debug */,
+				1A97F0CD0CBC7D8C31DFF229D53F7B88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2670,15 +2680,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		500983288FD27F691001EEF004174E82 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E7E18A3E8278024C2F3A5AA8E8C2EFCF /* Debug */,
-				96EFDB97F9EFB8EEBBA65C5AA6A9488E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		52EC5BD53AFC31153286E36345A879DE /* Build configuration list for PBXAggregateTarget "SnapSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2688,11 +2689,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		884508D2388916369DB1497152683DBE /* Build configuration list for PBXNativeTarget "SpotifyLogin" */ = {
+		62468BF9C7EDA172E951A24083C3ECA7 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				524DBB5D93314D2DE17F58D0348EA8F2 /* Debug */,
-				C7B968830D5FD1F45391B575FA492EF5 /* Release */,
+				E8F35927ECB754A46E0AC8C2BACAF32D /* Debug */,
+				6E2226BAF771B9AEEA8FE646C18E7879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		633DEAD6F1D791840D172915245F26AA /* Build configuration list for PBXNativeTarget "Pods-SnapNP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F9C7830BE040D93482C29D1F9A8B33 /* Debug */,
+				EDE285A01054B131AAD4E533B7CC7053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82F4B7C8B61FB3FB7B650EF96D1FB1C8 /* Build configuration list for PBXNativeTarget "UIImageColors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96673C129897484A7F7134855502925B /* Debug */,
+				A5B32E39265E24014D221DD30DD3E08B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2706,6 +2725,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		9C50A4A5CEA57821BA3CD911B290D419 /* Build configuration list for PBXNativeTarget "Pastel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60F731DF48862C993F703DD3290E342F /* Debug */,
+				02D9E94E3A1B1CB989FFDDF65AA094A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9DA7777E63D63371163DFCC2FBA63256 /* Build configuration list for PBXAggregateTarget "GoogleAppMeasurement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2715,47 +2743,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C155EECD6EC839B9AA60922CEC409258 /* Build configuration list for PBXNativeTarget "Pods-SnapNP" */ = {
+		E4A5194ABAF7A4780609E0E581DA6B54 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A19A0F445A4DB64B95619AD51C7AF196 /* Debug */,
-				918C9E14809AA87F049BE5A618C23750 /* Release */,
+				75BBB760DFD877E344322B54D29DFE64 /* Debug */,
+				F94FD07C591B17B7E61A1528AB9BCB3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C169FB0063A74D33B45C0D7A66FD65D1 /* Build configuration list for PBXNativeTarget "UIImageColors" */ = {
+		EE6D071531D5E58B92215EB1935E976B /* Build configuration list for PBXNativeTarget "AZDialogView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4019DA20E239F6AB93935F149076D007 /* Debug */,
-				4560B22638A12214851FEE33D3AE5138 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D5E312F4600394E714475D6967C23540 /* Build configuration list for PBXNativeTarget "AZDialogView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				67AA0E5F2C7C311997942BF7D92AD52B /* Debug */,
-				D3E8B1110A1CBD27FA1FD177F9807FA1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E87124444A44B7DB55208E7FEC21D331 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				533220A7363132F85843031FA4F2AAAB /* Debug */,
-				9838C58BD1AA67DBD29475983CB12D4A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB2E9810EB2A7C3A021E21FC0D8D752B /* Build configuration list for PBXNativeTarget "SwiftVideoBackground" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE4D572776E4EDC9E6CBDBE5BEDADD84 /* Debug */,
-				CDDC381D215553AD76EE8CC440AAD773 /* Release */,
+				C795FAD710EBBBC7928336F950F93FBE /* Debug */,
+				E160CA8282A3C9B9920E01EAD357E68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

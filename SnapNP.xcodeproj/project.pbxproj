@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0142173C2384BD4400F6304F /* AvenirNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0142173B2384BD4400F6304F /* AvenirNextLTPro-Regular.otf */; };
 		6F7FF14522C08A02006BB9FB /* AvenirNextLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6F7FF14422C08A02006BB9FB /* AvenirNextLTPro-Bold.otf */; };
 		6F7FF14622C08A14006BB9FB /* AvenirNextLTPro-Bold.otf in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FF14422C08A02006BB9FB /* AvenirNextLTPro-Bold.otf */; };
 		6FBCC24522C088E500EA70E8 /* AvenirNextLTPro-BoldCn.otf in Sources */ = {isa = PBXBuildFile; fileRef = 6FBCC24422C088E100EA70E8 /* AvenirNextLTPro-BoldCn.otf */; };
@@ -79,12 +80,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0142173B2384BD4400F6304F /* AvenirNextLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Regular.otf"; sourceTree = "<group>"; };
 		6F7FF14422C08A02006BB9FB /* AvenirNextLTPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Bold.otf"; sourceTree = "<group>"; };
 		6FBCC24422C088E100EA70E8 /* AvenirNextLTPro-BoldCn.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-BoldCn.otf"; sourceTree = "<group>"; };
-		9809163722AC0405001E286D /* AvenirNextLTPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AvenirNextLTPro-Bold.otf"; path = "../../AvenirNextLTPro-Bold.otf"; sourceTree = "<group>"; };
 		980C424D22B5943200BDE1A5 /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
-		98496F4722DFC0B500BF7030 /* 1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1024.png; path = ../../../Desktop/1024.png; sourceTree = "<group>"; };
-		984BD0F822F3C1B100B44AAE /* bigFile.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = bigFile.mp4; path = ../../../Downloads/bigFile.mp4; sourceTree = "<group>"; };
 		987C1D7622AABCE800EA2CD2 /* SnapNP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapNP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987C1D7922AABCE800EA2CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987C1D7B22AABCE800EA2CD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -220,13 +219,11 @@
 				6FBCC24422C088E100EA70E8 /* AvenirNextLTPro-BoldCn.otf */,
 				980C424D22B5943200BDE1A5 /* searchViewController.swift */,
 				6F7FF14422C08A02006BB9FB /* AvenirNextLTPro-Bold.otf */,
+				0142173B2384BD4400F6304F /* AvenirNextLTPro-Regular.otf */,
 				987C1D7B22AABCE800EA2CD2 /* ViewController.swift */,
 				987C1D7D22AABCE800EA2CD2 /* Main.storyboard */,
 				987C1D8022AABCEB00EA2CD2 /* Assets.xcassets */,
 				987C1D8222AABCEB00EA2CD2 /* LaunchScreen.storyboard */,
-				9809163722AC0405001E286D /* AvenirNextLTPro-Bold.otf */,
-				98496F4722DFC0B500BF7030 /* 1024.png */,
-				984BD0F822F3C1B100B44AAE /* bigFile.mp4 */,
 				9883F1BA22AD7B6C0054E484 /* Animations */,
 				9883F1B422AD7B6C0054E484 /* NVActivityIndicatorAnimationDelegate.swift */,
 				9883F1B622AD7B6C0054E484 /* NVActivityIndicatorShape.swift */,
@@ -421,6 +418,7 @@
 				987C1D8422AABCEB00EA2CD2 /* LaunchScreen.storyboard in Resources */,
 				987C1D8122AABCEB00EA2CD2 /* Assets.xcassets in Resources */,
 				6F7FF14522C08A02006BB9FB /* AvenirNextLTPro-Bold.otf in Resources */,
+				0142173C2384BD4400F6304F /* AvenirNextLTPro-Regular.otf in Resources */,
 				987C1D7F22AABCE800EA2CD2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 import SwiftyJSON
 import UIKit
 import Alamofire
+
 struct post {
     //let mainImage : UIImage!
     let name : String!
@@ -54,6 +55,9 @@ class searchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchTextEntry.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         // Do any additional setup after loading the view.
     }
+    
+    
+    
     @objc fileprivate func onDrag(_ sender: UIPanGestureRecognizer) {
         
         let translation = sender.translation(in: view)

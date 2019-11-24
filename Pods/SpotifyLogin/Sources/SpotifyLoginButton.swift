@@ -48,7 +48,7 @@ public class SpotifyLoginButton: UIButton {
                               in: Bundle(for: SpotifyLoginButton.self),
                               compatibleWith: nil)!
             .withRenderingMode(.alwaysTemplate), for: .normal)
-        setTitle("SIGN IN WITH SPOTIFY", for: .normal)
+        setTitle("CONNECT SPOTIFY", for: .normal)
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
         frame.size = intrinsicContentSize
     }
@@ -65,7 +65,7 @@ public class SpotifyLoginButton: UIButton {
     }
 
     public override var intrinsicContentSize: CGSize {
-        return CGSize(width: 260.0, height: 55.0)
+        return CGSize(width: 230.0, height: 45.0)
     }
 
     override public func layoutSubviews() {
@@ -78,11 +78,11 @@ public class SpotifyLoginButton: UIButton {
 internal extension UIColor {
 
     class func spt_green() -> UIColor {
-        return UIColor(red: 0.0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)
+        return UIColor(red: 0.0/255.0, green: 200.0/255.0, blue: 80.0/255.0, alpha: 1.0)
     }
 
     class func spt_darkGreen() -> UIColor {
-        return UIColor(red: 0/255.0, green: 0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        return UIColor(red: 0.0/255.0, green: 200.0/255.0, blue: 60.0/255.0, alpha: 1.0)
     }
 
 }
