@@ -63,7 +63,7 @@ class LogInViewController: UIViewController {
     
     @objc func loginSuccessful() {
         self.dismiss(animated: true, completion: nil)
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "loginRefresh"), object: nil)
+        //NotificationCenter.default.post(name: Notification.Name(rawValue: "loginRefresh"), object: nil)
     }
 }
 extension UIView {

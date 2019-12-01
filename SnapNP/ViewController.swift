@@ -42,12 +42,12 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     var urls = URL(string: "")
     override func viewDidLoad() {
         super.viewDidLoad()
-        //albumArtContainer.center.x = view.frame.width + albumArtContainer.frame.width
         buttonUIAdjust()
-       //SpotifyLogin.shared.logout()
+        self.animateOut(animateView: self.albumArtContainer)
+       
         NotificationCenter.default.addObserver(self, selector: #selector(disconnectPaxiSocket(_:)), name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(refreshNote(_:)), name: Notification.Name(rawValue: "loginRefresh"), object: nil)
-        // Do any additional setup after loading the view.
+       
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -56,6 +56,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         self.refreshAll()
     }
     override func viewDidAppear(_ animated: Bool) {
+        
         SpotifyLogin.shared.getAccessToken { [weak self] (token, error) in
                    
                    if error != nil || token == nil {
@@ -70,7 +71,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                        self!.username = usernameRec!
                        key = token!
                        self!.fetchTrackRequest()
-                       //self!.fetchTrackRequest()
                        
                        print(token!)
                    }
@@ -128,12 +128,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                      
                      if let id = json["album"]["images"].array {
                          let stringURL = id[0]["url"].url
-                         // let stringURL = self.stringify(json: id[0]["url"])
-                         //self.urls = URL(string: stringURL!)
                          self.downloadImageSearch(from: stringURL!)
-                         
-                         // print(stringURL)
-                         //self.getTempoOfID(id: id)
+    
                          
                      }
                      
@@ -178,6 +174,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             print(response?.suggestedFilename ?? url.lastPathComponent)
             print("Download Finished")
             DispatchQueue.main.async() {
+                
                 self.albumArtImage.image = UIImage(data: data)
                 self.customImage = UIImage(data: data)!
             }
@@ -193,6 +190,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
       }
     func demoSendSticker() {
           /* Sticker to be used in the Snap */
+        
+        albumArtContainer.layer.shadowOpacity = 0.0
           print("send sticker")
            let snap = SCSDKNoSnapContent()
           if #available(iOS 10.0, *) {
@@ -200,16 +199,14 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
               let renderer = UIGraphicsImageRenderer(size: size)
               let image = renderer.pngData { ctx in
                   
-                 // UIColor.clear.set()
-                 
-
-                  
                  albumArtContainer.drawHierarchy(in: albumArtContainer.bounds, afterScreenUpdates: true)
                   
               }
-              print("New method ran")
-              //var imageToUseAsSticker = self.resizeImage(image: UIImage(data: image)!, targetSize: CGSize(width: 200.0, height: 200.0))
-              let sticker = SCSDKSnapSticker(stickerImage: UIImage(data: image)!)
+            
+            
+            var useImage = UIImage(data: image)!
+            useImage = ResizeImage(image: useImage, targetSize: CGSize(width: 470, height: 470))
+              let sticker = SCSDKSnapSticker(stickerImage: useImage)
               snap.sticker = sticker
           } else {
             print("Early method ran")
@@ -220,22 +217,12 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
           }
           
          
-          
-          //let stickerImage = image/* Prepare a sticker image */
-         
-          /* Alternatively, use a URL instead */
-          // let sticker = SCSDKSnapSticker(stickerUrl: stickerImageUrl, isAnimated: false)
-          
-          /* Modeling a Snap using SCSDKNoSnapContent */
-         
-          /* Optional */
-          /* Optional */
+          albumArtContainer.layer.shadowOpacity = 1.0
           snap.caption = songTitle + "\n" + artistName
           print(extUrl)
           extUrl = extUrl.replacingOccurrences(of: " ", with: "%20")
           snap.attachmentUrl = extUrl
           view.isUserInteractionEnabled = false
-          print("Demo Send")
           snapAPI.startSending(snap) { [weak self] (error: Error?) in
               self?.view.isUserInteractionEnabled = true
               
@@ -276,7 +263,11 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
        
        if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
     //alert not playing
-           self.presentDialog()
+            DispatchQueue.main.async() {
+                self.presentDialog()
+
+                          
+                          }
        }
        
        
@@ -301,11 +292,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
          
            if let title = json["item"]["name"].string {
                self.songTitle = title
-               DispatchQueue.main.async() {
-              // self.titleLbl.text = title
-
-               
-               }
+              
                print("TITLE",self.songTitle)
                
                if let arts = json["item"]["artists"][0]["name"].string {
@@ -330,6 +317,31 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
        task.resume()
        }
        }
+    func ResizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+
+        let widthRatio  = targetSize.width  / image.size.width
+        let heightRatio = targetSize.height / image.size.height
+
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+        }
+
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+
+        return newImage
+    }
     @IBAction func helpDiaButton(_ sender: Any) {
         aboutDia()
     }
@@ -346,9 +358,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                   self.albumArtImage.image = UIImage(data: data)
                   
                   self.customImage = UIImage(data: data)!
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                   self.animateIn(animateView: self.albumArtContainer)
-                }
+                    
                
 
                   print("Done setting image")
@@ -468,11 +479,10 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
          
         
          dialog.addAction(AZDialogAction(title: "Check Again") { (dialog) -> (Void) in
-             //add your actions here.
+             
            dialog.dismiss(animated: false, completion: nil)
-           self.presentDialog2()
-            // dialog.dismiss(animated: true, completion: nil)
-            //  self.refreshAll()
+           self.animateRefreshDialog()
+           self.refreshAll()
          })
          DispatchQueue.main.async {
              //Do UI Code here.
@@ -480,7 +490,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
              self.present(dialog, animated: false, completion: nil)
              }
          }
-    func presentDialog2() {
+    func animateRefreshDialog() {
         let dialog = AZDialogViewController(title: "One sec..", message: "Checking Spotify for currently playing music.")
         
         let container = dialog.container
@@ -518,13 +528,13 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         when = DispatchTime.now() + 2.2
         DispatchQueue.main.asyncAfter(deadline: when) {
             dialog.message = "Finishing up.."
+            self.fetchTrackRequest()
             
         }
         when = DispatchTime.now() + 3
         DispatchQueue.main.asyncAfter(deadline: when) {
             
             dialog.dismiss(animated: false, completion: nil)
-            //self.refreshAll()
         }
         
     }
@@ -567,9 +577,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     func refreshAll() {
            print("RefreshAll Commanded")
-           //runGradient(mainColor: UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0))
-             
-           
            SpotifyLogin.shared.getAccessToken { [weak self] (token, error) in
                
                if error != nil || token == nil {
@@ -579,15 +586,10 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                else {
                    print("Successful login")
                    let usernameRec = SpotifyLogin.shared.username
-                   
-                   print(usernameRec!)
                    self!.username = usernameRec!
                    key = token!
                    self!.fetchTrackRequest()
-                   //self!.fetchTrackRequest()
-                   
                    print(token!)
-                self!.fetchTrackRequest()
                }
            }
        }
