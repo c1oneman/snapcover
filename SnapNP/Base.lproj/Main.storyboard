@@ -19,7 +19,7 @@
         <!--Log In View Controller-->
         <scene sceneID="azW-Wo-NQV">
             <objects>
-                <viewController storyboardIdentifier="login" wantsFullScreenLayout="YES" id="DLN-rg-hOt" customClass="LogInViewController" customModule="SnapNP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" wantsFullScreenLayout="YES" id="DLN-rg-hOt" customClass="LogInViewController" customModule="Coverly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J49-VY-Ch9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,7 @@
         <!--Search View Controller-->
         <scene sceneID="Lzr-PD-4qA">
             <objects>
-                <viewController storyboardIdentifier="search" id="dvw-fG-54R" customClass="searchViewController" customModule="SnapNP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="search" id="dvw-fG-54R" customClass="searchViewController" customModule="Coverly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fRl-nu-KDw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +160,7 @@
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeadlineTableViewCell" rowHeight="93" id="4sC-9d-Xce" customClass="HeadlineTableViewCell" customModule="SnapNP" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeadlineTableViewCell" rowHeight="93" id="4sC-9d-Xce" customClass="HeadlineTableViewCell" customModule="Coverly" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4sC-9d-Xce" id="wRM-co-3Q7">
@@ -266,7 +266,7 @@
         <!--View Controller-->
         <scene sceneID="wy6-DZ-CI2">
             <objects>
-                <viewController id="Y9y-NG-XvS" customClass="ViewController" customModule="SnapNP" sceneMemberID="viewController">
+                <viewController id="Y9y-NG-XvS" customClass="ViewController" customModule="Coverly" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WAb-Bq-fXq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -323,9 +323,9 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSI-Dz-eDg">
-                                <rect key="frame" x="90.333333333333329" y="86" width="194.33333333333337" height="32.666666666666657"/>
+                                <rect key="frame" x="16" y="86" width="343" height="61"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="CSI-Dz-eDg" secondAttribute="height" multiplier="13:3" constant="53" id="eZv-cO-FWS"/>
+                                    <constraint firstAttribute="width" secondItem="CSI-Dz-eDg" secondAttribute="height" multiplier="13:3" constant="78.666666666666686" id="eZv-cO-FWS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="31"/>
                                 <state key="normal" title="Coverly.app">
@@ -333,7 +333,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li8-HL-78y">
-                                <rect key="frame" x="28" y="124.66666666666667" width="319" height="16.333333333333329"/>
+                                <rect key="frame" x="28" y="143" width="319" height="16.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Li8-HL-78y" secondAttribute="height" multiplier="26:3" constant="178" id="hwC-KY-SvI"/>
                                 </constraints>
@@ -405,12 +405,24 @@
                                     <constraint firstItem="OR9-XY-Sop" firstAttribute="centerY" secondItem="ZBA-Jx-oIY" secondAttribute="centerY" id="kTV-uY-WEW"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pte-do-xvA">
-                                <rect key="frame" x="321.66666666666669" y="44" width="37.333333333333314" height="37.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to play anywhere" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Db-gY-yJa">
+                                <rect key="frame" x="104.66666666666669" y="643.33333333333337" width="166" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Db-gY-yJa" secondAttribute="height" multiplier="83:23" id="2u5-d3-sB5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pte-do-xvA">
+                                <rect key="frame" x="15.999999999999996" y="44" width="37.666666666666657" height="37.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Pte-do-xvA" secondAttribute="height" multiplier="1:1" id="0Dk-eq-j8g"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="noun_about_1709327"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="ellipsis.circle.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="helpDiaButton:" destination="Y9y-NG-XvS" eventType="touchDown" id="cfB-tp-P6u"/>
                                 </connections>
@@ -421,15 +433,17 @@
                             <constraint firstItem="k2V-AN-fnS" firstAttribute="bottom" secondItem="EnQ-7B-Akr" secondAttribute="bottom" constant="39" id="0HM-oQ-WA4"/>
                             <constraint firstItem="Pte-do-xvA" firstAttribute="width" secondItem="WAb-Bq-fXq" secondAttribute="width" multiplier="0.1" id="1Ua-Co-5dc"/>
                             <constraint firstItem="OR9-XY-Sop" firstAttribute="width" secondItem="zac-sC-1Gc" secondAttribute="width" id="2vY-US-VB7"/>
-                            <constraint firstItem="Li8-HL-78y" firstAttribute="top" secondItem="CSI-Dz-eDg" secondAttribute="bottom" constant="6" id="3e0-rp-gLZ"/>
+                            <constraint firstItem="Li8-HL-78y" firstAttribute="top" secondItem="CSI-Dz-eDg" secondAttribute="bottom" constant="-4" id="3e0-rp-gLZ"/>
                             <constraint firstItem="jxP-9H-e6J" firstAttribute="centerX" secondItem="WAb-Bq-fXq" secondAttribute="centerX" id="3hz-HU-ktg"/>
                             <constraint firstItem="aUJ-lY-Ifg" firstAttribute="centerX" secondItem="WAb-Bq-fXq" secondAttribute="centerX" id="6OM-8F-QyS"/>
                             <constraint firstItem="ZBA-Jx-oIY" firstAttribute="leading" secondItem="MlC-R6-9oG" secondAttribute="trailing" id="6Zm-al-S95"/>
                             <constraint firstItem="akD-c1-Vam" firstAttribute="centerY" secondItem="MlC-R6-9oG" secondAttribute="centerY" constant="0.5" id="7U9-47-79B"/>
                             <constraint firstItem="akD-c1-Vam" firstAttribute="trailing" secondItem="MlC-R6-9oG" secondAttribute="trailing" constant="-21.5" id="FpI-7u-hmG"/>
+                            <constraint firstItem="MlC-R6-9oG" firstAttribute="top" secondItem="4Db-gY-yJa" secondAttribute="bottom" id="GcV-0X-Q0n"/>
                             <constraint firstItem="jxP-9H-e6J" firstAttribute="width" secondItem="WAb-Bq-fXq" secondAttribute="width" multiplier="0.741546" id="I4j-qE-R6e"/>
                             <constraint firstItem="jxP-9H-e6J" firstAttribute="centerY" secondItem="WAb-Bq-fXq" secondAttribute="centerY" id="JXv-ES-zLc"/>
                             <constraint firstItem="CSI-Dz-eDg" firstAttribute="top" secondItem="k2V-AN-fnS" secondAttribute="top" constant="42" id="Kco-4c-kyq"/>
+                            <constraint firstItem="4Db-gY-yJa" firstAttribute="centerX" secondItem="WAb-Bq-fXq" secondAttribute="centerX" id="MmV-RL-IQh"/>
                             <constraint firstItem="MlC-R6-9oG" firstAttribute="leading" secondItem="EnQ-7B-Akr" secondAttribute="trailing" id="NXP-eE-VNy"/>
                             <constraint firstItem="aUJ-lY-Ifg" firstAttribute="centerY" secondItem="WAb-Bq-fXq" secondAttribute="centerY" id="P4c-en-EEx"/>
                             <constraint firstItem="k2V-AN-fnS" firstAttribute="bottom" secondItem="MlC-R6-9oG" secondAttribute="bottom" constant="39" id="Qei-B1-OgA"/>
@@ -439,15 +453,16 @@
                             <constraint firstItem="aUJ-lY-Ifg" firstAttribute="width" secondItem="WAb-Bq-fXq" secondAttribute="width" multiplier="0.2" id="aeL-lj-MHv"/>
                             <constraint firstItem="EnQ-7B-Akr" firstAttribute="leading" secondItem="k2V-AN-fnS" secondAttribute="leading" id="cct-CT-oqt"/>
                             <constraint firstItem="CSI-Dz-eDg" firstAttribute="centerX" secondItem="WAb-Bq-fXq" secondAttribute="centerX" id="epK-OU-9OB"/>
+                            <constraint firstItem="Pte-do-xvA" firstAttribute="leading" secondItem="k2V-AN-fnS" secondAttribute="leading" constant="16" id="exB-ru-1uN"/>
                             <constraint firstItem="Pte-do-xvA" firstAttribute="top" secondItem="k2V-AN-fnS" secondAttribute="top" id="fZi-fr-XLo"/>
                             <constraint firstItem="ZBA-Jx-oIY" firstAttribute="centerY" secondItem="MlC-R6-9oG" secondAttribute="centerY" id="hFR-Jo-UDm"/>
+                            <constraint firstItem="4Db-gY-yJa" firstAttribute="width" secondItem="WAb-Bq-fXq" secondAttribute="width" multiplier="0.442667" id="hjU-Ok-U5m"/>
                             <constraint firstItem="MlC-R6-9oG" firstAttribute="centerX" secondItem="WAb-Bq-fXq" secondAttribute="centerX" id="kta-IC-SCQ"/>
                             <constraint firstItem="akD-c1-Vam" firstAttribute="width" secondItem="MlC-R6-9oG" secondAttribute="width" multiplier="0.15" id="nMp-pK-abY"/>
                             <constraint firstItem="Li8-HL-78y" firstAttribute="centerX" secondItem="WAb-Bq-fXq" secondAttribute="centerX" id="rmN-o1-DhR"/>
                             <constraint firstItem="MlC-R6-9oG" firstAttribute="width" secondItem="WAb-Bq-fXq" secondAttribute="width" multiplier="0.456522" id="uG3-bI-QiF"/>
-                            <constraint firstItem="CSI-Dz-eDg" firstAttribute="width" secondItem="WAb-Bq-fXq" secondAttribute="width" multiplier="0.376812" constant="53" id="wBu-e7-YK7"/>
+                            <constraint firstItem="CSI-Dz-eDg" firstAttribute="width" secondItem="WAb-Bq-fXq" secondAttribute="width" multiplier="0.376812" constant="201.69550000000001" id="wBu-e7-YK7"/>
                             <constraint firstItem="Li8-HL-78y" firstAttribute="width" secondItem="WAb-Bq-fXq" secondAttribute="width" multiplier="0.376812" constant="178" id="xA9-PI-Amv"/>
-                            <constraint firstItem="k2V-AN-fnS" firstAttribute="trailing" secondItem="Pte-do-xvA" secondAttribute="trailing" constant="16" id="yHL-VP-sk1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k2V-AN-fnS"/>
                     </view>
@@ -459,20 +474,27 @@
                         <outlet property="refreshBtn" destination="zac-sC-1Gc" id="w3W-l7-BUB"/>
                         <outlet property="searchBtn" destination="OR9-XY-Sop" id="l2F-vT-9cK"/>
                         <outlet property="snapchatBtnImage" destination="akD-c1-Vam" id="SdC-Y3-6ZU"/>
-                        <outlet property="statusText" destination="27Q-XD-Qkv" id="1WT-1m-ly6"/>
+                        <outlet property="subtitle" destination="Li8-HL-78y" id="7Lm-Lq-XVN"/>
+                        <outlet property="swipeUPLBL" destination="4Db-gY-yJa" id="yiz-3g-QOx"/>
+                        <outlet property="titleText" destination="CSI-Dz-eDg" id="pIJ-8Q-vq1"/>
+                        <outletCollection property="notSharable" destination="OR9-XY-Sop" collectionClass="NSMutableArray" id="sn5-eH-4qN"/>
+                        <outletCollection property="notSharable" destination="MlC-R6-9oG" collectionClass="NSMutableArray" id="uHt-30-AX5"/>
+                        <outletCollection property="notSharable" destination="zac-sC-1Gc" collectionClass="NSMutableArray" id="gYv-il-r5r"/>
+                        <outletCollection property="notSharable" destination="akD-c1-Vam" collectionClass="NSMutableArray" id="pfh-eI-JLj"/>
+                        <outletCollection property="notSharable" destination="Pte-do-xvA" collectionClass="NSMutableArray" id="jIp-a8-Hqe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHm-in-rdX" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-602" y="777"/>
+            <point key="canvasLocation" x="-602.39999999999998" y="776.60098522167493"/>
         </scene>
     </scenes>
     <resources>
         <image name="coverlyLogoWhite" width="737" height="732"/>
+        <image name="ellipsis.circle.fill" catalog="system" width="64" height="60"/>
         <image name="ghostlogo" width="152" height="143"/>
-        <image name="image" width="512" height="512"/>
+        <image name="image" width="268" height="268"/>
         <image name="musicBit" width="398" height="398"/>
-        <image name="noun_about_1709327" width="411" height="411"/>
         <image name="reloadTransparent" width="200" height="200"/>
         <image name="searchBtn" width="200" height="200"/>
     </resources>

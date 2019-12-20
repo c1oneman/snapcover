@@ -14,6 +14,7 @@ import SwiftyJSON
 import AZDialogView
 import SafariServices
 import MessageUI
+import UIImageColors
 var globalID = ""
 var key = ""
 
@@ -23,15 +24,22 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
       let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     
-    @IBOutlet weak var refreshBtn: UIButton!
+    @IBOutlet var titleText: UIButton!
+    @IBOutlet var subtitle: UIButton!
+    
     
     @IBOutlet weak var readyButton: UIButton!
-    @IBOutlet weak var albumArtContainer: UIView!
+    @IBOutlet weak var refreshBtn: UIButton!
     @IBOutlet weak var main: UIButton!
     @IBOutlet weak var snapchatBtnImage: UIImageView!
-    @IBOutlet weak var statusText: UILabel!
-    @IBOutlet weak var albumArtImage: UIImageView!
     @IBOutlet weak var searchBtn: UIButton!
+    
+    @IBOutlet weak var albumArtContainer: UIView!
+    @IBOutlet weak var albumArtImage: UIImageView!
+   
+    @IBOutlet var swipeUPLBL: UILabel!
+    @IBOutlet var notSharable: [UIView]!
+    
     var snapAPI = SCSDKSnapAPI()
     var imgURLpublic = ""
     var username = ""
@@ -44,7 +52,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         super.viewDidLoad()
         buttonUIAdjust()
         self.animateOut(animateView: self.albumArtContainer)
-       
+        self.swipeUPLBL.isHidden = true
         NotificationCenter.default.addObserver(self, selector: #selector(disconnectPaxiSocket(_:)), name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(refreshNote(_:)), name: Notification.Name(rawValue: "loginRefresh"), object: nil)
        
@@ -144,7 +152,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                          if let arts = json["artists"][0]["name"].string {
                              self.artistName = arts
                              if let name = json["external_urls"]["spotify"].string {
-                                var nameEncoded = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+                                let nameEncoded = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
                                  self.extUrl = "https://www.coverly.app/song?s=" + nameEncoded + "&t=" + self.songTitle + "&a=" + self.artistName + "&f=" + self.imgURLpublic
                              }
                              
@@ -189,45 +197,75 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
           self.present(controller, animated: true, completion: nil)
       }
     func demoSendSticker() {
+        let alert = UIAlertController(title: nil, message: "Preparing..", preferredStyle: .alert)
+
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.gray
+        loadingIndicator.startAnimating();
+
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
           /* Sticker to be used in the Snap */
+        swipeUPLBL.isHidden = false
+          albumArtContainer.layer.shadowOpacity = 0.0
+          print("send photo")
+        var colorMain = self.view.backgroundColor
         
-        albumArtContainer.layer.shadowOpacity = 0.0
-          print("send sticker")
-           let snap = SCSDKNoSnapContent()
           if #available(iOS 10.0, *) {
-              let size = CGSize(width: albumArtContainer.bounds.width, height: albumArtContainer.bounds.height)
-              let renderer = UIGraphicsImageRenderer(size: size)
-              let image = renderer.pngData { ctx in
-                  
-                 albumArtContainer.drawHierarchy(in: albumArtContainer.bounds, afterScreenUpdates: true)
-                  
-              }
+            let colors = customImage!.getColors()
+            titleText.setTitle(songTitle.replacingOccurrences(of: "\\s?\\([\\w\\s]*\\)", with: "", options: .regularExpression), for: .normal)
+            subtitle.setTitle(artistName, for: .normal)
+            titleText.setTitleColor(colors?.primary, for: .normal)
+            subtitle.setTitleColor(colors?.primary, for: .normal)
+            view.backgroundColor = colors?.background
+            swipeUPLBL.textColor = colors?.secondary
+            for view in notSharable {
+              view.isHidden = true
+            }
+                    //\\(.*\\)
+                  //  detailLabel.textColor = colors.detail
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                let size = CGSize(width: self.view.bounds.width, height: self.view.bounds.height)
+                             let renderer = UIGraphicsImageRenderer(size: size)
+                             let image = renderer.pngData { ctx in
+                                self.view.drawHierarchy(in: self.view.bounds, afterScreenUpdates: true)
+                             }
+                let useImage = UIImage(data: image)!
+                           let photo = SCSDKSnapPhoto(image: useImage)
+                           
+                           let photoContent = SCSDKPhotoSnapContent(snapPhoto: photo)
+                self.albumArtContainer.layer.shadowOpacity = 1.0
+                for view in self.notSharable {
+                             view.isHidden = false
+                           }
+                self.view.backgroundColor = colorMain
+                self.titleText.setTitleColor(UIColor.white, for: .normal)
+                self.titleText.setTitle("Coverly.app", for: .normal)
+                self.subtitle.setTitle("snap what you listen to", for: .normal)
+                alert.dismiss(animated: false, completion: nil)
+                self.subtitle.setTitleColor(UIColor.white, for: .normal)
+                self.swipeUPLBL.isHidden = true
+                //photoContent.caption = self.songTitle + "\n" + self.artistName
+                print(self.extUrl)
+                self.extUrl = self.extUrl.replacingOccurrences(of: " ", with: "%20")
+                photoContent.attachmentUrl = self.extUrl
+                self.view.isUserInteractionEnabled = false
+                self.snapAPI.startSending(photoContent) { [weak self] (error: Error?) in
+                               self?.view.isUserInteractionEnabled = true
+                               
+                               // Handle response
+                           }
+            }
+             
+           
             
-            
-            var useImage = UIImage(data: image)!
-            useImage = ResizeImage(image: useImage, targetSize: CGSize(width: 470, height: 470))
-              let sticker = SCSDKSnapSticker(stickerImage: useImage)
-              snap.sticker = sticker
           } else {
-            print("Early method ran")
-              // Fallback on earlier versions
-              let image = customImage!
-               let sticker = SCSDKSnapSticker(stickerImage: image)
-               snap.sticker = sticker
+            print("FAIL")
           }
           
          
-          albumArtContainer.layer.shadowOpacity = 1.0
-          snap.caption = songTitle + "\n" + artistName
-          print(extUrl)
-          extUrl = extUrl.replacingOccurrences(of: " ", with: "%20")
-          snap.attachmentUrl = extUrl
-          view.isUserInteractionEnabled = false
-          snapAPI.startSending(snap) { [weak self] (error: Error?) in
-              self?.view.isUserInteractionEnabled = true
-              
-              // Handle response
-          }
+          
       }
     @IBAction func mainSubmitBtn(_ sender: Any) {
         demoSendSticker()
@@ -278,11 +316,13 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
            
            
            if let id = json["item"]["album"]["images"].array {
-               let stringURL = id[0]["url"].url
+               let stringURL = id[0]["url"].url ?? URL(string: "nil")
               // let stringURL = self.stringify(json: id[0]["url"])
               //self.urls = URL(string: stringURL!)
+           
                self.downloadImage(from: stringURL!)
                self.imgURLpublic = stringURL!.absoluteString
+            
              // print(stringURL)
              //self.getTempoOfID(id: id)
        
@@ -299,7 +339,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                     print("ARTIST",arts)
                    self.artistName = arts
                    if let name = json["item"]["album"]["external_urls"]["spotify"].string {
-                    var nameEncoded = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+                    let nameEncoded = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
                        self.extUrl = "https://www.coverly.app/song?s=" + nameEncoded + "&t=" + self.songTitle + "&a=" + self.artistName + "&f=" + self.imgURLpublic
                     
                        
@@ -647,6 +687,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
              self.main.transform = originalTransform
            })
     }
+    
     func aboutDia() {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
