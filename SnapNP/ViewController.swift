@@ -24,7 +24,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
       let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     
-    @IBOutlet var titleText: UIButton!
+
+    @IBOutlet var titleText: UILabel!
     @IBOutlet var subtitle: UIButton!
     
     
@@ -50,6 +51,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     var urls = URL(string: "")
     override func viewDidLoad() {
         super.viewDidLoad()
+        readyButton.isEnabled = false
         buttonUIAdjust()
         self.animateOut(animateView: self.albumArtContainer)
         self.swipeUPLBL.isHidden = true
@@ -62,6 +64,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     @objc func refreshNote(_ notification: Notification) {
         self.refreshAll()
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         
@@ -182,9 +185,15 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             print(response?.suggestedFilename ?? url.lastPathComponent)
             print("Download Finished")
             DispatchQueue.main.async() {
-                
                 self.albumArtImage.image = UIImage(data: data)
-                self.customImage = UIImage(data: data)!
+                   
+                   self.customImage = UIImage(data: data)!
+                   self.animateIn(animateView: self.albumArtContainer)
+                   self.readyButton.isEnabled = true
+                
+
+                   print("Done setting image")
+               
             }
             
         }
@@ -214,9 +223,9 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         
           if #available(iOS 10.0, *) {
             let colors = customImage!.getColors()
-            titleText.setTitle(songTitle.replacingOccurrences(of: "\\s?\\([\\w\\s]*\\)", with: "", options: .regularExpression), for: .normal)
+            titleText.text = songTitle.replacingOccurrences(of: "\\s?\\([\\w\\s]*\\)", with: "", options: .regularExpression)
             subtitle.setTitle(artistName, for: .normal)
-            titleText.setTitleColor(colors?.primary, for: .normal)
+            titleText.textColor = colors?.primary
             subtitle.setTitleColor(colors?.primary, for: .normal)
             view.backgroundColor = colors?.background
             swipeUPLBL.textColor = colors?.secondary
@@ -240,8 +249,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                              view.isHidden = false
                            }
                 self.view.backgroundColor = colorMain
-                self.titleText.setTitleColor(UIColor.white, for: .normal)
-                self.titleText.setTitle("Coverly.app", for: .normal)
+                self.titleText.textColor = UIColor.white
+                self.titleText.text = "Coverly.app"
                 self.subtitle.setTitle("snap what you listen to", for: .normal)
                 alert.dismiss(animated: false, completion: nil)
                 self.subtitle.setTitleColor(UIColor.white, for: .normal)
@@ -399,7 +408,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                   
                   self.customImage = UIImage(data: data)!
                   self.animateIn(animateView: self.albumArtContainer)
-                    
+                  self.readyButton.isEnabled = true
                
 
                   print("Done setting image")
@@ -522,7 +531,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
              
            dialog.dismiss(animated: false, completion: nil)
            self.animateRefreshDialog()
-           self.refreshAll()
+           
          })
          DispatchQueue.main.async {
              //Do UI Code here.
@@ -617,6 +626,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     func refreshAll() {
            print("RefreshAll Commanded")
+          self.readyButton.isEnabled = false
            SpotifyLogin.shared.getAccessToken { [weak self] (token, error) in
                
                if error != nil || token == nil {
@@ -734,11 +744,11 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                 //add your actions here.
                 
                 dialog.dismiss(animated: false, completion: nil)
-                 self.showSafariVC(for: "https://www.coverly.app/about")
+                 self.showSafariVC(for: "https://www.coverly.app/")
                 
             })
             dialog.addAction(AZDialogAction(title: "Terms Of Service") { (dialog) -> (Void) in
-                //add your actions here.
+       
                 
                 dialog.dismiss(animated: false, completion: nil)
                 self.showSafariVC(for: "https://www.coverly.app/tos")
@@ -746,7 +756,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             })
             dialog.addAction(AZDialogAction(title: "Contact Support") { (dialog) -> (Void) in
                 
-                //add your actions here.
+       
              
                 dialog.dismiss(animated: false, completion: nil)
              
@@ -787,6 +797,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
      }
     //Animations
     func animateIn(animateView: UIView) {
+        animateView.alpha = 1.0
                 UIView.animate(withDuration:0.4,
                                delay: 0.0,
                                usingSpringWithDamping: 0.6,
@@ -800,6 +811,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                    })
      }
     func animateOut(animateView: UIView) {
+        animateView.alpha = 0.0
         UIView.animate(withDuration: 0.6,
                        delay: 0.0,
                               usingSpringWithDamping: 0.5,

@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -33,8 +33,6 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-7908027428647197~9067202662</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>snapchat</string>
@@ -45,7 +43,7 @@
 	<key>NSAppleMusicUsageDescription</key>
 	<string>Fetching what Apple Music is currently playing.</string>
 	<key>SCSDKClientId</key>
-	<string>a6373a20-8f21-45d1-87d4-e34eac7dcc24</string>
+	<string>e9d89dd5-4211-4c5f-af5f-7b6003697ca0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -68,6 +66,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIUserInterfaceStyle</key>
-	<string>light</string>
+	<string>Light</string>
 </dict>
 </plist>

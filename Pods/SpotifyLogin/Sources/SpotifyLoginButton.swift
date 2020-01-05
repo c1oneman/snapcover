@@ -78,11 +78,11 @@ public class SpotifyLoginButton: UIButton {
 internal extension UIColor {
 
     class func spt_green() -> UIColor {
-        return UIColor(red: 0.0/255.0, green: 200.0/255.0, blue: 80.0/255.0, alpha: 1.0)
+        return UIColor(red: 0.0/255.0, green: 210.0/255.0, blue: 80.0/255.0, alpha: 1.0)
     }
 
     class func spt_darkGreen() -> UIColor {
-        return UIColor(red: 0.0/255.0, green: 200.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+        return UIColor(red: 0.0/255.0, green: 210.0/255.0, blue: 60.0/255.0, alpha: 1.0)
     }
 
 }
